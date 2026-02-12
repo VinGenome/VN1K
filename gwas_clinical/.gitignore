@@ -1,0 +1,12 @@
+data/
+assoc_linear
+mahattan/
+*test*
+src/test.ipynb
+
+# R data
+.Rhistory
+
+# image
+*.png
+*.pdf
