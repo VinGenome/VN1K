@@ -1,0 +1,159 @@
+<h1 id="dgv4vn-analysis-procedure">DGV4VN ANALYSIS PROCEDURE</h1>
+<p>There are 3 big steps in the analysis procedure: I_MAIN_FLOW, II_QC_AND_PROCESS_QC_RESULT, III_TOPUP_CASES</p>
+<!-- TABLE OF CONTENTS -->
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#STEP-I:-I_MAIN_FLOW">STEP I: I_MAIN_FLOW</a><ul>
+<li><a href="#Prerequisites">Prerequisites</a></li>
+<li><a href="#I-1.-Initialize-Run-directory">I-1. Initialize Run directory</a></li>
+<li><a href="#I-2.-Pre-process-raw-fastq---Clean">I-2. Pre-process raw fastq - Clean</a></li>
+<li><a href="#I-3.-Run-Dragen-pipeline">I-3. Run Dragen pipeline</a></li>
+<li><a href="#I-4.-Run-GATK-pipeline-on-parabricks">I-4. Run GATK pipeline on parabricks</a></li>
+</ul>
+</li>
+<li><a href="#STEP-II:-II_QC_AND_PROCESS_QC_RESULT">STEP II: II_QC_AND_PROCESS_QC_RESULT</a><ul>
+<li><a href="#Prerequisites">Prerequisites</a></li>
+<li><a href="#II-1.-QC-fastq-files">II-1. QC fastq files</a></li>
+<li><a href="#II-2.-QC-bam-files">II-2. QC bam files</a></li>
+<li><a href="#II-3.-Run-QC-extra">II-3. Run QC extra</a></li>
+<li><a href="#Prerequisites">Prerequisites</a></li>
+</ul>
+</li>
+<li><a href="#STEP-III:-III_TOPUP_CASES">STEP III: III_TOPUP_CASES</a><ul>
+<li><a href="#Prerequisites">Prerequisites</a></li>
+<li><a href="#III-1.-Run-Dragen-pipeline">III-1. Run Dragen pipeline</a></li>
+<li><a href="#III-2.-Run-GATK-pipeline-on-parabricks">III-2. Run GATK pipeline on parabricks</a></li>
+<li><a href="#III-3.-QC-bam-files">III-3. QC bam files </a></li>
+<li><a href="#III-4.-Run-QC-extra">III-4. Run QC extra</a></li>
+</ul>
+</li>
+<li><a href="#Contributing">Contributing</a></li>
+</ul>
+<h2 id="step-i-i_main_flow">STEP I: I_MAIN_FLOW</h2>
+<p>The main flow is implemented from bcl files to vcf files.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>All scripts are saved in <code>/dragennfs/area1/analysis/script/I_MAIN_FLOW</code></p>
+<pre><code class="lang-sh">cd <span class="hljs-regexp">/dragennfs/</span>area1<span class="hljs-regexp">/analysis/</span>script<span class="hljs-regexp">/I_MAIN_FLOW</span>
+</code></pre>
+<p align="center">
+    <a href="https://drive.google.com/open?id=10vs_y8riMtFCMtPiGWqg4aopGIOQfDyb">
+        <img src="step1.png">
+    </a>
+</p>
+### I-1. Initialize Run directory
+
+Create the hierachy of directory for the Run (given by <code>$RUN_ID</code> i.e <code>200427_A00858_0036_AH5Y37DSXY</code>) in <code>/dragennfs/area4/analysis/$RUN_ID/</code>.
+
+Run bcl2fastq to convert bcl files to fastq files saved in folder <code>/dragennfs/area4/analysis/$RUN_ID/fastq_raw</code>.
+
+<code>sh
+bash 1_initialization.sh $RUN_ID</code>
+<p align="center">
+    <a href="https://drive.google.com/open?id=10vs_y8riMtFCMtPiGWqg4aopGIOQfDyb">
+        <img src="directory.png">
+    </a>
+</p>
+
+<p>In case of errors in sample name, use script <code>fix_fastq_raw.sh</code> to fix. Command:</p>
+<pre><code class="lang-sh">bash fix_fastq_raw<span class="hljs-selector-class">.sh</span> <span class="hljs-variable">$RUN_ID</span>
+</code></pre>
+<h3 id="i-2-pre-process-raw-fastq-clean">I-2. Pre-process raw fastq - Clean</h3>
+<p>Clean the raw fastq files. The output is then stored in <code>/dragennfs/area4/analysis/$RUN_ID/fastq_clean/</code></p>
+<pre><code class="lang-sh">bash run_inParallel<span class="hljs-selector-class">.sh</span> <span class="hljs-number">2</span>_clean_fastq<span class="hljs-selector-class">.sh</span> <span class="hljs-variable">$RUN_ID</span>
+</code></pre>
+<h3 id="i-3-run-dragen-pipeline">I-3. Run Dragen pipeline</h3>
+<p>Run Dragen pipeline on the clean fastq files. The output is then stored in <code>/dragennfs/area4/analysis/$RUN_ID/pipelines/Dragen_v07.011.350.3.3.11/</code></p>
+<pre><code class="lang-sh">bash run_inTurn<span class="hljs-selector-class">.sh</span> <span class="hljs-number">3</span>_Dragenpipeline<span class="hljs-selector-class">.sh</span> <span class="hljs-variable">$RUN_ID</span>
+</code></pre>
+<h3 id="i-4-run-gatk-pipeline-on-parabricks">I-4. Run GATK pipeline on parabricks</h3>
+<p>Run GATK best practice pipeline on the clean fastq files. The output bam files are then stored in <code>/dragennfs/area4/analysis/$RUN_ID/pipelines/Bwa_mem/</code>. 
+The output gvcf files are then stored in <code>/dragennfs/area4/analysis/$RUN_ID/pipelines/Parabricks/GATK_v4.0/</code></p>
+<pre><code class="lang-sh">bash run_inTurn<span class="hljs-selector-class">.sh</span> <span class="hljs-number">4</span>_Parabricks_GATKpipeline<span class="hljs-selector-class">.sh</span> <span class="hljs-variable">$RUN_ID</span>
+</code></pre>
+<h2 id="step-ii-ii_qc_and_process_qc_result">STEP II: II_QC_AND_PROCESS_QC_RESULT</h2>
+<p>The QC step is implemented on processed files of Step I. </p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>All scripts are saved in <code>/dragennfs/area1/analysis/script/II_QC_AND_PROCESS_QC_RESULT</code></p>
+<pre><code class="lang-sh">cd <span class="hljs-regexp">/dragennfs/</span>area1<span class="hljs-regexp">/analysis/</span>script<span class="hljs-regexp">/II_QC_AND_PROCESS_QC_RESULT</span>
+</code></pre>
+<p align="center">
+    <a href="https://drive.google.com/open?id=10vs_y8riMtFCMtPiGWqg4aopGIOQfDyb">
+        <img src="step2.png">
+    </a>
+</p>
+
+<h3 id="ii-1-qc-fastq-files">II-1. QC fastq files</h3>
+<p>Run QC on the fastq files (raw and clean). The output is generated in <code>/dragennfs/area4/analysis/$RUN_ID/qc/</code>.</p>
+<pre><code class="lang-sh">bash run_inParallel<span class="hljs-selector-class">.sh</span> <span class="hljs-number">1</span>_QC_fastq<span class="hljs-selector-class">.sh</span> <span class="hljs-variable">$RUN_ID</span>
+</code></pre>
+<p>To quickly collect infomation for the report table (sheet Run_1_9: reads, Q20, Q30) use the command</p>
+<pre><code class="lang-sh">bash <span class="hljs-number">3</span>_Collect_fastQC_info<span class="hljs-selector-class">.sh</span> <span class="hljs-variable">$RUN_ID</span>
+</code></pre>
+<p>In case of error in counting base pair, use <code>count_bp.sh</code> and <code>collect_bp.sh</code> to fix. Command:</p>
+<pre><code class="lang-sh">bash run_inTurn<span class="hljs-selector-class">.sh</span> count_bp<span class="hljs-selector-class">.sh</span> <span class="hljs-variable">$RUN_ID</span>
+bash collect_bp<span class="hljs-selector-class">.sh</span> <span class="hljs-variable">$RUN_ID</span>
+</code></pre>
+<h3 id="ii-2-qc-bam-files">II-2. QC bam files</h3>
+<p>Run QC on the bam files. The output is then stored in <code>/dragennfs/area4/analysis/$RUN_ID/pipelines/Dragen_v07.011.350.3.3.11/</code></p>
+<pre><code class="lang-sh">bash run_inParallel<span class="hljs-selector-class">.sh</span> <span class="hljs-number">2</span>_QC_bam<span class="hljs-selector-class">.sh</span> <span class="hljs-variable">$RUN_ID</span>
+</code></pre>
+<p>To quickly collect infomation for the report table (sheet alignment: coverage 4x, 15x, over reference genome) use the command</p>
+<pre><code class="lang-sh">bash <span class="hljs-number">4</span>_Collect_bamQC_info<span class="hljs-selector-class">.sh</span> <span class="hljs-variable">$RUN_ID</span>
+</code></pre>
+<h3 id="ii-3-run-qc-extra">II-3. Run QC extra</h3>
+<p>Run extra QC for bam files and vcf files for further analysis ( pipeline on the clean fastq files. 
+The output is then stored in <code>/dragennfs/area4/analysis/$RUN_ID/pipelines/Dragen_v07.011.350.3.3.11/</code></p>
+<pre><code class="lang-sh">bash run_inParallel<span class="hljs-selector-class">.sh</span> <span class="hljs-number">5</span>_QC_extra<span class="hljs-selector-class">.sh</span> <span class="hljs-variable">$RUN_ID</span>
+</code></pre>
+<h2 id="step-iii-iii_topup_cases">STEP III: III_TOPUP_CASES</h2>
+<p>This step is for the topup cases of the Run. After step <a href="#I-1.-Initialize-Run-directory">I-1</a>, check <code>/dragennfs/area4/analysis/$RUN_ID/</code> if list_topup.csv exists.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>All scripts are saved in <code>/dragennfs/area1/analysis/script/III_TOPUP_CASES</code></p>
+<pre><code class="lang-sh">cd <span class="hljs-regexp">/dragennfs/</span>area1<span class="hljs-regexp">/analysis/</span>script<span class="hljs-regexp">/III_TOPUP_CASES</span>
+</code></pre>
+<p align="center">
+    <a href="https://drive.google.com/open?id=10vs_y8riMtFCMtPiGWqg4aopGIOQfDyb">
+        <img src="step3.png">
+    </a>
+</p>
+
+<p>Add two more columns (column for First_RUN_ID and Second_RUN_ID) to <code>/dragennfs/area4/analysis/$RUN_ID/list_topup.csv</code>.
+Example:</p>
+<pre><code>VN_01_00_0001   <span class="hljs-regexp">/dragennfs/</span>area1<span class="hljs-regexp">/analysis/</span><span class="hljs-number">190610</span>_A00858_0010_AHLHLYDSXX<span class="hljs-regexp">/        /</span>dragennfs<span class="hljs-regexp">/area3/</span>analysis<span class="hljs-regexp">/191218_A00858_0020_BHWTJ7DSXX/</span>
+VN_01_01_0002   <span class="hljs-regexp">/dragennfs/</span>area1<span class="hljs-regexp">/analysis/</span><span class="hljs-number">190610</span>_A00858_0010_AHLHLYDSXX<span class="hljs-regexp">/        /</span>dragennfs<span class="hljs-regexp">/area3/</span>analysis<span class="hljs-regexp">/191218_A00858_0020_BHWTJ7DSXX/</span>
+VN_01_01_0003   <span class="hljs-regexp">/dragennfs/</span>area1<span class="hljs-regexp">/analysis/</span><span class="hljs-number">190610</span>_A00858_0010_AHLHLYDSXX<span class="hljs-regexp">/        /</span>dragennfs<span class="hljs-regexp">/area3/</span>analysis<span class="hljs-regexp">/191218_A00858_0020_BHWTJ7DSXX/</span>
+VN_01_01_0004   <span class="hljs-regexp">/dragennfs/</span>area1<span class="hljs-regexp">/analysis/</span><span class="hljs-number">190610</span>_A00858_0010_AHLHLYDSXX<span class="hljs-regexp">/        /</span>dragennfs<span class="hljs-regexp">/area3/</span>analysis<span class="hljs-regexp">/191218_A00858_0020_BHWTJ7DSXX/</span>
+VN_01_01_0006   <span class="hljs-regexp">/dragennfs/</span>area1<span class="hljs-regexp">/analysis/</span><span class="hljs-number">190610</span>_A00858_0010_AHLHLYDSXX<span class="hljs-regexp">/        /</span>dragennfs<span class="hljs-regexp">/area3/</span>analysis<span class="hljs-regexp">/191218_A00858_0020_BHWTJ7DSXX/</span>
+VN_01_00_0007   <span class="hljs-regexp">/dragennfs/</span>area1<span class="hljs-regexp">/analysis/</span><span class="hljs-number">190610</span>_A00858_0010_AHLHLYDSXX<span class="hljs-regexp">/        /</span>dragennfs<span class="hljs-regexp">/area3/</span>analysis<span class="hljs-regexp">/191218_A00858_0020_BHWTJ7DSXX/</span>
+VN_01_01_0008   <span class="hljs-regexp">/dragennfs/</span>area1<span class="hljs-regexp">/analysis/</span><span class="hljs-number">190610</span>_A00858_0010_AHLHLYDSXX<span class="hljs-regexp">/        /</span>dragennfs<span class="hljs-regexp">/area3/</span>analysis<span class="hljs-regexp">/191218_A00858_0020_BHWTJ7DSXX/</span>
+</code></pre><h3 id="iii-1-run-dragen-pipeline">III-1. Run Dragen pipeline</h3>
+<p>Merge two bam files generated by dragen-aligner and run Dragen pipeline for the variant calling step. The output files are stored in
+<code>/dragennfs/area4/analysis/$RUN_ID/pipelines/Dragen_v07.011.350.3.3.11/topup_samples/</code></p>
+<pre><code class="lang-sh">bash run_inTurn<span class="hljs-selector-class">.sh</span> <span class="hljs-number">1</span>_Dragenpipeline<span class="hljs-selector-class">.sh</span> <span class="hljs-variable">$RUN_ID</span>
+</code></pre>
+<h3 id="iii-2-run-gatk-pipeline-on-parabricks">III-2. Run GATK pipeline on parabricks</h3>
+<p>Merge two bam files generated by bwa-mem and run GATK-HC for the variant calling step. The output files are then stored in
+<code>/dragennfs/area4/analysis/$RUN_ID/pipelines/Parabricks/GATK_v4.0/topup_samples/</code></p>
+<pre><code class="lang-sh">bash run_inTurn<span class="hljs-selector-class">.sh</span> <span class="hljs-number">2</span>_Parabricks_GATKpipeline_topup<span class="hljs-selector-class">.sh</span> <span class="hljs-variable">$RUN_ID</span>
+</code></pre>
+<h3 id="iii-3-qc-bam-files">III-3. QC bam files</h3>
+<p>Run QC on the bam files. The output is then stored in <code>/dragennfs/area4/analysis/$RUN_ID/pipelines/Dragen_v07.011.350.3.3.11/</code></p>
+<pre><code class="lang-sh">bash run_inParallel<span class="hljs-selector-class">.sh</span> <span class="hljs-number">3</span>_QC_bam<span class="hljs-selector-class">.sh</span> <span class="hljs-variable">$RUN_ID</span>
+</code></pre>
+<p>To quickly collect infomation for the report table (sheet alignment: coverage 4x, 15x, over reference genome) use the command</p>
+<pre><code class="lang-sh">bash <span class="hljs-number">4</span>_Collect_bamQC_info<span class="hljs-selector-class">.sh</span> <span class="hljs-variable">$RUN_ID</span>
+</code></pre>
+<h3 id="iii-4-run-qc-extra">III-4. Run QC extra</h3>
+<p>Run extra QC for bam files and vcf files for further analysis ( pipeline on the clean fastq files. The output is then stored in
+<code>/dragennfs/area4/analysis/$RUN_ID/pipelines/Dragen_v07.011.350.3.3.11/</code></p>
+<pre><code class="lang-sh">bash run_inParallel<span class="hljs-selector-class">.sh</span> <span class="hljs-number">5</span>_QC_extra<span class="hljs-selector-class">.sh</span> <span class="hljs-variable">$RUN_ID</span>
+</code></pre>
+<h2 id="contributing">Contributing</h2>
+<ul>
+<li><strong>Ha Trang - trangth18</strong> - <em>Initial work</em> </li>
+<li><strong>Tuan Do - tuandn8</strong> - <em>combine code and extract info</em> </li>
+<li><strong>Tuan Nguyen - tuannt44</strong> - <em>combine code and extract info</em> </li>
+<li><strong>Hau Le -hauld1</strong> - <em>Corresponding and responsibility</em> </li>
+</ul>
+<h2 id="license">License</h2>
+<p>This project is licensed under the MIT License - see the <a href="LICENSE.md">LICENSE.md</a> file for details</p>

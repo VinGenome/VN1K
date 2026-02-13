@@ -1,0 +1,264 @@
+VN_03_00_0799_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_00_0799_01_01/after/VN_03_00_0799_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 394104848
+GC content: 40
+Q20 394017852
+Q30 386695306
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_00_0799_01_01/after/VN_03_00_0799_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 394104848
+GC content 40
+Q20 390983511
+Q30 360727617
+VN_03_01_0800_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_01_0800_01_01/after/VN_03_01_0800_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 248959831
+GC content: 40
+Q20 248904182
+Q30 244186170
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_01_0800_01_01/after/VN_03_01_0800_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 248959831
+GC content 40
+Q20 247384952
+Q30 229292490
+VN_03_01_0802_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_01_0802_01_01/after/VN_03_01_0802_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 201140320
+GC content: 40
+Q20 201097431
+Q30 197370525
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_01_0802_01_01/after/VN_03_01_0802_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 201140320
+GC content 40
+Q20 200024780
+Q30 186655852
+VN_03_00_0803_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_00_0803_01_01/after/VN_03_00_0803_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 330503477
+GC content: 40
+Q20 330433488
+Q30 324127204
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_00_0803_01_01/after/VN_03_00_0803_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 330503477
+GC content 40
+Q20 328529163
+Q30 306540974
+VN_03_01_0804_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_01_0804_01_01/after/VN_03_01_0804_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 341898979
+GC content: 40
+Q20 341834406
+Q30 335279590
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_01_0804_01_01/after/VN_03_01_0804_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 341898979
+GC content 40
+Q20 339699667
+Q30 315164923
+VN_03_01_0805_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_01_0805_01_01/after/VN_03_01_0805_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 246762199
+GC content: 40
+Q20 246694756
+Q30 241841353
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_01_0805_01_01/after/VN_03_01_0805_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 246762199
+GC content 40
+Q20 244297026
+Q30 224767614
+VN_03_00_0806_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_00_0806_01_01/after/VN_03_00_0806_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 284265665
+GC content: 40
+Q20 284202603
+Q30 278514862
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_00_0806_01_01/after/VN_03_00_0806_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 284265665
+GC content 40
+Q20 281406581
+Q30 258013522
+VN_03_00_0807_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_00_0807_01_01/after/VN_03_00_0807_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 300112965
+GC content: 40
+Q20 300057143
+Q30 294431134
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_00_0807_01_01/after/VN_03_00_0807_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 300112965
+GC content 40
+Q20 298141363
+Q30 277007367
+VN_03_01_0808_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_01_0808_01_01/after/VN_03_01_0808_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 269174815
+GC content: 40
+Q20 269123866
+Q30 263793699
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_01_0808_01_01/after/VN_03_01_0808_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 269174815
+GC content 40
+Q20 266476395
+Q30 244356252
+VN_01_00_0809_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_00_0809_01_01/after/VN_01_00_0809_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 665404861
+GC content: 40
+Q20 665268164
+Q30 651956832
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_00_0809_01_01/after/VN_01_00_0809_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 665404861
+GC content 40
+Q20 660422104
+Q30 611676869
+VN_01_00_0810_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_00_0810_01_01/after/VN_01_00_0810_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 336786653
+GC content: 40
+Q20 336706296
+Q30 330473120
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_00_0810_01_01/after/VN_01_00_0810_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 336786653
+GC content 40
+Q20 334475780
+Q30 310552635
+VN_01_00_0811_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_00_0811_01_01/after/VN_01_00_0811_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 308619109
+GC content: 40
+Q20 308544010
+Q30 302796133
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_00_0811_01_01/after/VN_01_00_0811_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 308619109
+GC content 40
+Q20 306333867
+Q30 284419000
+VN_01_00_0812_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_00_0812_01_01/after/VN_01_00_0812_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 313859855
+GC content: 40
+Q20 313804286
+Q30 307862847
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_00_0812_01_01/after/VN_01_00_0812_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 313859855
+GC content 40
+Q20 311729788
+Q30 289359978
+VN_01_00_0814_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_00_0814_01_01/after/VN_01_00_0814_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 412729234
+GC content: 40
+Q20 412634549
+Q30 405003596
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_00_0814_01_01/after/VN_01_00_0814_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 412729234
+GC content 40
+Q20 410209939
+Q30 383932594
+VN_01_00_0816_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_00_0816_01_01/after/VN_01_00_0816_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 244403143
+GC content: 40
+Q20 244348320
+Q30 239653327
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_00_0816_01_01/after/VN_01_00_0816_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 244403143
+GC content 39
+Q20 241592224
+Q30 219726635
+VN_01_00_0817_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_00_0817_01_01/after/VN_01_00_0817_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 318977053
+GC content: 40
+Q20 318909329
+Q30 312931150
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_00_0817_01_01/after/VN_01_00_0817_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 318977053
+GC content 40
+Q20 314072922
+Q30 278501944
+VN_01_00_0818_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_00_0818_01_01/after/VN_01_00_0818_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 314142237
+GC content: 40
+Q20 314065992
+Q30 308008749
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_00_0818_01_01/after/VN_01_00_0818_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 314142237
+GC content 40
+Q20 311872718
+Q30 288690837
+VN_01_01_0819_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_01_0819_01_01/after/VN_01_01_0819_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 350828578
+GC content: 40
+Q20 350751547
+Q30 344375589
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_01_0819_01_01/after/VN_01_01_0819_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 350828578
+GC content 40
+Q20 349549688
+Q30 328946628
+VN_01_01_0820_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_01_0820_01_01/after/VN_01_01_0820_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 357493946
+GC content: 40
+Q20 357420095
+Q30 350754877
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_01_0820_01_01/after/VN_01_01_0820_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 357493946
+GC content 40
+Q20 354977713
+Q30 328840511
+VN_01_01_0821_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_01_0821_01_01/after/VN_01_01_0821_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 332513422
+GC content: 40
+Q20 332443867
+Q30 326329629
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_01_0821_01_01/after/VN_01_01_0821_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 332513422
+GC content 40
+Q20 330836037
+Q30 310205779
+VN_01_00_0822_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_00_0822_01_01/after/VN_01_00_0822_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 461845450
+GC content: 40
+Q20 461746262
+Q30 453207417
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_00_0822_01_01/after/VN_01_00_0822_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 461845450
+GC content 39
+Q20 456827263
+Q30 418845747
+VN_01_00_0823_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_00_0823_01_01/after/VN_01_00_0823_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 320771805
+GC content: 40
+Q20 320696649
+Q30 314568098
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_01_00_0823_01_01/after/VN_01_00_0823_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 320771805
+GC content 40
+Q20 318392833
+Q30 294805681
+VN_03_00_0825_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_00_0825_01_01/after/VN_03_00_0825_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 397474177
+GC content: 40
+Q20 397386363
+Q30 389725200
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_00_0825_01_01/after/VN_03_00_0825_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 397474177
+GC content 40
+Q20 394739801
+Q30 366763043
+VN_03_00_0826_01_01
+File 1: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_00_0826_01_01/after/VN_03_00_0826_01_01_R1.filtered.trimmed_fastqc.zip
+Total Sequences: 396535050
+GC content: 40
+Q20 396451455
+Q30 388623958
+File 2: /dragennfs/area4/analysis/200825_A00858_0047_AHFGGHDSXY/qc/VN_03_00_0826_01_01/after/VN_03_00_0826_01_01_R2.filtered.trimmed_fastqc.zip
+Total Sequences 396535050
+GC content 39
+Q20 391885400
+Q30 357840529

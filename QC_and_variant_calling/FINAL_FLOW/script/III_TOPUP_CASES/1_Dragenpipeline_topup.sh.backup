@@ -1,0 +1,23 @@
+Picard_root="/dragennfs/area1/analysis/picard/"
+GATK_root="/home/shared/tools/gatk-4.1.2.0/"
+
+sample="$1"
+first_run="$2"
+second_run="$3"
+
+echo "$sample"
+
+first_root="${first_run}""/pipelines/Dragen_v07.011.350.3.3.11/"
+second_root="${second_run}""/pipelines/Dragen_v07.011.350.3.3.11/"
+
+Result_root="${second_root}""topup_samples/""${sample}/"
+
+[[ ! -f "${second_root}""topup_samples/" ]] && mkdir "${second_root}""topup_samples/"
+mkdir "${Result_root}"
+
+java -jar "${Picard_root}"picard.jar MergeSamFiles I="${first_root}""${sample}"_01_01/"${sample}"_01_01.bam I="${second_root}""${sample}"_02_01/"${sample}"_02_01.bam O="${Result_root}""${sample}".merged.bam
+
+# For case like sample 0077 uses run 02 and run 03
+# java -jar "${Picard_root}"picard.jar MergeSamFiles I="${first_root}""${sample}"_02_01/"${sample}"_02_01.bam I="${second_root}""${sample}"_03_01/"${sample}"_03_01.bam O="${Result_root}""${sample}".merged.bam
+
+dragen -r /staging/Refs/ --output-directory "${Result_root}" --output-file-prefix "${sample}" -b "${Result_root}""${sample}".merged.bam --enable-variant-caller true --vc-sample-name "${sample}" --enable-duplicate-marking true --vc-emit-ref-confidence GVCF --enable-cnv true --cnv-enable-self-normalization true --enable-map-align true --ht-alt-aware-validate true
