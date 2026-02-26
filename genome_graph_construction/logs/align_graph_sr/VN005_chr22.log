@@ -1,0 +1,6 @@
+Guessing that results/indexes/chr22/vn_pangenome.chr22.shortread.zipcodes is Short Read Zipcodes
+Guessing that results/indexes/chr22/vn_pangenome.chr22.xg is XG
+warning[vg::Watchdog]: Thread 1 has been checked in for 10 seconds processing: A00858:10:HLHLYDSXX:2:2148:31232:35978, A00858:10:HLHLYDSXX:2:2148:31232:35978
+warning[vg::Watchdog]: Thread 1 finally checked out after 1537 seconds and 32 kb memory growth processing: A00858:10:HLHLYDSXX:2:2148:31232:35978, A00858:10:HLHLYDSXX:2:2148:31232:35978
+warning[vg::Watchdog]: Thread 9 has been checked in for 10 seconds processing: A00858:10:HLHLYDSXX:3:2603:14986:22279, A00858:10:HLHLYDSXX:3:2603:14986:22279
+warning[vg::Watchdog]: Thread 9 finally checked out after 570 seconds and 0 kb memory growth processing: A00858:10:HLHLYDSXX:3:2603:14986:22279, A00858:10:HLHLYDSXX:3:2603:14986:22279

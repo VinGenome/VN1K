@@ -1,0 +1,33 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##contig=<ID=chr22,length=50818468>
+##INFO=<ID=AT,Number=R,Type=String,Description="Allele Traversal as path in graph">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Total Depth">
+##FORMAT=<ID=AD,Number=.,Type=Integer,Description="Allelic depths for the ref and alt alleles in the order listed">
+##FORMAT=<ID=MAD,Number=1,Type=Integer,Description="Minimum site allele depth">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read Depth">
+##FORMAT=<ID=GL,Number=G,Type=Float,Description="Genotype Likelihood, log10-scaled likelihoods of the data given the called genotype for each possible genotype generated from the reference and alternate alleles given the sample ploidy">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality, the Phred-scaled probability estimate of the called genotype">
+##FORMAT=<ID=GP,Number=1,Type=Float,Description="Genotype Probability, the log-scaled posterior probability of the called genotype">
+##FORMAT=<ID=XD,Number=1,Type=Float,Description="eXpected Depth, background coverage as used for the Poisson model">
+##FILTER=<ID=lowad,Description="Variant does not meet minimum allele read support threshold of 1">
+##FILTER=<ID=lowdepth,Description="Variant has read depth less than 4">
+##SAMPLE=<ID=HG02080>
+##INFO=<ID=OLD_MULTIALLELIC,Number=1,Type=String,Description="Original chr:pos:ref:alt encoding">
+##bcftools_normVersion=1.21+htslib-1.21
+##bcftools_normCommand=norm -m -any -f results/backbone/ref_by_chrom/chr22.fa -Oz -o results/novel_calling/baseline_sr/HG02080/chr22/normalized.vcf.gz; Date=Wed Jan 14 11:08:59 2026
+##bcftools_viewVersion=1.21+htslib-1.21
+##bcftools_viewCommand=view -f PASS -i abs(strlen(ALT)-strlen(REF))>=50 -Oz -o results/novel_calling/baseline_sr/HG02080/chr22/sv_unannot.vcf.gz results/novel_calling/baseline_sr/HG02080/chr22/normalized.vcf.gz; Date=Wed Jan 14 11:09:01 2026
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=SVLEN,Number=1,Type=Integer,Description="Difference in length between REF and ALT alleles">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##bcftools_viewVersion=1.20+htslib-1.20
+##bcftools_viewCommand=view -c 1 /home/giangvm1/bit_bucket/pangenom/pipeline/old_code/genome_graph_mc_pipeline/results/called_variants/novel_calling_baseline_sr/HG02080/chr22_sv.vcf.gz; Date=Wed Jan 14 15:12:22 2026
+##bcftools_filterVersion=1.20+htslib-1.20
+##bcftools_filterCommand=filter -i '(SVTYPE=="DEL" || SVTYPE=="INS") & ABS(SVLEN) >=50'; Date=Wed Jan 14 15:12:22 2026
+##bcftools_viewCommand=view -o /home/giangvm1/bit_bucket/pangenom/pipeline/old_code/genome_graph_mc_pipeline/scripts/old_upsets/old_upsets/processed_vcfs/HG02080_novel_calling_baseline_sr.vcf; Date=Wed Jan 14 15:12:22 2026
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	HG02080_novel_calling_baseline_sr
+chr22	23622665	>738209>1639660	TTTTCATAGAGACCATTTAAAAAAGAATATGAAAATGCTACAATTAAAAATAGTCATGA	T	151.801	PASS	AT=>738209>1771898>738210>738211>1639660,>738209>1639660,>738209>1771898>1639660;DP=9;OLD_MULTIALLELIC=chr22:23622665:TTTTCATAGAGACCATTTAAAAAAGAATATGAAAATGCTACAATTAAAAATAGTCATGA/T/TTTTCATAGAGACCATTTAAAAAA;SVTYPE=DEL;SVLEN=-58;AC=1;AN=1	GT:DP:GL	1/.:9:-21.8775,-9.67562,-19.3653
+chr22	43589280	>1362165>1639541	CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAGTACAG	C	261.002	PASS	AT=>1362165>1362166>1362167>1639541,>1362165>1639541;DP=13;SVTYPE=DEL;SVLEN=-50;AC=2;AN=2	GT:DP:AD:GL:GQ:GP:XD:MAD	1/1:13:0,13:-30.1992,-8.1693,-4.57623:35:-1.09887:32.2876:13

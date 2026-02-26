@@ -1,0 +1,4 @@
+/home/giangvm1/bit_bucket/pangenom/pipeline/old_code/genome_graph_mc_pipeline/results/called_variants/linear_sr/HG02059.vcf.gz,linear_sr,HG02059
+/home/giangvm1/bit_bucket/pangenom/pipeline/old_code/genome_graph_mc_pipeline/results/called_variants/linear_sr/HG02080.vcf.gz,linear_sr,HG02080
+/home/giangvm1/bit_bucket/pangenom/pipeline/old_code/genome_graph_mc_pipeline/results/called_variants/graph_sr/HG02059.vcf.gz,graph_sr,HG02059
+/home/giangvm1/bit_bucket/pangenom/pipeline/old_code/genome_graph_mc_pipeline/results/called_variants/graph_sr/HG02080.vcf.gz,graph_sr,HG02080

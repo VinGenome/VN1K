@@ -1,0 +1,21 @@
+decompose v0.5
+
+options:     input VCF file        results/called_variants/vg_call_baseline_sr/HG02080/chr22.vcf.gz
+         [s] smart decomposition   false (experimental)
+         [o] output VCF file       -
+
+
+stats: no. variants                 : 0
+       no. biallelic variants       : 0
+       no. multiallelic variants    : 0
+
+       no. additional biallelics    : 0
+       total no. of biallelics      : 0
+
+Time elapsed: 0.00s
+
+Writing to /tmp/bcftools.sDCggj
+Lines   total/split/joined/realigned/removed/skipped:	0/0/0/0/0/0
+Merging 0 temporary files
+Done
+Cleaning

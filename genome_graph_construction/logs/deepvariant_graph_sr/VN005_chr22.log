@@ -1,0 +1,1329 @@
+2026-01-16 10:31:36.904923: I external/local_tsl/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2026-01-16 10:31:36.909549: I external/local_tsl/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2026-01-16 10:31:36.959662: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-01-16 10:31:37.921898: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+I0116 10:31:40.074514 140291937005568 run_deepvariant.py:621] Creating a directory for intermediate results in /output/tmp_chr22
+
+***** Intermediate results will be written to /output/tmp_chr22 in docker. ****
+
+
+***** Running the command:*****
+time seq 0 7 | parallel -q --halt 2 --line-buffer /opt/deepvariant/bin/make_examples --mode calling --ref "/ref/chr22.fa" --reads "/input/chr22.surjected.sorted.bam" --examples "/output/tmp_chr22/make_examples.tfrecord@8.gz" --checkpoint "/opt/models/wgs" --gvcf "/output/tmp_chr22/gvcf.tfrecord@8.gz" --task {}
+
+I0116 10:31:40.075222 140291937005568 run_deepvariant.py:857] env = {'HOSTNAME': '02ca6286a1ca', 'PWD': '/opt/deepvariant', 'HOME': '/', 'DV_BIN_PATH': '/opt/deepvariant/bin', 'TF_USE_LEGACY_KERAS': '1', 'SHLVL': '1', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/deepvariant/bin:/opt/conda/envs/bio/bin', '_': '/usr/bin/python3', 'LC_CTYPE': 'C.UTF-8', 'TF2_BEHAVIOR': '1', 'TPU_ML_PLATFORM': 'Tensorflow', 'TF_CPP_MIN_LOG_LEVEL': '1'}
+2026-01-16 10:31:43.745301: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-01-16 10:31:43.671973: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-01-16 10:31:43.770856: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-01-16 10:31:43.764694: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-01-16 10:31:43.822778: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-01-16 10:31:43.955450: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-01-16 10:31:43.967217: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-01-16 10:31:43.941240: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/tmp/Bazel.runfiles_rd9b1zhv/runfiles/absl_py/absl/flags/_validators.py:233: UserWarning: Flag --mode has a non-None default value; therefore, mark_flag_as_required will pass even if flag is not specified in the command line!
+  mark_flag_as_required(flag_name, flag_values)
+I0116 10:31:46.126277 140283420848128 make_examples_core.py:3773] model.example_info filename: /opt/models/wgs/model.example_info.json
+I0116 10:31:46.126598 140283420848128 make_examples_core.py:3777] Reading flags_for_calling from /opt/models/wgs/model.example_info.json
+I0116 10:31:46.126914 140283420848128 make_examples_core.py:3794] Flags for calling:
+call_small_model_examples: True
+pileup_image_height: 100
+pileup_image_width: 221
+small_model_indel_gq_threshold: 28
+small_model_snp_gq_threshold: 20
+small_model_vaf_context_window_size: 51
+track_ref_reads: True
+trained_small_model_path: /opt/smallmodels/wgs
+I0116 10:31:46.127740 140283420848128 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+W0116 10:31:46.127816 140283420848128 make_examples_core.py:464] No non-empty sample name found in the input reads. DeepVariant will use default as the sample name. You can also provide a sample name with the --sample_name argument.
+I0116 10:31:46.129215 140283420848128 dv_utils.py:333] From /opt/models/wgs/model.example_info.json: Shape of input examples: [100, 221, 7], Channels of input examples: [1, 2, 3, 4, 5, 6, 19].
+I0116 10:31:46.129436 140283420848128 make_examples_options.py:1204] Parsing AUX Fields: []
+W0116 10:31:46.129675 140283420848128 make_examples_options.py:1255] Automatically setting --trim_reads_for_pileup to True because --alt_aligned_pileup is set.
+/tmp/Bazel.runfiles_4h91nml0/runfiles/absl_py/absl/flags/_validators.py:233: UserWarning: Flag --mode has a non-None default value; therefore, mark_flag_as_required will pass even if flag is not specified in the command line!
+  mark_flag_as_required(flag_name, flag_values)
+I0116 10:31:46.093234 139973552287744 make_examples_core.py:3773] model.example_info filename: /opt/models/wgs/model.example_info.json
+I0116 10:31:46.093543 139973552287744 make_examples_core.py:3777] Reading flags_for_calling from /opt/models/wgs/model.example_info.json
+I0116 10:31:46.093873 139973552287744 make_examples_core.py:3794] Flags for calling:
+call_small_model_examples: True
+pileup_image_height: 100
+pileup_image_width: 221
+small_model_indel_gq_threshold: 28
+small_model_snp_gq_threshold: 20
+small_model_vaf_context_window_size: 51
+track_ref_reads: True
+trained_small_model_path: /opt/smallmodels/wgs
+I0116 10:31:46.094659 139973552287744 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+W0116 10:31:46.094731 139973552287744 make_examples_core.py:464] No non-empty sample name found in the input reads. DeepVariant will use default as the sample name. You can also provide a sample name with the --sample_name argument.
+I0116 10:31:46.096027 139973552287744 dv_utils.py:333] From /opt/models/wgs/model.example_info.json: Shape of input examples: [100, 221, 7], Channels of input examples: [1, 2, 3, 4, 5, 6, 19].
+I0116 10:31:46.096236 139973552287744 make_examples_options.py:1204] Parsing AUX Fields: []
+W0116 10:31:46.096464 139973552287744 make_examples_options.py:1255] Automatically setting --trim_reads_for_pileup to True because --alt_aligned_pileup is set.
+I0116 10:31:46.126950 139973552287744 make_examples_core.py:367] Task 0/8: Preparing inputs
+I0116 10:31:46.127535 139973552287744 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:46.128169 139973552287744 make_examples_core.py:367] Task 0/8: Common contigs are ['chr22']
+/tmp/Bazel.runfiles_kvi42hlh/runfiles/absl_py/absl/flags/_validators.py:233: UserWarning: Flag --mode has a non-None default value; therefore, mark_flag_as_required will pass even if flag is not specified in the command line!
+  mark_flag_as_required(flag_name, flag_values)
+I0116 10:31:46.111831 140511434571776 make_examples_core.py:3773] model.example_info filename: /opt/models/wgs/model.example_info.json
+I0116 10:31:46.112159 140511434571776 make_examples_core.py:3777] Reading flags_for_calling from /opt/models/wgs/model.example_info.json
+I0116 10:31:46.112477 140511434571776 make_examples_core.py:3794] Flags for calling:
+call_small_model_examples: True
+pileup_image_height: 100
+pileup_image_width: 221
+small_model_indel_gq_threshold: 28
+small_model_snp_gq_threshold: 20
+small_model_vaf_context_window_size: 51
+track_ref_reads: True
+trained_small_model_path: /opt/smallmodels/wgs
+I0116 10:31:46.113302 140511434571776 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+W0116 10:31:46.113375 140511434571776 make_examples_core.py:464] No non-empty sample name found in the input reads. DeepVariant will use default as the sample name. You can also provide a sample name with the --sample_name argument.
+I0116 10:31:46.114698 140511434571776 dv_utils.py:333] From /opt/models/wgs/model.example_info.json: Shape of input examples: [100, 221, 7], Channels of input examples: [1, 2, 3, 4, 5, 6, 19].
+I0116 10:31:46.114910 140511434571776 make_examples_options.py:1204] Parsing AUX Fields: []
+W0116 10:31:46.115142 140511434571776 make_examples_options.py:1255] Automatically setting --trim_reads_for_pileup to True because --alt_aligned_pileup is set.
+/tmp/Bazel.runfiles_5cg_a39j/runfiles/absl_py/absl/flags/_validators.py:233: UserWarning: Flag --mode has a non-None default value; therefore, mark_flag_as_required will pass even if flag is not specified in the command line!
+  mark_flag_as_required(flag_name, flag_values)
+I0116 10:31:46.118615 140164982493184 make_examples_core.py:3773] model.example_info filename: /opt/models/wgs/model.example_info.json
+I0116 10:31:46.118982 140164982493184 make_examples_core.py:3777] Reading flags_for_calling from /opt/models/wgs/model.example_info.json
+I0116 10:31:46.119309 140164982493184 make_examples_core.py:3794] Flags for calling:
+call_small_model_examples: True
+pileup_image_height: 100
+pileup_image_width: 221
+small_model_indel_gq_threshold: 28
+small_model_snp_gq_threshold: 20
+small_model_vaf_context_window_size: 51
+track_ref_reads: True
+trained_small_model_path: /opt/smallmodels/wgs
+I0116 10:31:46.120157 140164982493184 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+W0116 10:31:46.120232 140164982493184 make_examples_core.py:464] No non-empty sample name found in the input reads. DeepVariant will use default as the sample name. You can also provide a sample name with the --sample_name argument.
+I0116 10:31:46.121566 140164982493184 dv_utils.py:333] From /opt/models/wgs/model.example_info.json: Shape of input examples: [100, 221, 7], Channels of input examples: [1, 2, 3, 4, 5, 6, 19].
+I0116 10:31:46.121788 140164982493184 make_examples_options.py:1204] Parsing AUX Fields: []
+W0116 10:31:46.122025 140164982493184 make_examples_options.py:1255] Automatically setting --trim_reads_for_pileup to True because --alt_aligned_pileup is set.
+I0116 10:31:46.162601 140283420848128 make_examples_core.py:367] Task 1/8: Preparing inputs
+I0116 10:31:46.163207 140283420848128 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:46.163897 140283420848128 make_examples_core.py:367] Task 1/8: Common contigs are ['chr22']
+I0116 10:31:46.243867 139973552287744 make_examples_core.py:367] Task 0/8: Starting from v0.9.0, --use_ref_for_cram is default to true. If you are using CRAM input, note that we will decode CRAM using the reference you passed in with --ref
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768559506.244121     235 sam_reader.cc:997] Setting HTS_OPT_BLOCK_SIZE to 134217728
+I0116 10:31:46.150585 140511434571776 make_examples_core.py:367] Task 6/8: Preparing inputs
+I0116 10:31:46.151173 140511434571776 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:46.151801 140511434571776 make_examples_core.py:367] Task 6/8: Common contigs are ['chr22']
+I0116 10:31:46.153345 140164982493184 make_examples_core.py:367] Task 3/8: Preparing inputs
+I0116 10:31:46.154018 140164982493184 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:46.154694 140164982493184 make_examples_core.py:367] Task 3/8: Common contigs are ['chr22']
+I0116 10:31:46.287923 140283420848128 make_examples_core.py:367] Task 1/8: Starting from v0.9.0, --use_ref_for_cram is default to true. If you are using CRAM input, note that we will decode CRAM using the reference you passed in with --ref
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768559506.288117     236 sam_reader.cc:997] Setting HTS_OPT_BLOCK_SIZE to 134217728
+I0116 10:31:46.313667 139973552287744 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:46.270170 140511434571776 make_examples_core.py:367] Task 6/8: Starting from v0.9.0, --use_ref_for_cram is default to true. If you are using CRAM input, note that we will decode CRAM using the reference you passed in with --ref
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768559506.270364     240 sam_reader.cc:997] Setting HTS_OPT_BLOCK_SIZE to 134217728
+I0116 10:31:46.333146 140511434571776 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:46.324004 140164982493184 make_examples_core.py:367] Task 3/8: Starting from v0.9.0, --use_ref_for_cram is default to true. If you are using CRAM input, note that we will decode CRAM using the reference you passed in with --ref
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768559506.324380     238 sam_reader.cc:997] Setting HTS_OPT_BLOCK_SIZE to 134217728
+I0116 10:31:46.350836 140283420848128 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+/tmp/Bazel.runfiles_zwgrmmbd/runfiles/absl_py/absl/flags/_validators.py:233: UserWarning: Flag --mode has a non-None default value; therefore, mark_flag_as_required will pass even if flag is not specified in the command line!
+  mark_flag_as_required(flag_name, flag_values)
+/tmp/Bazel.runfiles_p7lyi14v/runfiles/absl_py/absl/flags/_validators.py:233: UserWarning: Flag --mode has a non-None default value; therefore, mark_flag_as_required will pass even if flag is not specified in the command line!
+  mark_flag_as_required(flag_name, flag_values)
+I0116 10:31:46.382961 140639462100992 make_examples_core.py:3773] model.example_info filename: /opt/models/wgs/model.example_info.json
+I0116 10:31:46.383286 140639462100992 make_examples_core.py:3777] Reading flags_for_calling from /opt/models/wgs/model.example_info.json
+I0116 10:31:46.383577 140639462100992 make_examples_core.py:3794] Flags for calling:
+call_small_model_examples: True
+pileup_image_height: 100
+pileup_image_width: 221
+small_model_indel_gq_threshold: 28
+small_model_snp_gq_threshold: 20
+small_model_vaf_context_window_size: 51
+track_ref_reads: True
+trained_small_model_path: /opt/smallmodels/wgs
+I0116 10:31:46.384255 140639462100992 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+W0116 10:31:46.384522 140639462100992 make_examples_core.py:464] No non-empty sample name found in the input reads. DeepVariant will use default as the sample name. You can also provide a sample name with the --sample_name argument.
+I0116 10:31:46.385725 140639462100992 dv_utils.py:333] From /opt/models/wgs/model.example_info.json: Shape of input examples: [100, 221, 7], Channels of input examples: [1, 2, 3, 4, 5, 6, 19].
+I0116 10:31:46.385920 140639462100992 make_examples_options.py:1204] Parsing AUX Fields: []
+W0116 10:31:46.386124 140639462100992 make_examples_options.py:1255] Automatically setting --trim_reads_for_pileup to True because --alt_aligned_pileup is set.
+I0116 10:31:46.379505 139810517626880 make_examples_core.py:3773] model.example_info filename: /opt/models/wgs/model.example_info.json
+I0116 10:31:46.380019 139810517626880 make_examples_core.py:3777] Reading flags_for_calling from /opt/models/wgs/model.example_info.json
+I0116 10:31:46.380791 139810517626880 make_examples_core.py:3794] Flags for calling:
+call_small_model_examples: True
+pileup_image_height: 100
+pileup_image_width: 221
+small_model_indel_gq_threshold: 28
+small_model_snp_gq_threshold: 20
+small_model_vaf_context_window_size: 51
+track_ref_reads: True
+trained_small_model_path: /opt/smallmodels/wgs
+I0116 10:31:46.382012 139810517626880 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+W0116 10:31:46.382141 139810517626880 make_examples_core.py:464] No non-empty sample name found in the input reads. DeepVariant will use default as the sample name. You can also provide a sample name with the --sample_name argument.
+I0116 10:31:46.384613 139810517626880 dv_utils.py:333] From /opt/models/wgs/model.example_info.json: Shape of input examples: [100, 221, 7], Channels of input examples: [1, 2, 3, 4, 5, 6, 19].
+I0116 10:31:46.384987 139810517626880 make_examples_options.py:1204] Parsing AUX Fields: []
+W0116 10:31:46.385398 139810517626880 make_examples_options.py:1255] Automatically setting --trim_reads_for_pileup to True because --alt_aligned_pileup is set.
+/tmp/Bazel.runfiles_aeax5xi6/runfiles/absl_py/absl/flags/_validators.py:233: UserWarning: Flag --mode has a non-None default value; therefore, mark_flag_as_required will pass even if flag is not specified in the command line!
+  mark_flag_as_required(flag_name, flag_values)
+I0116 10:31:46.424209 140313907945472 make_examples_core.py:3773] model.example_info filename: /opt/models/wgs/model.example_info.json
+I0116 10:31:46.424538 140313907945472 make_examples_core.py:3777] Reading flags_for_calling from /opt/models/wgs/model.example_info.json
+I0116 10:31:46.424843 140313907945472 make_examples_core.py:3794] Flags for calling:
+call_small_model_examples: True
+pileup_image_height: 100
+pileup_image_width: 221
+small_model_indel_gq_threshold: 28
+small_model_snp_gq_threshold: 20
+small_model_vaf_context_window_size: 51
+track_ref_reads: True
+trained_small_model_path: /opt/smallmodels/wgs
+I0116 10:31:46.425666 140313907945472 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+W0116 10:31:46.425734 140313907945472 make_examples_core.py:464] No non-empty sample name found in the input reads. DeepVariant will use default as the sample name. You can also provide a sample name with the --sample_name argument.
+I0116 10:31:46.413768 140639462100992 make_examples_core.py:367] Task 2/8: Preparing inputs
+I0116 10:31:46.414295 140639462100992 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:46.415070 140639462100992 make_examples_core.py:367] Task 2/8: Common contigs are ['chr22']
+I0116 10:31:46.417196 140164982493184 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:46.426925 140313907945472 dv_utils.py:333] From /opt/models/wgs/model.example_info.json: Shape of input examples: [100, 221, 7], Channels of input examples: [1, 2, 3, 4, 5, 6, 19].
+I0116 10:31:46.427122 140313907945472 make_examples_options.py:1204] Parsing AUX Fields: []
+W0116 10:31:46.427328 140313907945472 make_examples_options.py:1255] Automatically setting --trim_reads_for_pileup to True because --alt_aligned_pileup is set.
+I0116 10:31:46.436043 139810517626880 make_examples_core.py:367] Task 7/8: Preparing inputs
+I0116 10:31:46.436931 139810517626880 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:46.438039 139810517626880 make_examples_core.py:367] Task 7/8: Common contigs are ['chr22']
+I0116 10:31:46.454428 140313907945472 make_examples_core.py:367] Task 4/8: Preparing inputs
+I0116 10:31:46.455004 140313907945472 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:46.455596 140313907945472 make_examples_core.py:367] Task 4/8: Common contigs are ['chr22']
+I0116 10:31:46.526819 140639462100992 make_examples_core.py:367] Task 2/8: Starting from v0.9.0, --use_ref_for_cram is default to true. If you are using CRAM input, note that we will decode CRAM using the reference you passed in with --ref
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768559506.527147     237 sam_reader.cc:997] Setting HTS_OPT_BLOCK_SIZE to 134217728
+I0116 10:31:46.572849 140313907945472 make_examples_core.py:367] Task 4/8: Starting from v0.9.0, --use_ref_for_cram is default to true. If you are using CRAM input, note that we will decode CRAM using the reference you passed in with --ref
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768559506.573177     239 sam_reader.cc:997] Setting HTS_OPT_BLOCK_SIZE to 134217728
+I0116 10:31:46.589540 140639462100992 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:46.630785 140313907945472 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:46.654981 139810517626880 make_examples_core.py:367] Task 7/8: Starting from v0.9.0, --use_ref_for_cram is default to true. If you are using CRAM input, note that we will decode CRAM using the reference you passed in with --ref
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768559506.655646     241 sam_reader.cc:997] Setting HTS_OPT_BLOCK_SIZE to 134217728
+/tmp/Bazel.runfiles_sf55c7_c/runfiles/absl_py/absl/flags/_validators.py:233: UserWarning: Flag --mode has a non-None default value; therefore, mark_flag_as_required will pass even if flag is not specified in the command line!
+  mark_flag_as_required(flag_name, flag_values)
+I0116 10:31:46.664510 139740115177472 make_examples_core.py:3773] model.example_info filename: /opt/models/wgs/model.example_info.json
+I0116 10:31:46.665041 139740115177472 make_examples_core.py:3777] Reading flags_for_calling from /opt/models/wgs/model.example_info.json
+I0116 10:31:46.665513 139740115177472 make_examples_core.py:3794] Flags for calling:
+call_small_model_examples: True
+pileup_image_height: 100
+pileup_image_width: 221
+small_model_indel_gq_threshold: 28
+small_model_snp_gq_threshold: 20
+small_model_vaf_context_window_size: 51
+track_ref_reads: True
+trained_small_model_path: /opt/smallmodels/wgs
+I0116 10:31:46.666735 139740115177472 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+W0116 10:31:46.666854 139740115177472 make_examples_core.py:464] No non-empty sample name found in the input reads. DeepVariant will use default as the sample name. You can also provide a sample name with the --sample_name argument.
+I0116 10:31:46.668943 139740115177472 dv_utils.py:333] From /opt/models/wgs/model.example_info.json: Shape of input examples: [100, 221, 7], Channels of input examples: [1, 2, 3, 4, 5, 6, 19].
+I0116 10:31:46.669292 139740115177472 make_examples_options.py:1204] Parsing AUX Fields: []
+W0116 10:31:46.669668 139740115177472 make_examples_options.py:1255] Automatically setting --trim_reads_for_pileup to True because --alt_aligned_pileup is set.
+I0116 10:31:46.709163 140283420848128 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:46.709522 140283420848128 make_examples_core.py:367] Task 1/8: Writing gvcf records to /output/tmp_chr22/gvcf.tfrecord-00001-of-00008.gz
+I0116 10:31:46.711499 140283420848128 make_examples_core.py:367] Task 1/8: Writing examples to /output/tmp_chr22/make_examples.tfrecord-00001-of-00008.gz
+I0116 10:31:46.711556 140283420848128 make_examples_core.py:367] Task 1/8: Overhead for preparing inputs: 0 seconds
+I0116 10:31:46.713698 139740115177472 make_examples_core.py:367] Task 5/8: Preparing inputs
+I0116 10:31:46.714592 139740115177472 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:46.715692 139740115177472 make_examples_core.py:367] Task 5/8: Common contigs are ['chr22']
+I0116 10:31:46.721479 140283420848128 make_examples_core.py:367] Task 1/8: 0 candidates (0 examples) [0.01s elapsed]
+I0116 10:31:46.752412 139810517626880 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:46.787649 139973552287744 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:46.788132 139973552287744 make_examples_core.py:367] Task 0/8: Writing gvcf records to /output/tmp_chr22/gvcf.tfrecord-00000-of-00008.gz
+I0116 10:31:46.791343 139973552287744 make_examples_core.py:367] Task 0/8: Writing examples to /output/tmp_chr22/make_examples.tfrecord-00000-of-00008.gz
+I0116 10:31:46.791449 139973552287744 make_examples_core.py:367] Task 0/8: Overhead for preparing inputs: 0 seconds
+I0116 10:31:46.809251 139973552287744 make_examples_core.py:367] Task 0/8: 0 candidates (0 examples) [0.02s elapsed]
+I0116 10:31:46.813044 140511434571776 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:46.813591 140511434571776 make_examples_core.py:367] Task 6/8: Writing gvcf records to /output/tmp_chr22/gvcf.tfrecord-00006-of-00008.gz
+I0116 10:31:46.816716 140511434571776 make_examples_core.py:367] Task 6/8: Writing examples to /output/tmp_chr22/make_examples.tfrecord-00006-of-00008.gz
+I0116 10:31:46.816821 140511434571776 make_examples_core.py:367] Task 6/8: Overhead for preparing inputs: 0 seconds
+I0116 10:31:46.834424 140511434571776 make_examples_core.py:367] Task 6/8: 0 candidates (0 examples) [0.02s elapsed]
+I0116 10:31:46.908194 139740115177472 make_examples_core.py:367] Task 5/8: Starting from v0.9.0, --use_ref_for_cram is default to true. If you are using CRAM input, note that we will decode CRAM using the reference you passed in with --ref
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768559506.908610     242 sam_reader.cc:997] Setting HTS_OPT_BLOCK_SIZE to 134217728
+I0116 10:31:46.994395 139740115177472 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:47.059097 140639462100992 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:47.059679 140639462100992 make_examples_core.py:367] Task 2/8: Writing gvcf records to /output/tmp_chr22/gvcf.tfrecord-00002-of-00008.gz
+I0116 10:31:47.062689 140639462100992 make_examples_core.py:367] Task 2/8: Writing examples to /output/tmp_chr22/make_examples.tfrecord-00002-of-00008.gz
+I0116 10:31:47.062793 140639462100992 make_examples_core.py:367] Task 2/8: Overhead for preparing inputs: 0 seconds
+I0116 10:31:47.066565 140164982493184 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:47.067043 140164982493184 make_examples_core.py:367] Task 3/8: Writing gvcf records to /output/tmp_chr22/gvcf.tfrecord-00003-of-00008.gz
+I0116 10:31:47.069999 140164982493184 make_examples_core.py:367] Task 3/8: Writing examples to /output/tmp_chr22/make_examples.tfrecord-00003-of-00008.gz
+I0116 10:31:47.070105 140164982493184 make_examples_core.py:367] Task 3/8: Overhead for preparing inputs: 0 seconds
+I0116 10:31:47.079706 140639462100992 make_examples_core.py:367] Task 2/8: 0 candidates (0 examples) [0.02s elapsed]
+I0116 10:31:47.086841 140164982493184 make_examples_core.py:367] Task 3/8: 0 candidates (0 examples) [0.02s elapsed]
+I0116 10:31:47.154411 140313907945472 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:47.155023 140313907945472 make_examples_core.py:367] Task 4/8: Writing gvcf records to /output/tmp_chr22/gvcf.tfrecord-00004-of-00008.gz
+I0116 10:31:47.158728 140313907945472 make_examples_core.py:367] Task 4/8: Writing examples to /output/tmp_chr22/make_examples.tfrecord-00004-of-00008.gz
+I0116 10:31:47.158834 140313907945472 make_examples_core.py:367] Task 4/8: Overhead for preparing inputs: 0 seconds
+I0116 10:31:47.176681 140313907945472 make_examples_core.py:367] Task 4/8: 0 candidates (0 examples) [0.02s elapsed]
+I0116 10:31:47.439447 139810517626880 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:47.440013 139810517626880 make_examples_core.py:367] Task 7/8: Writing gvcf records to /output/tmp_chr22/gvcf.tfrecord-00007-of-00008.gz
+I0116 10:31:47.443177 139810517626880 make_examples_core.py:367] Task 7/8: Writing examples to /output/tmp_chr22/make_examples.tfrecord-00007-of-00008.gz
+I0116 10:31:47.443284 139810517626880 make_examples_core.py:367] Task 7/8: Overhead for preparing inputs: 1 seconds
+I0116 10:31:47.461325 139810517626880 make_examples_core.py:367] Task 7/8: 0 candidates (0 examples) [0.02s elapsed]
+I0116 10:31:47.469157 139740115177472 genomics_reader.py:223] Reading /input/chr22.surjected.sorted.bam with NativeSamReader
+I0116 10:31:47.469610 139740115177472 make_examples_core.py:367] Task 5/8: Writing gvcf records to /output/tmp_chr22/gvcf.tfrecord-00005-of-00008.gz
+I0116 10:31:47.471858 139740115177472 make_examples_core.py:367] Task 5/8: Writing examples to /output/tmp_chr22/make_examples.tfrecord-00005-of-00008.gz
+I0116 10:31:47.471919 139740115177472 make_examples_core.py:367] Task 5/8: Overhead for preparing inputs: 0 seconds
+I0116 10:31:47.482982 139740115177472 make_examples_core.py:367] Task 5/8: 0 candidates (0 examples) [0.01s elapsed]
+I0116 10:32:26.042075 139810517626880 make_examples_core.py:367] Task 7/8: 2002 candidates (1778 examples) [38.58s elapsed]
+I0116 10:32:26.837677 140639462100992 make_examples_core.py:367] Task 2/8: 2088 candidates (1909 examples) [39.76s elapsed]
+I0116 10:32:26.845837 140511434571776 make_examples_core.py:367] Task 6/8: 2024 candidates (1856 examples) [40.01s elapsed]
+I0116 10:32:27.058332 140164982493184 make_examples_core.py:367] Task 3/8: 2020 candidates (2007 examples) [39.97s elapsed]
+I0116 10:32:27.290046 139740115177472 make_examples_core.py:367] Task 5/8: 2024 candidates (1806 examples) [39.81s elapsed]
+I0116 10:32:27.415908 139973552287744 make_examples_core.py:367] Task 0/8: 2047 candidates (2004 examples) [40.61s elapsed]
+I0116 10:32:28.836818 140283420848128 make_examples_core.py:367] Task 1/8: 2001 candidates (2001 examples) [42.12s elapsed]
+I0116 10:32:34.459563 140313907945472 make_examples_core.py:367] Task 4/8: 2056 candidates (1819 examples) [47.28s elapsed]
+I0116 10:32:50.638376 140164982493184 make_examples_core.py:367] Task 3/8: 4039 candidates (3721 examples) [23.58s elapsed]
+I0116 10:32:51.474784 140283420848128 make_examples_core.py:367] Task 1/8: 4004 candidates (3576 examples) [22.64s elapsed]
+I0116 10:32:51.680667 140639462100992 make_examples_core.py:367] Task 2/8: 4061 candidates (3580 examples) [24.84s elapsed]
+I0116 10:32:51.695112 140511434571776 make_examples_core.py:367] Task 6/8: 4034 candidates (3504 examples) [24.85s elapsed]
+I0116 10:32:54.039908 139973552287744 make_examples_core.py:367] Task 0/8: 4067 candidates (3604 examples) [26.62s elapsed]
+I0116 10:32:55.343080 139810517626880 make_examples_core.py:367] Task 7/8: 4050 candidates (3437 examples) [29.30s elapsed]
+I0116 10:32:56.685712 139740115177472 make_examples_core.py:367] Task 5/8: 4015 candidates (3558 examples) [29.40s elapsed]
+I0116 10:33:07.864802 140313907945472 make_examples_core.py:367] Task 4/8: 4051 candidates (3517 examples) [33.40s elapsed]
+I0116 10:33:10.837966 140164982493184 make_examples_core.py:367] Task 3/8: 6057 candidates (5139 examples) [20.20s elapsed]
+I0116 10:33:12.019010 140283420848128 make_examples_core.py:367] Task 1/8: 6012 candidates (4934 examples) [20.54s elapsed]
+I0116 10:33:12.271369 140639462100992 make_examples_core.py:367] Task 2/8: 6015 candidates (4923 examples) [20.59s elapsed]
+I0116 10:33:12.786925 140511434571776 make_examples_core.py:367] Task 6/8: 6089 candidates (5001 examples) [21.09s elapsed]
+I0116 10:33:12.961316 139973552287744 make_examples_core.py:367] Task 0/8: 6012 candidates (5112 examples) [18.92s elapsed]
+I0116 10:33:15.643476 139810517626880 make_examples_core.py:367] Task 7/8: 6101 candidates (4766 examples) [20.30s elapsed]
+I0116 10:33:17.212624 139740115177472 make_examples_core.py:367] Task 5/8: 6017 candidates (5064 examples) [20.53s elapsed]
+I0116 10:33:31.801926 140164982493184 make_examples_core.py:367] Task 3/8: 8021 candidates (6729 examples) [20.96s elapsed]
+I0116 10:33:34.636728 140283420848128 make_examples_core.py:367] Task 1/8: 8004 candidates (6634 examples) [22.62s elapsed]
+I0116 10:33:34.646520 139973552287744 make_examples_core.py:367] Task 0/8: 8052 candidates (6776 examples) [21.68s elapsed]
+I0116 10:33:35.824466 140511434571776 make_examples_core.py:367] Task 6/8: 8022 candidates (6650 examples) [23.04s elapsed]
+I0116 10:33:37.732944 140639462100992 make_examples_core.py:367] Task 2/8: 8038 candidates (6611 examples) [25.46s elapsed]
+I0116 10:33:37.677226 139810517626880 make_examples_core.py:367] Task 7/8: 8052 candidates (6301 examples) [22.03s elapsed]
+I0116 10:33:38.404218 140313907945472 make_examples_core.py:367] Task 4/8: 6021 candidates (4897 examples) [30.54s elapsed]
+I0116 10:33:39.426429 139740115177472 make_examples_core.py:367] Task 5/8: 8018 candidates (6619 examples) [22.21s elapsed]
+I0116 10:33:55.803633 139973552287744 make_examples_core.py:367] Task 0/8: 10048 candidates (8637 examples) [21.16s elapsed]
+I0116 10:33:57.319701 140283420848128 make_examples_core.py:367] Task 1/8: 10005 candidates (8356 examples) [22.68s elapsed]
+I0116 10:33:57.975059 140164982493184 make_examples_core.py:367] Task 3/8: 10042 candidates (8446 examples) [26.17s elapsed]
+I0116 10:33:58.302522 139810517626880 make_examples_core.py:367] Task 7/8: 10010 candidates (8086 examples) [20.62s elapsed]
+I0116 10:33:59.387150 140511434571776 make_examples_core.py:367] Task 6/8: 10027 candidates (8464 examples) [23.56s elapsed]
+I0116 10:34:00.874185 140639462100992 make_examples_core.py:367] Task 2/8: 10047 candidates (8502 examples) [23.14s elapsed]
+I0116 10:34:03.853615 140313907945472 make_examples_core.py:367] Task 4/8: 8020 candidates (6569 examples) [25.45s elapsed]
+I0116 10:34:06.708868 139740115177472 make_examples_core.py:367] Task 5/8: 10066 candidates (8465 examples) [27.28s elapsed]
+I0116 10:34:19.330571 140283420848128 make_examples_core.py:367] Task 1/8: 12011 candidates (10078 examples) [22.01s elapsed]
+I0116 10:34:18.757035 139810517626880 make_examples_core.py:367] Task 7/8: 12003 candidates (9694 examples) [20.45s elapsed]
+I0116 10:34:19.451824 139973552287744 make_examples_core.py:367] Task 0/8: 12021 candidates (10378 examples) [23.65s elapsed]
+I0116 10:34:20.850573 140164982493184 make_examples_core.py:367] Task 3/8: 12040 candidates (10233 examples) [22.88s elapsed]
+I0116 10:34:23.442584 140511434571776 make_examples_core.py:367] Task 6/8: 12047 candidates (10205 examples) [24.05s elapsed]
+I0116 10:34:23.893210 140639462100992 make_examples_core.py:367] Task 2/8: 12012 candidates (10158 examples) [23.02s elapsed]
+I0116 10:34:26.947148 139740115177472 make_examples_core.py:367] Task 5/8: 12006 candidates (10160 examples) [20.24s elapsed]
+I0116 10:34:27.111958 140313907945472 make_examples_core.py:367] Task 4/8: 10035 candidates (8381 examples) [23.26s elapsed]
+I0116 10:34:45.662396 139810517626880 make_examples_core.py:367] Task 7/8: 14006 candidates (11375 examples) [26.90s elapsed]
+I0116 10:34:47.055803 140283420848128 make_examples_core.py:367] Task 1/8: 14075 candidates (11888 examples) [27.72s elapsed]
+I0116 10:34:47.099636 140164982493184 make_examples_core.py:367] Task 3/8: 14047 candidates (11855 examples) [26.25s elapsed]
+I0116 10:34:49.360272 139973552287744 make_examples_core.py:367] Task 0/8: 14045 candidates (11966 examples) [29.91s elapsed]
+I0116 10:34:49.536811 140511434571776 make_examples_core.py:367] Task 6/8: 14013 candidates (11920 examples) [26.09s elapsed]
+I0116 10:34:49.850731 140639462100992 make_examples_core.py:367] Task 2/8: 14003 candidates (11753 examples) [25.96s elapsed]
+I0116 10:34:52.583396 140313907945472 make_examples_core.py:367] Task 4/8: 12014 candidates (10114 examples) [25.47s elapsed]
+I0116 10:34:55.428031 139740115177472 make_examples_core.py:367] Task 5/8: 14091 candidates (12108 examples) [28.48s elapsed]
+I0116 10:35:04.703444 139810517626880 make_examples_core.py:367] Task 7/8: 16041 candidates (12494 examples) [19.04s elapsed]
+I0116 10:35:06.865104 140164982493184 make_examples_core.py:367] Task 3/8: 16057 candidates (12855 examples) [19.77s elapsed]
+I0116 10:35:08.789468 140639462100992 make_examples_core.py:367] Task 2/8: 16000 candidates (12634 examples) [18.94s elapsed]
+I0116 10:35:08.493509 140511434571776 make_examples_core.py:367] Task 6/8: 16030 candidates (12895 examples) [18.96s elapsed]
+I0116 10:35:09.006018 139973552287744 make_examples_core.py:367] Task 0/8: 16017 candidates (13133 examples) [19.65s elapsed]
+I0116 10:35:10.283603 140283420848128 make_examples_core.py:367] Task 1/8: 16066 candidates (13201 examples) [23.23s elapsed]
+I0116 10:35:15.567980 139740115177472 make_examples_core.py:367] Task 5/8: 16036 candidates (13039 examples) [20.14s elapsed]
+I0116 10:35:21.065139 140313907945472 make_examples_core.py:367] Task 4/8: 14037 candidates (11768 examples) [28.48s elapsed]
+I0116 10:35:23.124545 139810517626880 make_examples_core.py:367] Task 7/8: 18004 candidates (13498 examples) [18.42s elapsed]
+I0116 10:35:27.219873 139973552287744 make_examples_core.py:367] Task 0/8: 18049 candidates (14211 examples) [18.21s elapsed]
+I0116 10:35:28.129822 140511434571776 make_examples_core.py:367] Task 6/8: 18086 candidates (14043 examples) [19.64s elapsed]
+I0116 10:35:29.135251 140164982493184 make_examples_core.py:367] Task 3/8: 18021 candidates (14014 examples) [22.27s elapsed]
+I0116 10:35:29.546401 140283420848128 make_examples_core.py:367] Task 1/8: 18083 candidates (14383 examples) [19.26s elapsed]
+I0116 10:35:29.713095 140639462100992 make_examples_core.py:367] Task 2/8: 18069 candidates (13934 examples) [20.92s elapsed]
+I0116 10:35:38.436740 139740115177472 make_examples_core.py:367] Task 5/8: 18067 candidates (14311 examples) [22.87s elapsed]
+I0116 10:35:40.692783 140313907945472 make_examples_core.py:367] Task 4/8: 16021 candidates (12713 examples) [19.63s elapsed]
+I0116 10:35:46.688780 139973552287744 make_examples_core.py:367] Task 0/8: 20030 candidates (15786 examples) [19.47s elapsed]
+I0116 10:35:46.896271 139810517626880 make_examples_core.py:367] Task 7/8: 20072 candidates (15235 examples) [23.77s elapsed]
+I0116 10:35:53.461495 140283420848128 make_examples_core.py:367] Task 1/8: 20093 candidates (15806 examples) [23.91s elapsed]
+I0116 10:35:53.674987 140639462100992 make_examples_core.py:367] Task 2/8: 20090 candidates (15532 examples) [23.96s elapsed]
+I0116 10:35:55.709083 140164982493184 make_examples_core.py:367] Task 3/8: 20092 candidates (15872 examples) [26.57s elapsed]
+I0116 10:35:56.712294 140511434571776 make_examples_core.py:367] Task 6/8: 20021 candidates (15740 examples) [28.58s elapsed]
+I0116 10:36:02.262135 139740115177472 make_examples_core.py:367] Task 5/8: 20049 candidates (15788 examples) [23.83s elapsed]
+I0116 10:36:05.311864 140313907945472 make_examples_core.py:367] Task 4/8: 18021 candidates (14036 examples) [24.62s elapsed]
+I0116 10:36:07.383777 139973552287744 make_examples_core.py:367] Task 0/8: 22006 candidates (17499 examples) [20.69s elapsed]
+I0116 10:36:11.262398 139810517626880 make_examples_core.py:367] Task 7/8: 22063 candidates (16933 examples) [24.37s elapsed]
+I0116 10:36:15.048808 140164982493184 make_examples_core.py:367] Task 3/8: 22105 candidates (17386 examples) [19.34s elapsed]
+I0116 10:36:15.699939 140283420848128 make_examples_core.py:367] Task 1/8: 22004 candidates (17319 examples) [22.24s elapsed]
+I0116 10:36:16.230330 140639462100992 make_examples_core.py:367] Task 2/8: 22030 candidates (17157 examples) [22.56s elapsed]
+I0116 10:36:20.217156 140511434571776 make_examples_core.py:367] Task 6/8: 22044 candidates (17263 examples) [23.50s elapsed]
+I0116 10:36:25.290082 139740115177472 make_examples_core.py:367] Task 5/8: 22027 candidates (17241 examples) [23.03s elapsed]
+I0116 10:36:32.867027 139973552287744 make_examples_core.py:367] Task 0/8: 24036 candidates (19284 examples) [25.48s elapsed]
+I0116 10:36:35.694648 140313907945472 make_examples_core.py:367] Task 4/8: 20102 candidates (15609 examples) [30.38s elapsed]
+I0116 10:36:41.006512 140639462100992 make_examples_core.py:367] Task 2/8: 24001 candidates (18941 examples) [24.78s elapsed]
+I0116 10:36:42.021380 140283420848128 make_examples_core.py:367] Task 1/8: 24052 candidates (19125 examples) [26.32s elapsed]
+I0116 10:36:43.469338 139810517626880 make_examples_core.py:367] Task 7/8: 24115 candidates (18899 examples) [32.21s elapsed]
+I0116 10:36:46.952442 140164982493184 make_examples_core.py:367] Task 3/8: 24019 candidates (19100 examples) [31.90s elapsed]
+I0116 10:36:47.373177 140511434571776 make_examples_core.py:367] Task 6/8: 24009 candidates (18923 examples) [27.16s elapsed]
+I0116 10:36:51.569924 139740115177472 make_examples_core.py:367] Task 5/8: 24057 candidates (18997 examples) [26.28s elapsed]
+I0116 10:36:55.995575 140313907945472 make_examples_core.py:367] Task 4/8: 22023 candidates (17115 examples) [20.30s elapsed]
+I0116 10:37:04.201108 139973552287744 make_examples_core.py:367] Task 0/8: 26029 candidates (21189 examples) [31.33s elapsed]
+I0116 10:37:10.913478 139810517626880 make_examples_core.py:367] Task 7/8: 26112 candidates (20703 examples) [27.44s elapsed]
+I0116 10:37:12.926511 140639462100992 make_examples_core.py:367] Task 2/8: 26052 candidates (20797 examples) [31.92s elapsed]
+I0116 10:37:13.246374 140283420848128 make_examples_core.py:367] Task 1/8: 26039 candidates (20951 examples) [31.22s elapsed]
+I0116 10:37:13.207592 140164982493184 make_examples_core.py:367] Task 3/8: 26013 candidates (20999 examples) [26.25s elapsed]
+I0116 10:37:17.025721 140511434571776 make_examples_core.py:367] Task 6/8: 26048 candidates (20812 examples) [29.65s elapsed]
+I0116 10:37:17.519483 139740115177472 make_examples_core.py:367] Task 5/8: 26041 candidates (20893 examples) [25.95s elapsed]
+I0116 10:37:25.379212 139973552287744 make_examples_core.py:367] Task 0/8: 28004 candidates (22823 examples) [21.18s elapsed]
+I0116 10:37:28.256137 140313907945472 make_examples_core.py:367] Task 4/8: 24035 candidates (18829 examples) [32.26s elapsed]
+I0116 10:37:32.215709 139810517626880 make_examples_core.py:367] Task 7/8: 28107 candidates (22404 examples) [21.30s elapsed]
+I0116 10:37:36.223627 140283420848128 make_examples_core.py:367] Task 1/8: 28049 candidates (22642 examples) [22.98s elapsed]
+I0116 10:37:36.596529 140511434571776 make_examples_core.py:367] Task 6/8: 28054 candidates (22483 examples) [19.57s elapsed]
+I0116 10:37:36.195918 140164982493184 make_examples_core.py:367] Task 3/8: 28040 candidates (22458 examples) [22.99s elapsed]
+I0116 10:37:37.193974 139740115177472 make_examples_core.py:367] Task 5/8: 28025 candidates (22540 examples) [19.67s elapsed]
+I0116 10:37:37.901222 140639462100992 make_examples_core.py:367] Task 2/8: 28009 candidates (22442 examples) [24.97s elapsed]
+I0116 10:37:54.164523 139973552287744 make_examples_core.py:367] Task 0/8: 30001 candidates (24355 examples) [28.78s elapsed]
+I0116 10:37:54.109505 139810517626880 make_examples_core.py:367] Task 7/8: 30080 candidates (24062 examples) [21.89s elapsed]
+I0116 10:37:56.998287 140313907945472 make_examples_core.py:367] Task 4/8: 26041 candidates (20720 examples) [28.74s elapsed]
+I0116 10:37:59.079651 139740115177472 make_examples_core.py:367] Task 5/8: 30007 candidates (23829 examples) [21.89s elapsed]
+I0116 10:38:00.913367 140639462100992 make_examples_core.py:367] Task 2/8: 30082 candidates (23901 examples) [23.01s elapsed]
+I0116 10:38:01.168763 140283420848128 make_examples_core.py:367] Task 1/8: 30013 candidates (24125 examples) [24.94s elapsed]
+I0116 10:38:03.611612 140164982493184 make_examples_core.py:367] Task 3/8: 30027 candidates (23955 examples) [27.42s elapsed]
+I0116 10:38:17.145014 140313907945472 make_examples_core.py:367] Task 4/8: 28077 candidates (22445 examples) [20.15s elapsed]
+I0116 10:38:21.374731 140639462100992 make_examples_core.py:367] Task 2/8: 32056 candidates (24994 examples) [20.46s elapsed]
+I0116 10:38:22.435741 139973552287744 make_examples_core.py:367] Task 0/8: 32122 candidates (25450 examples) [28.27s elapsed]
+I0116 10:38:22.614324 139810517626880 make_examples_core.py:367] Task 7/8: 32070 candidates (25143 examples) [28.50s elapsed]
+I0116 10:38:31.775138 140511434571776 make_examples_core.py:367] Task 6/8: 30117 candidates (23666 examples) [55.18s elapsed]
+I0116 10:38:32.604659 140283420848128 make_examples_core.py:367] Task 1/8: 32058 candidates (25188 examples) [31.44s elapsed]
+I0116 10:38:34.276012 139740115177472 make_examples_core.py:367] Task 5/8: 32055 candidates (24859 examples) [35.20s elapsed]
+I0116 10:38:40.163863 140313907945472 make_examples_core.py:367] Task 4/8: 30126 candidates (23803 examples) [23.02s elapsed]
+I0116 10:38:43.519734 140164982493184 make_examples_core.py:367] Task 3/8: 32033 candidates (25129 examples) [39.91s elapsed]
+I0116 10:38:44.720474 140639462100992 make_examples_core.py:367] Task 2/8: 34019 candidates (25989 examples) [23.35s elapsed]
+I0116 10:38:49.089396 139810517626880 make_examples_core.py:367] Task 7/8: 34010 candidates (26264 examples) [26.47s elapsed]
+I0116 10:38:50.930599 139973552287744 make_examples_core.py:367] Task 0/8: 34007 candidates (26568 examples) [28.49s elapsed]
+I0116 10:38:57.713885 140283420848128 make_examples_core.py:367] Task 1/8: 34017 candidates (26124 examples) [25.11s elapsed]
+I0116 10:39:00.210041 139740115177472 make_examples_core.py:367] Task 5/8: 34020 candidates (25725 examples) [25.93s elapsed]
+I0116 10:39:01.370822 140511434571776 make_examples_core.py:367] Task 6/8: 32047 candidates (24840 examples) [29.60s elapsed]
+I0116 10:39:03.491456 140313907945472 make_examples_core.py:367] Task 4/8: 32040 candidates (24705 examples) [23.33s elapsed]
+I0116 10:39:08.045698 140164982493184 make_examples_core.py:367] Task 3/8: 34052 candidates (26151 examples) [24.53s elapsed]
+I0116 10:39:11.599405 140639462100992 make_examples_core.py:367] Task 2/8: 36127 candidates (26974 examples) [26.88s elapsed]
+I0116 10:39:12.517709 139810517626880 make_examples_core.py:367] Task 7/8: 36017 candidates (27205 examples) [23.43s elapsed]
+I0116 10:39:21.309045 140283420848128 make_examples_core.py:367] Task 1/8: 36065 candidates (27192 examples) [23.59s elapsed]
+I0116 10:39:23.213529 139973552287744 make_examples_core.py:367] Task 0/8: 36006 candidates (27741 examples) [32.28s elapsed]
+I0116 10:39:30.091976 139740115177472 make_examples_core.py:367] Task 5/8: 36025 candidates (26727 examples) [29.88s elapsed]
+I0116 10:39:29.888225 140511434571776 make_examples_core.py:367] Task 6/8: 34044 candidates (25892 examples) [28.52s elapsed]
+I0116 10:39:32.723339 140313907945472 make_examples_core.py:367] Task 4/8: 34037 candidates (25556 examples) [29.23s elapsed]
+I0116 10:39:33.586806 140639462100992 make_examples_core.py:367] Task 2/8: 38002 candidates (27972 examples) [21.99s elapsed]
+I0116 10:39:36.686519 140164982493184 make_examples_core.py:367] Task 3/8: 36065 candidates (27127 examples) [28.64s elapsed]
+I0116 10:39:41.121192 139810517626880 make_examples_core.py:367] Task 7/8: 38063 candidates (28143 examples) [28.60s elapsed]
+I0116 10:39:51.850038 140283420848128 make_examples_core.py:367] Task 1/8: 38017 candidates (28353 examples) [30.54s elapsed]
+I0116 10:39:55.449811 140511434571776 make_examples_core.py:367] Task 6/8: 36053 candidates (27003 examples) [25.56s elapsed]
+I0116 10:39:57.371740 140313907945472 make_examples_core.py:367] Task 4/8: 36021 candidates (26658 examples) [24.65s elapsed]
+I0116 10:39:57.524804 139973552287744 make_examples_core.py:367] Task 0/8: 38046 candidates (29069 examples) [34.31s elapsed]
+I0116 10:39:58.957894 139740115177472 make_examples_core.py:367] Task 5/8: 38096 candidates (27557 examples) [28.87s elapsed]
+I0116 10:40:00.251217 140639462100992 make_examples_core.py:367] Task 2/8: 40042 candidates (29472 examples) [26.66s elapsed]
+I0116 10:40:03.180974 139810517626880 make_examples_core.py:367] Task 7/8: 40048 candidates (29527 examples) [22.06s elapsed]
+I0116 10:40:12.534529 140164982493184 make_examples_core.py:367] Task 3/8: 38014 candidates (28402 examples) [35.85s elapsed]
+I0116 10:40:16.672583 140283420848128 make_examples_core.py:367] Task 1/8: 40090 candidates (29962 examples) [24.82s elapsed]
+I0116 10:40:19.598401 140511434571776 make_examples_core.py:367] Task 6/8: 38076 candidates (27931 examples) [24.15s elapsed]
+I0116 10:40:22.530431 139973552287744 make_examples_core.py:367] Task 0/8: 40040 candidates (30238 examples) [25.01s elapsed]
+I0116 10:40:27.711241 139740115177472 make_examples_core.py:367] Task 5/8: 40088 candidates (28956 examples) [28.75s elapsed]
+I0116 10:40:31.186213 140639462100992 make_examples_core.py:367] Task 2/8: 42046 candidates (30526 examples) [30.93s elapsed]
+I0116 10:40:32.306538 139810517626880 make_examples_core.py:367] Task 7/8: 42038 candidates (30490 examples) [29.13s elapsed]
+I0116 10:40:39.711176 140313907945472 make_examples_core.py:367] Task 4/8: 38010 candidates (27934 examples) [42.34s elapsed]
+I0116 10:40:44.150352 140164982493184 make_examples_core.py:367] Task 3/8: 40029 candidates (29707 examples) [31.62s elapsed]
+I0116 10:40:46.488027 139973552287744 make_examples_core.py:367] Task 0/8: 42071 candidates (31131 examples) [23.96s elapsed]
+I0116 10:40:52.957189 140511434571776 make_examples_core.py:367] Task 6/8: 40013 candidates (29169 examples) [33.36s elapsed]
+I0116 10:40:54.236999 139740115177472 make_examples_core.py:367] Task 5/8: 42004 candidates (29841 examples) [26.53s elapsed]
+I0116 10:40:55.950166 140283420848128 make_examples_core.py:367] Task 1/8: 42001 candidates (30740 examples) [39.28s elapsed]
+I0116 10:40:59.399561 139810517626880 make_examples_core.py:367] Task 7/8: 44082 candidates (31549 examples) [27.09s elapsed]
+I0116 10:41:04.898448 140639462100992 make_examples_core.py:367] Task 2/8: 44041 candidates (31443 examples) [33.71s elapsed]
+I0116 10:41:08.138224 140313907945472 make_examples_core.py:367] Task 4/8: 40024 candidates (29285 examples) [28.43s elapsed]
+I0116 10:41:08.940256 140164982493184 make_examples_core.py:367] Task 3/8: 42053 candidates (30789 examples) [24.79s elapsed]
+I0116 10:41:15.855065 139973552287744 make_examples_core.py:367] Task 0/8: 44040 candidates (32116 examples) [29.37s elapsed]
+I0116 10:41:19.897820 140283420848128 make_examples_core.py:367] Task 1/8: 44011 candidates (31688 examples) [23.95s elapsed]
+I0116 10:41:21.850457 140511434571776 make_examples_core.py:367] Task 6/8: 42146 candidates (30313 examples) [28.89s elapsed]
+I0116 10:41:23.961509 139810517626880 make_examples_core.py:367] Task 7/8: 46021 candidates (32408 examples) [24.56s elapsed]
+I0116 10:41:28.376369 139740115177472 make_examples_core.py:367] Task 5/8: 44036 candidates (30839 examples) [34.14s elapsed]
+I0116 10:41:32.427271 140313907945472 make_examples_core.py:367] Task 4/8: 42011 candidates (30373 examples) [24.29s elapsed]
+I0116 10:41:36.090344 140164982493184 make_examples_core.py:367] Task 3/8: 44027 candidates (31781 examples) [27.15s elapsed]
+I0116 10:41:36.570639 140639462100992 make_examples_core.py:367] Task 2/8: 46030 candidates (32271 examples) [31.67s elapsed]
+I0116 10:41:39.831247 139973552287744 make_examples_core.py:367] Task 0/8: 46097 candidates (33236 examples) [23.98s elapsed]
+I0116 10:41:40.951911 140511434571776 make_examples_core.py:367] Task 6/8: 44122 candidates (31114 examples) [19.10s elapsed]
+I0116 10:41:57.013727 140283420848128 make_examples_core.py:367] Task 1/8: 46025 candidates (32730 examples) [37.12s elapsed]
+I0116 10:42:00.129613 139973552287744 make_examples_core.py:367] Task 0/8: 48006 candidates (34184 examples) [20.30s elapsed]
+I0116 10:42:00.653899 139740115177472 make_examples_core.py:367] Task 5/8: 46029 candidates (31796 examples) [32.28s elapsed]
+I0116 10:42:00.996805 140164982493184 make_examples_core.py:367] Task 3/8: 46020 candidates (32867 examples) [24.91s elapsed]
+I0116 10:42:01.657332 139810517626880 make_examples_core.py:367] Task 7/8: 48040 candidates (33462 examples) [37.70s elapsed]
+I0116 10:42:03.131453 140313907945472 make_examples_core.py:367] Task 4/8: 44142 candidates (31221 examples) [30.70s elapsed]
+I0116 10:42:06.235365 140511434571776 make_examples_core.py:367] Task 6/8: 46087 candidates (31942 examples) [25.28s elapsed]
+I0116 10:42:09.139487 140639462100992 make_examples_core.py:367] Task 2/8: 48009 candidates (33280 examples) [32.57s elapsed]
+I0116 10:42:23.655218 140164982493184 make_examples_core.py:367] Task 3/8: 48010 candidates (33859 examples) [22.66s elapsed]
+I0116 10:42:24.956487 139810517626880 make_examples_core.py:367] Task 7/8: 50068 candidates (34539 examples) [23.30s elapsed]
+I0116 10:42:25.613641 140283420848128 make_examples_core.py:367] Task 1/8: 48005 candidates (33652 examples) [28.60s elapsed]
+I0116 10:42:27.467569 140313907945472 make_examples_core.py:367] Task 4/8: 46042 candidates (32093 examples) [24.34s elapsed]
+I0116 10:42:28.725801 139973552287744 make_examples_core.py:367] Task 0/8: 50045 candidates (35360 examples) [28.60s elapsed]
+I0116 10:42:32.592838 139740115177472 make_examples_core.py:367] Task 5/8: 48054 candidates (32761 examples) [31.94s elapsed]
+I0116 10:42:35.267940 140511434571776 make_examples_core.py:367] Task 6/8: 48040 candidates (32811 examples) [29.03s elapsed]
+I0116 10:42:41.606913 140639462100992 make_examples_core.py:367] Task 2/8: 50063 candidates (34467 examples) [32.47s elapsed]
+I0116 10:42:46.668888 140283420848128 make_examples_core.py:367] Task 1/8: 50089 candidates (34735 examples) [21.05s elapsed]
+I0116 10:42:47.144733 139973552287744 make_examples_core.py:367] Task 0/8: 52001 candidates (36873 examples) [18.42s elapsed]
+I0116 10:42:50.123449 139810517626880 make_examples_core.py:367] Task 7/8: 52020 candidates (35545 examples) [25.17s elapsed]
+I0116 10:42:50.459896 140164982493184 make_examples_core.py:367] Task 3/8: 50007 candidates (34836 examples) [26.80s elapsed]
+I0116 10:42:52.802818 139740115177472 make_examples_core.py:367] Task 5/8: 50018 candidates (33870 examples) [20.21s elapsed]
+I0116 10:43:02.630302 140313907945472 make_examples_core.py:367] Task 4/8: 48027 candidates (33172 examples) [35.16s elapsed]
+I0116 10:43:10.538960 139973552287744 make_examples_core.py:367] Task 0/8: 54001 candidates (37839 examples) [23.39s elapsed]
+I0116 10:43:10.917427 140511434571776 make_examples_core.py:367] Task 6/8: 50019 candidates (33864 examples) [35.65s elapsed]
+I0116 10:43:11.814548 140283420848128 make_examples_core.py:367] Task 1/8: 52099 candidates (35605 examples) [25.15s elapsed]
+I0116 10:43:11.898858 140639462100992 make_examples_core.py:367] Task 2/8: 52023 candidates (35532 examples) [30.29s elapsed]
+I0116 10:43:15.170426 139810517626880 make_examples_core.py:367] Task 7/8: 54039 candidates (36838 examples) [25.05s elapsed]
+I0116 10:43:21.046816 140164982493184 make_examples_core.py:367] Task 3/8: 52103 candidates (36127 examples) [30.59s elapsed]
+I0116 10:43:23.026728 139740115177472 make_examples_core.py:367] Task 5/8: 52133 candidates (34944 examples) [30.22s elapsed]
+I0116 10:43:27.337243 140313907945472 make_examples_core.py:367] Task 4/8: 50003 candidates (34199 examples) [24.71s elapsed]
+I0116 10:43:33.338308 140283420848128 make_examples_core.py:367] Task 1/8: 54130 candidates (37034 examples) [21.52s elapsed]
+I0116 10:43:34.628146 140511434571776 make_examples_core.py:367] Task 6/8: 52013 candidates (34805 examples) [23.71s elapsed]
+I0116 10:43:38.887197 140639462100992 make_examples_core.py:367] Task 2/8: 54082 candidates (36871 examples) [26.99s elapsed]
+I0116 10:43:39.359638 139973552287744 make_examples_core.py:367] Task 0/8: 56032 candidates (38863 examples) [28.82s elapsed]
+I0116 10:43:41.639168 139810517626880 make_examples_core.py:367] Task 7/8: 56014 candidates (37905 examples) [26.47s elapsed]
+I0116 10:43:45.869234 139740115177472 make_examples_core.py:367] Task 5/8: 54120 candidates (36259 examples) [22.84s elapsed]
+I0116 10:43:47.520924 140164982493184 make_examples_core.py:367] Task 3/8: 54075 candidates (37340 examples) [26.47s elapsed]
+I0116 10:43:55.256339 140283420848128 make_examples_core.py:367] Task 1/8: 56027 candidates (38107 examples) [21.92s elapsed]
+I0116 10:43:59.880104 140313907945472 make_examples_core.py:367] Task 4/8: 52093 candidates (35327 examples) [32.54s elapsed]
+I0116 10:44:02.158702 139973552287744 make_examples_core.py:367] Task 0/8: 58018 candidates (40221 examples) [22.80s elapsed]
+I0116 10:44:03.338231 140639462100992 make_examples_core.py:367] Task 2/8: 56060 candidates (37835 examples) [24.45s elapsed]
+I0116 10:44:06.667112 140511434571776 make_examples_core.py:367] Task 6/8: 54032 candidates (35837 examples) [32.04s elapsed]
+I0116 10:44:08.963884 139740115177472 make_examples_core.py:367] Task 5/8: 56036 candidates (37396 examples) [23.09s elapsed]
+I0116 10:44:12.783159 140164982493184 make_examples_core.py:367] Task 3/8: 56000 candidates (38275 examples) [25.26s elapsed]
+I0116 10:44:20.214238 140313907945472 make_examples_core.py:367] Task 4/8: 54000 candidates (36392 examples) [20.33s elapsed]
+I0116 10:44:21.693321 140283420848128 make_examples_core.py:367] Task 1/8: 58033 candidates (39041 examples) [26.44s elapsed]
+I0116 10:44:21.476779 139810517626880 make_examples_core.py:367] Task 7/8: 58080 candidates (39146 examples) [39.84s elapsed]
+I0116 10:44:31.241677 139973552287744 make_examples_core.py:367] Task 0/8: 60114 candidates (41390 examples) [29.08s elapsed]
+I0116 10:44:33.134524 140511434571776 make_examples_core.py:367] Task 6/8: 56069 candidates (37137 examples) [26.47s elapsed]
+I0116 10:44:35.061387 140639462100992 make_examples_core.py:367] Task 2/8: 58072 candidates (38687 examples) [31.72s elapsed]
+I0116 10:44:39.647531 139740115177472 make_examples_core.py:367] Task 5/8: 58034 candidates (38587 examples) [30.68s elapsed]
+I0116 10:44:45.881485 139810517626880 make_examples_core.py:367] Task 7/8: 60030 candidates (40289 examples) [24.40s elapsed]
+I0116 10:44:46.349749 140164982493184 make_examples_core.py:367] Task 3/8: 58105 candidates (39758 examples) [33.57s elapsed]
+I0116 10:44:48.502061 140283420848128 make_examples_core.py:367] Task 1/8: 60016 candidates (40384 examples) [26.81s elapsed]
+I0116 10:44:51.591521 139973552287744 make_examples_core.py:367] Task 0/8: 62028 candidates (42447 examples) [20.35s elapsed]
+I0116 10:44:58.204183 140639462100992 make_examples_core.py:367] Task 2/8: 60048 candidates (39931 examples) [23.14s elapsed]
+I0116 10:44:59.275811 140313907945472 make_examples_core.py:367] Task 4/8: 56009 candidates (37565 examples) [39.06s elapsed]
+I0116 10:45:00.033971 140511434571776 make_examples_core.py:367] Task 6/8: 58063 candidates (37937 examples) [26.90s elapsed]
+I0116 10:45:09.051019 139740115177472 make_examples_core.py:367] Task 5/8: 60051 candidates (40113 examples) [29.40s elapsed]
+I0116 10:45:11.989404 140164982493184 make_examples_core.py:367] Task 3/8: 60023 candidates (40704 examples) [25.64s elapsed]
+I0116 10:45:12.795808 139973552287744 make_examples_core.py:367] Task 0/8: 64053 candidates (43830 examples) [21.20s elapsed]
+I0116 10:45:14.574970 139810517626880 make_examples_core.py:367] Task 7/8: 62037 candidates (41364 examples) [28.69s elapsed]
+I0116 10:45:18.987614 140283420848128 make_examples_core.py:367] Task 1/8: 62058 candidates (41465 examples) [30.49s elapsed]
+I0116 10:45:24.093587 140313907945472 make_examples_core.py:367] Task 4/8: 58066 candidates (38627 examples) [24.82s elapsed]
+I0116 10:45:30.257471 140639462100992 make_examples_core.py:367] Task 2/8: 62026 candidates (40778 examples) [32.05s elapsed]
+I0116 10:45:36.928806 139810517626880 make_examples_core.py:367] Task 7/8: 64007 candidates (42353 examples) [22.35s elapsed]
+I0116 10:45:38.372884 140164982493184 make_examples_core.py:367] Task 3/8: 62132 candidates (41893 examples) [26.38s elapsed]
+I0116 10:45:40.663129 139973552287744 make_examples_core.py:367] Task 0/8: 66008 candidates (44926 examples) [27.87s elapsed]
+I0116 10:45:40.494263 140511434571776 make_examples_core.py:367] Task 6/8: 60011 candidates (38856 examples) [40.46s elapsed]
+I0116 10:45:44.451982 140283420848128 make_examples_core.py:367] Task 1/8: 64084 candidates (42663 examples) [25.46s elapsed]
+I0116 10:45:47.635485 139740115177472 make_examples_core.py:367] Task 5/8: 62117 candidates (40962 examples) [38.58s elapsed]
+I0116 10:45:50.446046 140313907945472 make_examples_core.py:367] Task 4/8: 60075 candidates (40120 examples) [26.35s elapsed]
+I0116 10:45:55.663026 139810517626880 make_examples_core.py:367] Task 7/8: 66052 candidates (43769 examples) [18.73s elapsed]
+I0116 10:46:01.259298 139973552287744 make_examples_core.py:367] Task 0/8: 68008 candidates (45784 examples) [20.60s elapsed]
+I0116 10:46:02.391275 140164982493184 make_examples_core.py:367] Task 3/8: 64002 candidates (42717 examples) [24.02s elapsed]
+I0116 10:46:11.699045 140639462100992 make_examples_core.py:367] Task 2/8: 64044 candidates (41974 examples) [41.44s elapsed]
+I0116 10:46:12.755115 140283420848128 make_examples_core.py:367] Task 1/8: 66063 candidates (43713 examples) [28.30s elapsed]
+I0116 10:46:15.107864 140313907945472 make_examples_core.py:367] Task 4/8: 62015 candidates (41152 examples) [24.66s elapsed]
+I0116 10:46:17.374084 139740115177472 make_examples_core.py:367] Task 5/8: 64010 candidates (41888 examples) [29.74s elapsed]
+I0116 10:46:22.975473 139810517626880 make_examples_core.py:367] Task 7/8: 68015 candidates (45048 examples) [27.31s elapsed]
+I0116 10:46:25.240937 140164982493184 make_examples_core.py:367] Task 3/8: 66028 candidates (44001 examples) [22.85s elapsed]
+I0116 10:46:25.647538 140511434571776 make_examples_core.py:367] Task 6/8: 62133 candidates (40227 examples) [45.15s elapsed]
+I0116 10:46:28.513956 139973552287744 make_examples_core.py:367] Task 0/8: 70042 candidates (46879 examples) [27.25s elapsed]
+I0116 10:46:33.363630 140639462100992 make_examples_core.py:367] Task 2/8: 66034 candidates (43001 examples) [21.66s elapsed]
+I0116 10:46:34.177631 140283420848128 make_examples_core.py:367] Task 1/8: 68000 candidates (44856 examples) [21.42s elapsed]
+I0116 10:46:37.082313 139740115177472 make_examples_core.py:367] Task 5/8: 66028 candidates (43171 examples) [19.71s elapsed]
+I0116 10:46:41.818859 140313907945472 make_examples_core.py:367] Task 4/8: 64069 candidates (42462 examples) [26.71s elapsed]
+I0116 10:46:43.866880 140511434571776 make_examples_core.py:367] Task 6/8: 64004 candidates (40941 examples) [18.22s elapsed]
+I0116 10:46:50.758882 139810517626880 make_examples_core.py:367] Task 7/8: 70004 candidates (45905 examples) [27.78s elapsed]
+I0116 10:46:53.489468 140164982493184 make_examples_core.py:367] Task 3/8: 68029 candidates (45111 examples) [28.25s elapsed]
+I0116 10:46:57.011796 139973552287744 make_examples_core.py:367] Task 0/8: 72029 candidates (47743 examples) [28.50s elapsed]
+I0116 10:46:59.417847 139740115177472 make_examples_core.py:367] Task 5/8: 68055 candidates (44280 examples) [22.34s elapsed]
+I0116 10:47:00.330476 140639462100992 make_examples_core.py:367] Task 2/8: 68140 candidates (44410 examples) [26.97s elapsed]
+I0116 10:47:01.609773 140283420848128 make_examples_core.py:367] Task 1/8: 70000 candidates (45951 examples) [27.43s elapsed]
+I0116 10:47:05.278651 140313907945472 make_examples_core.py:367] Task 4/8: 66020 candidates (43543 examples) [23.46s elapsed]
+I0116 10:47:15.057919 140511434571776 make_examples_core.py:367] Task 6/8: 66007 candidates (41920 examples) [31.19s elapsed]
+I0116 10:47:15.454791 140164982493184 make_examples_core.py:367] Task 3/8: 70083 candidates (46031 examples) [21.97s elapsed]
+I0116 10:47:22.078279 139810517626880 make_examples_core.py:367] Task 7/8: 72189 candidates (47065 examples) [31.32s elapsed]
+I0116 10:47:26.190287 139740115177472 make_examples_core.py:367] Task 5/8: 70043 candidates (45374 examples) [26.77s elapsed]
+I0116 10:47:26.788747 140639462100992 make_examples_core.py:367] Task 2/8: 70041 candidates (45439 examples) [26.46s elapsed]
+I0116 10:47:28.685974 140313907945472 make_examples_core.py:367] Task 4/8: 68033 candidates (44772 examples) [23.41s elapsed]
+I0116 10:47:29.424975 139973552287744 make_examples_core.py:367] Task 0/8: 74124 candidates (48844 examples) [32.41s elapsed]
+I0116 10:47:34.014805 140511434571776 make_examples_core.py:367] Task 6/8: 68033 candidates (43209 examples) [18.96s elapsed]
+I0116 10:47:34.749679 140283420848128 make_examples_core.py:367] Task 1/8: 72008 candidates (46942 examples) [33.14s elapsed]
+I0116 10:47:39.813579 140164982493184 make_examples_core.py:367] Task 3/8: 72031 candidates (46795 examples) [24.36s elapsed]
+I0116 10:47:51.786330 139740115177472 make_examples_core.py:367] Task 5/8: 72039 candidates (46375 examples) [25.60s elapsed]
+I0116 10:47:51.870693 139973552287744 make_examples_core.py:367] Task 0/8: 76033 candidates (50007 examples) [22.45s elapsed]
+I0116 10:47:55.578744 140639462100992 make_examples_core.py:367] Task 2/8: 72081 candidates (46497 examples) [28.79s elapsed]
+I0116 10:48:00.251207 140313907945472 make_examples_core.py:367] Task 4/8: 70005 candidates (45765 examples) [31.56s elapsed]
+I0116 10:48:03.077332 139810517626880 make_examples_core.py:367] Task 7/8: 74057 candidates (47965 examples) [41.00s elapsed]
+I0116 10:48:05.764296 140164982493184 make_examples_core.py:367] Task 3/8: 74064 candidates (47924 examples) [25.95s elapsed]
+I0116 10:48:07.109488 140511434571776 make_examples_core.py:367] Task 6/8: 70037 candidates (44262 examples) [33.09s elapsed]
+I0116 10:48:09.893404 140283420848128 make_examples_core.py:367] Task 1/8: 74051 candidates (48113 examples) [35.14s elapsed]
+I0116 10:48:15.150561 139740115177472 make_examples_core.py:367] Task 5/8: 74032 candidates (47578 examples) [23.36s elapsed]
+I0116 10:48:19.279982 139973552287744 make_examples_core.py:367] Task 0/8: 78018 candidates (50822 examples) [27.41s elapsed]
+I0116 10:48:19.604180 140639462100992 make_examples_core.py:367] Task 2/8: 74001 candidates (47669 examples) [24.03s elapsed]
+I0116 10:48:33.510554 140313907945472 make_examples_core.py:367] Task 4/8: 72061 candidates (47038 examples) [33.26s elapsed]
+I0116 10:48:34.712911 139810517626880 make_examples_core.py:367] Task 7/8: 76071 candidates (49031 examples) [31.64s elapsed]
+I0116 10:48:35.548087 140283420848128 make_examples_core.py:367] Task 1/8: 76099 candidates (49126 examples) [25.65s elapsed]
+I0116 10:48:38.310806 140511434571776 make_examples_core.py:367] Task 6/8: 72052 candidates (45347 examples) [31.20s elapsed]
+I0116 10:48:41.418016 140164982493184 make_examples_core.py:367] Task 3/8: 76122 candidates (48960 examples) [35.65s elapsed]
+I0116 10:48:42.634229 139973552287744 make_examples_core.py:367] Task 0/8: 80033 candidates (51456 examples) [23.35s elapsed]
+I0116 10:48:50.681306 140639462100992 make_examples_core.py:367] Task 2/8: 76025 candidates (48601 examples) [31.08s elapsed]
+I0116 10:48:53.725696 140283420848128 make_examples_core.py:367] Task 1/8: 78013 candidates (50225 examples) [18.18s elapsed]
+I0116 10:48:59.426853 139740115177472 make_examples_core.py:367] Task 5/8: 76053 candidates (48766 examples) [44.28s elapsed]
+I0116 10:48:59.337878 140164982493184 make_examples_core.py:367] Task 3/8: 78013 candidates (50100 examples) [17.92s elapsed]
+I0116 10:49:01.263277 140313907945472 make_examples_core.py:367] Task 4/8: 74073 candidates (48232 examples) [27.75s elapsed]
+I0116 10:49:06.044218 140511434571776 make_examples_core.py:367] Task 6/8: 74004 candidates (46325 examples) [27.73s elapsed]
+I0116 10:49:08.748513 139810517626880 make_examples_core.py:367] Task 7/8: 78028 candidates (50120 examples) [34.04s elapsed]
+I0116 10:49:14.436548 140639462100992 make_examples_core.py:367] Task 2/8: 78014 candidates (49531 examples) [23.75s elapsed]
+I0116 10:49:15.552127 139973552287744 make_examples_core.py:367] Task 0/8: 82003 candidates (52422 examples) [32.92s elapsed]
+I0116 10:49:30.112173 140313907945472 make_examples_core.py:367] Task 4/8: 76065 candidates (49283 examples) [28.85s elapsed]
+I0116 10:49:30.711195 140283420848128 make_examples_core.py:367] Task 1/8: 80065 candidates (51359 examples) [36.99s elapsed]
+I0116 10:49:32.654270 140164982493184 make_examples_core.py:367] Task 3/8: 80000 candidates (51156 examples) [33.32s elapsed]
+I0116 10:49:34.045759 139740115177472 make_examples_core.py:367] Task 5/8: 78076 candidates (49971 examples) [34.62s elapsed]
+I0116 10:49:43.382425 140639462100992 make_examples_core.py:367] Task 2/8: 80010 candidates (50703 examples) [28.95s elapsed]
+I0116 10:49:43.006810 140511434571776 make_examples_core.py:367] Task 6/8: 76061 candidates (47418 examples) [36.96s elapsed]
+I0116 10:49:49.685253 139810517626880 make_examples_core.py:367] Task 7/8: 80001 candidates (51203 examples) [40.94s elapsed]
+I0116 10:49:52.210487 139973552287744 make_examples_core.py:367] Task 0/8: 84027 candidates (53302 examples) [36.66s elapsed]
+I0116 10:49:58.258126 140283420848128 make_examples_core.py:367] Task 1/8: 82041 candidates (52600 examples) [27.55s elapsed]
+I0116 10:49:59.719003 140313907945472 make_examples_core.py:367] Task 4/8: 78060 candidates (50251 examples) [29.61s elapsed]
+I0116 10:50:05.243300 139740115177472 make_examples_core.py:367] Task 5/8: 80036 candidates (51014 examples) [31.20s elapsed]
+I0116 10:50:07.982495 140164982493184 make_examples_core.py:367] Task 3/8: 82099 candidates (52254 examples) [35.33s elapsed]
+I0116 10:50:14.476404 140511434571776 make_examples_core.py:367] Task 6/8: 78033 candidates (48401 examples) [31.47s elapsed]
+I0116 10:50:22.484557 140639462100992 make_examples_core.py:367] Task 2/8: 82066 candidates (51622 examples) [39.10s elapsed]
+I0116 10:50:28.708559 140313907945472 make_examples_core.py:367] Task 4/8: 80115 candidates (51562 examples) [28.99s elapsed]
+I0116 10:50:29.620691 139810517626880 make_examples_core.py:367] Task 7/8: 82028 candidates (52142 examples) [39.94s elapsed]
+I0116 10:50:34.895168 140283420848128 make_examples_core.py:367] Task 1/8: 84004 candidates (53781 examples) [36.64s elapsed]
+I0116 10:50:35.084936 139973552287744 make_examples_core.py:367] Task 0/8: 86100 candidates (54227 examples) [42.87s elapsed]
+I0116 10:50:35.533370 140511434571776 make_examples_core.py:367] Task 6/8: 80077 candidates (49325 examples) [21.06s elapsed]
+I0116 10:50:35.836255 140164982493184 make_examples_core.py:367] Task 3/8: 84056 candidates (53040 examples) [27.85s elapsed]
+I0116 10:50:43.142256 139740115177472 make_examples_core.py:367] Task 5/8: 82037 candidates (51797 examples) [37.90s elapsed]
+I0116 10:50:49.050209 140639462100992 make_examples_core.py:367] Task 2/8: 84000 candidates (52598 examples) [26.57s elapsed]
+I0116 10:50:56.942927 140313907945472 make_examples_core.py:367] Task 4/8: 82002 candidates (52475 examples) [28.23s elapsed]
+I0116 10:51:05.828324 139810517626880 make_examples_core.py:367] Task 7/8: 84209 candidates (53084 examples) [36.21s elapsed]
+I0116 10:51:06.807342 139973552287744 make_examples_core.py:367] Task 0/8: 88036 candidates (55319 examples) [31.72s elapsed]
+I0116 10:51:06.873819 140511434571776 make_examples_core.py:367] Task 6/8: 82013 candidates (50166 examples) [31.34s elapsed]
+I0116 10:51:07.693763 140283420848128 make_examples_core.py:367] Task 1/8: 86070 candidates (54715 examples) [32.80s elapsed]
+I0116 10:51:14.316589 140164982493184 make_examples_core.py:367] Task 3/8: 86014 candidates (54014 examples) [38.48s elapsed]
+I0116 10:51:16.963410 139740115177472 make_examples_core.py:367] Task 5/8: 84045 candidates (52673 examples) [33.82s elapsed]
+I0116 10:51:16.821729 140639462100992 make_examples_core.py:367] Task 2/8: 86020 candidates (53484 examples) [27.77s elapsed]
+I0116 10:51:30.920621 140313907945472 make_examples_core.py:367] Task 4/8: 84068 candidates (53632 examples) [33.98s elapsed]
+I0116 10:51:30.519822 139810517626880 make_examples_core.py:367] Task 7/8: 86007 candidates (53727 examples) [24.69s elapsed]
+I0116 10:51:36.331978 140283420848128 make_examples_core.py:367] Task 1/8: 88118 candidates (55565 examples) [28.64s elapsed]
+I0116 10:51:37.869968 139973552287744 make_examples_core.py:367] Task 0/8: 90114 candidates (56593 examples) [31.06s elapsed]
+I0116 10:51:42.757605 140639462100992 make_examples_core.py:367] Task 2/8: 88008 candidates (54307 examples) [25.94s elapsed]
+I0116 10:51:44.669972 140511434571776 make_examples_core.py:367] Task 6/8: 84121 candidates (51241 examples) [37.80s elapsed]
+I0116 10:51:51.785678 140164982493184 make_examples_core.py:367] Task 3/8: 88077 candidates (54894 examples) [37.47s elapsed]
+I0116 10:51:56.256096 139740115177472 make_examples_core.py:367] Task 5/8: 86096 candidates (53593 examples) [39.29s elapsed]
+I0116 10:52:00.959174 140313907945472 make_examples_core.py:367] Task 4/8: 86056 candidates (54361 examples) [30.04s elapsed]
+I0116 10:52:01.573051 139810517626880 make_examples_core.py:367] Task 7/8: 88030 candidates (54428 examples) [31.05s elapsed]
+I0116 10:52:07.713195 139973552287744 make_examples_core.py:367] Task 0/8: 92017 candidates (57812 examples) [29.84s elapsed]
+I0116 10:52:08.409200 140283420848128 make_examples_core.py:367] Task 1/8: 90058 candidates (56477 examples) [32.08s elapsed]
+I0116 10:52:15.700706 140639462100992 make_examples_core.py:367] Task 2/8: 90019 candidates (55251 examples) [32.94s elapsed]
+I0116 10:52:18.051665 140511434571776 make_examples_core.py:367] Task 6/8: 86017 candidates (52097 examples) [33.38s elapsed]
+I0116 10:52:18.574469 140164982493184 make_examples_core.py:367] Task 3/8: 90075 candidates (55580 examples) [26.79s elapsed]
+I0116 10:52:28.946176 139740115177472 make_examples_core.py:367] Task 5/8: 88093 candidates (54381 examples) [32.69s elapsed]
+I0116 10:52:31.480080 140283420848128 make_examples_core.py:367] Task 1/8: 92019 candidates (57607 examples) [23.07s elapsed]
+I0116 10:52:33.753137 140313907945472 make_examples_core.py:367] Task 4/8: 88006 candidates (55173 examples) [32.79s elapsed]
+I0116 10:52:39.926325 139973552287744 make_examples_core.py:367] Task 0/8: 94045 candidates (58754 examples) [32.21s elapsed]
+I0116 10:52:42.426771 139810517626880 make_examples_core.py:367] Task 7/8: 90003 candidates (55550 examples) [40.85s elapsed]
+I0116 10:52:48.608017 140511434571776 make_examples_core.py:367] Task 6/8: 88019 candidates (52910 examples) [30.56s elapsed]
+I0116 10:52:51.868064 140639462100992 make_examples_core.py:367] Task 2/8: 92036 candidates (56120 examples) [36.17s elapsed]
+I0116 10:52:53.093725 140164982493184 make_examples_core.py:367] Task 3/8: 92027 candidates (56631 examples) [34.52s elapsed]
+I0116 10:52:56.989921 139740115177472 make_examples_core.py:367] Task 5/8: 90138 candidates (55413 examples) [28.04s elapsed]
+I0116 10:53:02.563890 140313907945472 make_examples_core.py:367] Task 4/8: 90032 candidates (55976 examples) [28.81s elapsed]
+I0116 10:53:04.807718 140283420848128 make_examples_core.py:367] Task 1/8: 94011 candidates (58941 examples) [33.33s elapsed]
+I0116 10:53:10.166698 139810517626880 make_examples_core.py:367] Task 7/8: 92020 candidates (57034 examples) [27.74s elapsed]
+I0116 10:53:13.065237 139973552287744 make_examples_core.py:367] Task 0/8: 96030 candidates (59706 examples) [33.14s elapsed]
+I0116 10:53:21.324563 140639462100992 make_examples_core.py:367] Task 2/8: 94164 candidates (57110 examples) [29.46s elapsed]
+I0116 10:53:27.902775 140511434571776 make_examples_core.py:367] Task 6/8: 90022 candidates (53880 examples) [39.29s elapsed]
+I0116 10:53:27.846716 140164982493184 make_examples_core.py:367] Task 3/8: 94011 candidates (57942 examples) [34.75s elapsed]
+I0116 10:53:29.700476 139740115177472 make_examples_core.py:367] Task 5/8: 92004 candidates (56573 examples) [32.71s elapsed]
+I0116 10:53:32.351742 140283420848128 make_examples_core.py:367] Task 1/8: 96011 candidates (60061 examples) [27.54s elapsed]
+I0116 10:53:36.112372 140313907945472 make_examples_core.py:367] Task 4/8: 92016 candidates (57033 examples) [33.55s elapsed]
+I0116 10:53:39.861541 139810517626880 make_examples_core.py:367] Task 7/8: 94002 candidates (58063 examples) [29.69s elapsed]
+I0116 10:53:48.876357 139973552287744 make_examples_core.py:367] Task 0/8: 98053 candidates (60794 examples) [35.81s elapsed]
+I0116 10:53:51.288495 140639462100992 make_examples_core.py:367] Task 2/8: 96160 candidates (58106 examples) [29.96s elapsed]
+I0116 10:53:56.224208 140511434571776 make_examples_core.py:367] Task 6/8: 92031 candidates (55079 examples) [28.32s elapsed]
+I0116 10:53:56.510950 139740115177472 make_examples_core.py:367] Task 5/8: 94010 candidates (57572 examples) [26.81s elapsed]
+I0116 10:54:01.733892 140313907945472 make_examples_core.py:367] Task 4/8: 94012 candidates (58148 examples) [25.62s elapsed]
+I0116 10:54:01.952336 140283420848128 make_examples_core.py:367] Task 1/8: 98041 candidates (61052 examples) [29.60s elapsed]
+I0116 10:54:05.590890 140164982493184 make_examples_core.py:367] Task 3/8: 96018 candidates (58968 examples) [37.74s elapsed]
+I0116 10:54:18.538412 139973552287744 make_examples_core.py:367] Task 0/8: 100019 candidates (61929 examples) [29.66s elapsed]
+I0116 10:54:20.792788 139810517626880 make_examples_core.py:367] Task 7/8: 96080 candidates (58928 examples) [40.93s elapsed]
+I0116 10:54:21.988829 139740115177472 make_examples_core.py:367] Task 5/8: 96164 candidates (58814 examples) [25.48s elapsed]
+I0116 10:54:26.820547 140639462100992 make_examples_core.py:367] Task 2/8: 98212 candidates (59438 examples) [35.53s elapsed]
+I0116 10:54:31.227241 140511434571776 make_examples_core.py:367] Task 6/8: 94047 candidates (56150 examples) [35.00s elapsed]
+I0116 10:54:33.339402 140313907945472 make_examples_core.py:367] Task 4/8: 96128 candidates (59494 examples) [31.61s elapsed]
+I0116 10:54:37.316564 140283420848128 make_examples_core.py:367] Task 1/8: 100082 candidates (62131 examples) [35.36s elapsed]
+I0116 10:54:42.064362 139973552287744 make_examples_core.py:367] Task 0/8: 102020 candidates (62858 examples) [23.53s elapsed]
+I0116 10:54:45.103963 139740115177472 make_examples_core.py:367] Task 5/8: 98011 candidates (59768 examples) [23.11s elapsed]
+I0116 10:54:44.734330 140164982493184 make_examples_core.py:367] Task 3/8: 98020 candidates (59900 examples) [39.14s elapsed]
+I0116 10:54:46.392162 139810517626880 make_examples_core.py:367] Task 7/8: 98111 candidates (59824 examples) [25.60s elapsed]
+I0116 10:54:57.028801 140511434571776 make_examples_core.py:367] Task 6/8: 96074 candidates (57313 examples) [25.80s elapsed]
+I0116 10:54:59.144551 140639462100992 make_examples_core.py:367] Task 2/8: 100050 candidates (60289 examples) [32.32s elapsed]
+I0116 10:55:01.671093 140313907945472 make_examples_core.py:367] Task 4/8: 98038 candidates (60529 examples) [28.33s elapsed]
+I0116 10:55:06.373798 140283420848128 make_examples_core.py:367] Task 1/8: 102017 candidates (63216 examples) [29.06s elapsed]
+I0116 10:55:08.484873 140164982493184 make_examples_core.py:367] Task 3/8: 100066 candidates (60852 examples) [23.75s elapsed]
+I0116 10:55:12.362659 139973552287744 make_examples_core.py:367] Task 0/8: 104028 candidates (63760 examples) [30.30s elapsed]
+I0116 10:55:17.850082 139810517626880 make_examples_core.py:367] Task 7/8: 100018 candidates (60800 examples) [31.46s elapsed]
+I0116 10:55:21.719892 139740115177472 make_examples_core.py:367] Task 5/8: 100019 candidates (60750 examples) [36.62s elapsed]
+I0116 10:55:25.214637 140511434571776 make_examples_core.py:367] Task 6/8: 98013 candidates (58222 examples) [28.19s elapsed]
+I0116 10:55:27.643705 140313907945472 make_examples_core.py:367] Task 4/8: 100021 candidates (61620 examples) [25.97s elapsed]
+I0116 10:55:28.039800 140639462100992 make_examples_core.py:367] Task 2/8: 102015 candidates (61261 examples) [28.89s elapsed]
+I0116 10:55:30.865771 140283420848128 make_examples_core.py:367] Task 1/8: 104012 candidates (64323 examples) [24.49s elapsed]
+I0116 10:55:42.650926 140164982493184 make_examples_core.py:367] Task 3/8: 102017 candidates (61987 examples) [34.17s elapsed]
+I0116 10:55:43.660779 139973552287744 make_examples_core.py:367] Task 0/8: 106030 candidates (64946 examples) [31.30s elapsed]
+I0116 10:55:44.184669 139810517626880 make_examples_core.py:367] Task 7/8: 102000 candidates (61731 examples) [26.33s elapsed]
+I0116 10:55:52.995719 140511434571776 make_examples_core.py:367] Task 6/8: 100048 candidates (59283 examples) [27.78s elapsed]
+I0116 10:55:54.129645 140313907945472 make_examples_core.py:367] Task 4/8: 102063 candidates (62573 examples) [26.49s elapsed]
+I0116 10:55:57.797707 140283420848128 make_examples_core.py:367] Task 1/8: 106121 candidates (65299 examples) [26.93s elapsed]
+I0116 10:56:01.130561 139740115177472 make_examples_core.py:367] Task 5/8: 102057 candidates (61848 examples) [39.41s elapsed]
+I0116 10:56:07.583512 140164982493184 make_examples_core.py:367] Task 3/8: 104044 candidates (63169 examples) [24.93s elapsed]
+I0116 10:56:08.373888 140639462100992 make_examples_core.py:367] Task 2/8: 104045 candidates (62316 examples) [40.33s elapsed]
+I0116 10:56:14.571431 139973552287744 make_examples_core.py:367] Task 0/8: 108033 candidates (65924 examples) [30.91s elapsed]
+I0116 10:56:17.729429 140313907945472 make_examples_core.py:367] Task 4/8: 104111 candidates (63633 examples) [23.60s elapsed]
+I0116 10:56:18.053594 139810517626880 make_examples_core.py:367] Task 7/8: 104050 candidates (62611 examples) [33.87s elapsed]
+I0116 10:56:24.547393 140283420848128 make_examples_core.py:367] Task 1/8: 108133 candidates (66288 examples) [26.75s elapsed]
+I0116 10:56:29.467095 140511434571776 make_examples_core.py:367] Task 6/8: 102019 candidates (60226 examples) [36.47s elapsed]
+I0116 10:56:30.064869 139740115177472 make_examples_core.py:367] Task 5/8: 104048 candidates (62869 examples) [28.93s elapsed]
+I0116 10:56:37.273661 140639462100992 make_examples_core.py:367] Task 2/8: 106172 candidates (63488 examples) [28.90s elapsed]
+I0116 10:56:39.460233 140164982493184 make_examples_core.py:367] Task 3/8: 106090 candidates (64052 examples) [31.88s elapsed]
+I0116 10:56:41.392395 140313907945472 make_examples_core.py:367] Task 4/8: 106090 candidates (64643 examples) [23.66s elapsed]
+I0116 10:56:46.048435 139973552287744 make_examples_core.py:367] Task 0/8: 110091 candidates (67010 examples) [31.48s elapsed]
+I0116 10:56:53.107407 139810517626880 make_examples_core.py:367] Task 7/8: 106011 candidates (63584 examples) [35.05s elapsed]
+I0116 10:56:57.726968 140511434571776 make_examples_core.py:367] Task 6/8: 104034 candidates (61265 examples) [28.26s elapsed]
+I0116 10:57:00.666111 140283420848128 make_examples_core.py:367] Task 1/8: 110185 candidates (67221 examples) [36.12s elapsed]
+I0116 10:57:02.088373 139740115177472 make_examples_core.py:367] Task 5/8: 106228 candidates (63828 examples) [32.02s elapsed]
+I0116 10:57:04.978087 140639462100992 make_examples_core.py:367] Task 2/8: 108067 candidates (64688 examples) [27.70s elapsed]
+I0116 10:57:05.934751 140164982493184 make_examples_core.py:367] Task 3/8: 108023 candidates (64919 examples) [26.47s elapsed]
+I0116 10:57:06.664330 139973552287744 make_examples_core.py:367] Task 0/8: 112098 candidates (68155 examples) [20.62s elapsed]
+I0116 10:57:09.212488 140313907945472 make_examples_core.py:367] Task 4/8: 108073 candidates (65613 examples) [27.82s elapsed]
+I0116 10:57:16.729633 139810517626880 make_examples_core.py:367] Task 7/8: 108047 candidates (64744 examples) [23.62s elapsed]
+I0116 10:57:27.432608 140511434571776 make_examples_core.py:367] Task 6/8: 106048 candidates (62184 examples) [29.71s elapsed]
+I0116 10:57:28.776661 139740115177472 make_examples_core.py:367] Task 5/8: 108003 candidates (64788 examples) [26.69s elapsed]
+I0116 10:57:29.723980 139973552287744 make_examples_core.py:367] Task 0/8: 114065 candidates (69294 examples) [23.06s elapsed]
+I0116 10:57:30.393458 140283420848128 make_examples_core.py:367] Task 1/8: 112000 candidates (68123 examples) [29.73s elapsed]
+I0116 10:57:31.745890 140313907945472 make_examples_core.py:367] Task 4/8: 110020 candidates (66612 examples) [22.53s elapsed]
+I0116 10:57:33.280994 140164982493184 make_examples_core.py:367] Task 3/8: 110055 candidates (66097 examples) [27.35s elapsed]
+I0116 10:57:33.853007 140639462100992 make_examples_core.py:367] Task 2/8: 110007 candidates (65607 examples) [28.87s elapsed]
+I0116 10:57:51.763478 139810517626880 make_examples_core.py:367] Task 7/8: 110052 candidates (65748 examples) [35.03s elapsed]
+I0116 10:57:55.666719 140283420848128 make_examples_core.py:367] Task 1/8: 114070 candidates (69224 examples) [25.27s elapsed]
+I0116 10:57:55.584208 139740115177472 make_examples_core.py:367] Task 5/8: 110047 candidates (65933 examples) [26.81s elapsed]
+I0116 10:57:56.952144 139973552287744 make_examples_core.py:367] Task 0/8: 116021 candidates (70244 examples) [27.23s elapsed]
+I0116 10:57:58.129371 140313907945472 make_examples_core.py:367] Task 4/8: 112018 candidates (67477 examples) [26.38s elapsed]
+I0116 10:58:01.509491 140164982493184 make_examples_core.py:367] Task 3/8: 112044 candidates (67137 examples) [28.23s elapsed]
+I0116 10:58:02.637810 140511434571776 make_examples_core.py:367] Task 6/8: 108079 candidates (63203 examples) [35.20s elapsed]
+I0116 10:58:04.566599 140639462100992 make_examples_core.py:367] Task 2/8: 112001 candidates (66559 examples) [30.71s elapsed]
+I0116 10:58:17.951189 140283420848128 make_examples_core.py:367] Task 1/8: 116069 candidates (70245 examples) [22.28s elapsed]
+I0116 10:58:19.169638 139810517626880 make_examples_core.py:367] Task 7/8: 112065 candidates (66785 examples) [27.41s elapsed]
+I0116 10:58:23.468151 140313907945472 make_examples_core.py:367] Task 4/8: 114035 candidates (68641 examples) [25.34s elapsed]
+I0116 10:58:24.878920 140164982493184 make_examples_core.py:367] Task 3/8: 114098 candidates (68397 examples) [23.37s elapsed]
+I0116 10:58:26.839107 139740115177472 make_examples_core.py:367] Task 5/8: 112083 candidates (66997 examples) [31.25s elapsed]
+I0116 10:58:27.684994 139973552287744 make_examples_core.py:367] Task 0/8: 118068 candidates (71423 examples) [30.73s elapsed]
+I0116 10:58:31.218726 140639462100992 make_examples_core.py:367] Task 2/8: 114043 candidates (67625 examples) [26.65s elapsed]
+I0116 10:58:38.652331 140511434571776 make_examples_core.py:367] Task 6/8: 110015 candidates (64379 examples) [36.01s elapsed]
+I0116 10:58:45.026334 140283420848128 make_examples_core.py:367] Task 1/8: 118026 candidates (71412 examples) [27.07s elapsed]
+I0116 10:58:47.488529 139810517626880 make_examples_core.py:367] Task 7/8: 114002 candidates (67736 examples) [28.32s elapsed]
+I0116 10:58:50.004300 139740115177472 make_examples_core.py:367] Task 5/8: 114103 candidates (68223 examples) [23.16s elapsed]
+I0116 10:58:50.750750 140313907945472 make_examples_core.py:367] Task 4/8: 116048 candidates (69607 examples) [27.28s elapsed]
+I0116 10:58:52.565893 140164982493184 make_examples_core.py:367] Task 3/8: 116147 candidates (69344 examples) [27.69s elapsed]
+I0116 10:58:58.178135 140639462100992 make_examples_core.py:367] Task 2/8: 116005 candidates (68784 examples) [26.96s elapsed]
+I0116 10:59:00.602043 139973552287744 make_examples_core.py:367] Task 0/8: 120041 candidates (72387 examples) [32.92s elapsed]
+I0116 10:59:10.494951 140283420848128 make_examples_core.py:367] Task 1/8: 120083 candidates (72487 examples) [25.47s elapsed]
+I0116 10:59:10.677145 140511434571776 make_examples_core.py:367] Task 6/8: 112009 candidates (65389 examples) [32.02s elapsed]
+I0116 10:59:15.474524 140313907945472 make_examples_core.py:367] Task 4/8: 118079 candidates (70538 examples) [24.72s elapsed]
+I0116 10:59:15.916196 139740115177472 make_examples_core.py:367] Task 5/8: 116105 candidates (69310 examples) [25.91s elapsed]
+I0116 10:59:15.523306 140164982493184 make_examples_core.py:367] Task 3/8: 118032 candidates (70363 examples) [22.96s elapsed]
+I0116 10:59:15.089387 139810517626880 make_examples_core.py:367] Task 7/8: 116053 candidates (68878 examples) [27.60s elapsed]
+I0116 10:59:28.457854 140639462100992 make_examples_core.py:367] Task 2/8: 118050 candidates (69891 examples) [30.28s elapsed]
+I0116 10:59:33.206405 140511434571776 make_examples_core.py:367] Task 6/8: 114051 candidates (66507 examples) [22.53s elapsed]
+I0116 10:59:33.529263 139973552287744 make_examples_core.py:367] Task 0/8: 122007 candidates (73334 examples) [32.93s elapsed]
+I0116 10:59:40.806140 140313907945472 make_examples_core.py:367] Task 4/8: 120009 candidates (71642 examples) [25.33s elapsed]
+I0116 10:59:41.580433 140164982493184 make_examples_core.py:367] Task 3/8: 120017 candidates (71451 examples) [26.06s elapsed]
+I0116 10:59:42.987005 139810517626880 make_examples_core.py:367] Task 7/8: 118131 candidates (69960 examples) [27.90s elapsed]
+I0116 10:59:43.662353 139740115177472 make_examples_core.py:367] Task 5/8: 118030 candidates (70215 examples) [27.75s elapsed]
+I0116 10:59:56.071130 140283420848128 make_examples_core.py:367] Task 1/8: 122011 candidates (73502 examples) [45.58s elapsed]
+I0116 10:59:56.220905 140511434571776 make_examples_core.py:367] Task 6/8: 116065 candidates (67499 examples) [23.01s elapsed]
+I0116 10:59:58.274164 140639462100992 make_examples_core.py:367] Task 2/8: 120005 candidates (70967 examples) [29.82s elapsed]
+I0116 11:00:08.707829 139810517626880 make_examples_core.py:367] Task 7/8: 120012 candidates (70822 examples) [25.72s elapsed]
+I0116 11:00:10.526241 139973552287744 make_examples_core.py:367] Task 0/8: 124060 candidates (74295 examples) [37.00s elapsed]
+I0116 11:00:15.509647 140313907945472 make_examples_core.py:367] Task 4/8: 122058 candidates (72716 examples) [34.70s elapsed]
+I0116 11:00:21.811711 140164982493184 make_examples_core.py:367] Task 3/8: 122061 candidates (72434 examples) [40.23s elapsed]
+I0116 11:00:22.540276 139740115177472 make_examples_core.py:367] Task 5/8: 120131 candidates (71298 examples) [38.88s elapsed]
+I0116 11:00:25.368730 140511434571776 make_examples_core.py:367] Task 6/8: 118002 candidates (68380 examples) [29.15s elapsed]
+I0116 11:00:26.137401 140639462100992 make_examples_core.py:367] Task 2/8: 122052 candidates (72081 examples) [27.86s elapsed]
+I0116 11:00:38.745041 140283420848128 make_examples_core.py:367] Task 1/8: 124013 candidates (74618 examples) [42.67s elapsed]
+I0116 11:00:41.247718 139810517626880 make_examples_core.py:367] Task 7/8: 122058 candidates (72011 examples) [32.54s elapsed]
+I0116 11:00:48.717127 139973552287744 make_examples_core.py:367] Task 0/8: 126044 candidates (75344 examples) [38.19s elapsed]
+I0116 11:00:52.118929 140639462100992 make_examples_core.py:367] Task 2/8: 124024 candidates (72927 examples) [25.98s elapsed]
+I0116 11:00:55.101297 139740115177472 make_examples_core.py:367] Task 5/8: 122006 candidates (72018 examples) [32.56s elapsed]
+I0116 11:00:56.628656 140511434571776 make_examples_core.py:367] Task 6/8: 120100 candidates (69569 examples) [31.26s elapsed]
+I0116 11:00:58.371420 140313907945472 make_examples_core.py:367] Task 4/8: 124031 candidates (73812 examples) [42.86s elapsed]
+I0116 11:01:07.212649 140164982493184 make_examples_core.py:367] Task 3/8: 124066 candidates (73418 examples) [45.40s elapsed]
+I0116 11:01:13.620824 139810517626880 make_examples_core.py:367] Task 7/8: 124055 candidates (72796 examples) [32.37s elapsed]
+I0116 11:01:17.158914 140283420848128 make_examples_core.py:367] Task 1/8: 126135 candidates (75689 examples) [38.41s elapsed]
+I0116 11:01:27.363856 139973552287744 make_examples_core.py:367] Task 0/8: 128072 candidates (76317 examples) [38.65s elapsed]
+I0116 11:01:29.152825 140639462100992 make_examples_core.py:367] Task 2/8: 126065 candidates (73836 examples) [37.03s elapsed]
+I0116 11:01:34.459885 140511434571776 make_examples_core.py:367] Task 6/8: 122153 candidates (70270 examples) [37.83s elapsed]
+I0116 11:01:36.395543 140164982493184 make_examples_core.py:367] Task 3/8: 126125 candidates (74738 examples) [29.18s elapsed]
+I0116 11:01:37.994999 139740115177472 make_examples_core.py:367] Task 5/8: 124037 candidates (73041 examples) [42.89s elapsed]
+I0116 11:01:38.325217 140313907945472 make_examples_core.py:367] Task 4/8: 126100 candidates (74991 examples) [39.95s elapsed]
+I0116 11:01:38.449521 139810517626880 make_examples_core.py:367] Task 7/8: 126023 candidates (73765 examples) [24.83s elapsed]
+I0116 11:01:46.336433 140283420848128 make_examples_core.py:367] Task 1/8: 128007 candidates (76527 examples) [29.18s elapsed]
+I0116 11:01:54.929305 139973552287744 make_examples_core.py:367] Task 0/8: 130096 candidates (77398 examples) [27.57s elapsed]
+I0116 11:02:03.079318 140164982493184 make_examples_core.py:367] Task 3/8: 128009 candidates (75712 examples) [26.68s elapsed]
+I0116 11:02:08.730727 140511434571776 make_examples_core.py:367] Task 6/8: 124012 candidates (71274 examples) [34.27s elapsed]
+I0116 11:02:09.676532 139810517626880 make_examples_core.py:367] Task 7/8: 128107 candidates (74712 examples) [31.23s elapsed]
+I0116 11:02:10.382860 140313907945472 make_examples_core.py:367] Task 4/8: 128072 candidates (75946 examples) [32.06s elapsed]
+I0116 11:02:11.126219 140639462100992 make_examples_core.py:367] Task 2/8: 128053 candidates (74968 examples) [41.97s elapsed]
+I0116 11:02:13.597119 139740115177472 make_examples_core.py:367] Task 5/8: 126027 candidates (74095 examples) [35.60s elapsed]
+I0116 11:02:21.101220 140283420848128 make_examples_core.py:367] Task 1/8: 130001 candidates (77443 examples) [34.76s elapsed]
+I0116 11:02:26.711306 139973552287744 make_examples_core.py:367] Task 0/8: 132073 candidates (78414 examples) [31.78s elapsed]
+I0116 11:02:36.695980 140313907945472 make_examples_core.py:367] Task 4/8: 130007 candidates (76927 examples) [26.31s elapsed]
+I0116 11:02:37.695587 140511434571776 make_examples_core.py:367] Task 6/8: 126051 candidates (72204 examples) [28.96s elapsed]
+I0116 11:02:41.713685 139810517626880 make_examples_core.py:367] Task 7/8: 130028 candidates (75704 examples) [32.04s elapsed]
+I0116 11:02:44.323779 140639462100992 make_examples_core.py:367] Task 2/8: 130087 candidates (75935 examples) [33.20s elapsed]
+I0116 11:02:47.041759 140164982493184 make_examples_core.py:367] Task 3/8: 130008 candidates (76601 examples) [43.96s elapsed]
+I0116 11:02:50.815992 139740115177472 make_examples_core.py:367] Task 5/8: 128024 candidates (75068 examples) [37.22s elapsed]
+I0116 11:02:57.342721 140283420848128 make_examples_core.py:367] Task 1/8: 132070 candidates (78530 examples) [36.24s elapsed]
+I0116 11:02:58.444205 139973552287744 make_examples_core.py:367] Task 0/8: 134008 candidates (79541 examples) [31.73s elapsed]
+I0116 11:03:06.569088 140313907945472 make_examples_core.py:367] Task 4/8: 132098 candidates (77878 examples) [29.87s elapsed]
+I0116 11:03:09.728928 139810517626880 make_examples_core.py:367] Task 7/8: 132080 candidates (76887 examples) [28.01s elapsed]
+I0116 11:03:10.968835 140511434571776 make_examples_core.py:367] Task 6/8: 128039 candidates (73165 examples) [33.27s elapsed]
+I0116 11:03:17.901626 140639462100992 make_examples_core.py:367] Task 2/8: 132182 candidates (76936 examples) [33.58s elapsed]
+I0116 11:03:22.403741 140164982493184 make_examples_core.py:367] Task 3/8: 132044 candidates (77890 examples) [35.36s elapsed]
+I0116 11:03:25.022418 139740115177472 make_examples_core.py:367] Task 5/8: 130020 candidates (76211 examples) [34.21s elapsed]
+I0116 11:03:28.839212 140283420848128 make_examples_core.py:367] Task 1/8: 134057 candidates (79810 examples) [31.50s elapsed]
+I0116 11:03:28.567581 139973552287744 make_examples_core.py:367] Task 0/8: 136006 candidates (80821 examples) [30.12s elapsed]
+I0116 11:03:37.654519 140313907945472 make_examples_core.py:367] Task 4/8: 134012 candidates (78919 examples) [31.09s elapsed]
+I0116 11:03:44.434142 140511434571776 make_examples_core.py:367] Task 6/8: 130080 candidates (74139 examples) [33.47s elapsed]
+I0116 11:03:45.447915 139810517626880 make_examples_core.py:367] Task 7/8: 134013 candidates (78007 examples) [35.72s elapsed]
+I0116 11:03:45.642214 139740115177472 make_examples_core.py:367] Task 5/8: 132132 candidates (76984 examples) [20.62s elapsed]
+I0116 11:03:49.197730 140639462100992 make_examples_core.py:367] Task 2/8: 134078 candidates (77869 examples) [31.30s elapsed]
+I0116 11:04:01.940984 140283420848128 make_examples_core.py:367] Task 1/8: 136078 candidates (81057 examples) [33.10s elapsed]
+I0116 11:04:03.471189 140164982493184 make_examples_core.py:367] Task 3/8: 134104 candidates (79277 examples) [41.07s elapsed]
+I0116 11:04:05.158901 139973552287744 make_examples_core.py:367] Task 0/8: 138016 candidates (81847 examples) [36.59s elapsed]
+I0116 11:04:11.332052 140313907945472 make_examples_core.py:367] Task 4/8: 136047 candidates (80056 examples) [33.68s elapsed]
+I0116 11:04:15.304646 140639462100992 make_examples_core.py:367] Task 2/8: 136045 candidates (78843 examples) [26.11s elapsed]
+I0116 11:04:20.603619 139740115177472 make_examples_core.py:367] Task 5/8: 134081 candidates (78224 examples) [34.96s elapsed]
+I0116 11:04:22.047546 140511434571776 make_examples_core.py:367] Task 6/8: 132081 candidates (75423 examples) [37.61s elapsed]
+I0116 11:04:22.199293 139810517626880 make_examples_core.py:367] Task 7/8: 136067 candidates (79130 examples) [36.75s elapsed]
+I0116 11:04:34.269996 140164982493184 make_examples_core.py:367] Task 3/8: 136155 candidates (80507 examples) [30.80s elapsed]
+I0116 11:04:39.866085 140283420848128 make_examples_core.py:367] Task 1/8: 138153 candidates (82159 examples) [37.92s elapsed]
+I0116 11:04:39.874166 139973552287744 make_examples_core.py:367] Task 0/8: 140046 candidates (82962 examples) [34.71s elapsed]
+I0116 11:04:47.847352 140313907945472 make_examples_core.py:367] Task 4/8: 138033 candidates (81322 examples) [36.52s elapsed]
+I0116 11:04:51.136067 139740115177472 make_examples_core.py:367] Task 5/8: 136003 candidates (79433 examples) [30.53s elapsed]
+I0116 11:04:52.385986 140511434571776 make_examples_core.py:367] Task 6/8: 134061 candidates (76645 examples) [30.34s elapsed]
+I0116 11:04:58.472091 140639462100992 make_examples_core.py:367] Task 2/8: 138019 candidates (79963 examples) [43.17s elapsed]
+I0116 11:05:00.815725 139810517626880 make_examples_core.py:367] Task 7/8: 138140 candidates (80136 examples) [38.62s elapsed]
+I0116 11:05:01.459877 140164982493184 make_examples_core.py:367] Task 3/8: 138026 candidates (81468 examples) [27.19s elapsed]
+I0116 11:05:04.269893 139973552287744 make_examples_core.py:367] Task 0/8: 142020 candidates (83960 examples) [24.40s elapsed]
+I0116 11:05:14.929392 140313907945472 make_examples_core.py:367] Task 4/8: 140014 candidates (82552 examples) [27.08s elapsed]
+I0116 11:05:14.793817 140283420848128 make_examples_core.py:367] Task 1/8: 140000 candidates (83147 examples) [34.93s elapsed]
+I0116 11:05:22.625793 140511434571776 make_examples_core.py:367] Task 6/8: 136042 candidates (77749 examples) [30.24s elapsed]
+I0116 11:05:27.652498 140164982493184 make_examples_core.py:367] Task 3/8: 140092 candidates (82250 examples) [26.19s elapsed]
+I0116 11:05:28.815158 139810517626880 make_examples_core.py:367] Task 7/8: 140032 candidates (81088 examples) [28.00s elapsed]
+I0116 11:05:37.560410 139740115177472 make_examples_core.py:367] Task 5/8: 138180 candidates (80495 examples) [46.42s elapsed]
+I0116 11:05:37.861465 139973552287744 make_examples_core.py:367] Task 0/8: 144154 candidates (85087 examples) [33.59s elapsed]
+I0116 11:05:38.105144 140639462100992 make_examples_core.py:367] Task 2/8: 140006 candidates (81392 examples) [39.63s elapsed]
+I0116 11:05:38.296857 140283420848128 make_examples_core.py:367] Task 1/8: 142021 candidates (84217 examples) [23.50s elapsed]
+I0116 11:05:41.482826 140313907945472 make_examples_core.py:367] Task 4/8: 142130 candidates (83389 examples) [26.55s elapsed]
+I0116 11:05:54.470782 140164982493184 make_examples_core.py:367] Task 3/8: 142079 candidates (83403 examples) [26.82s elapsed]
+I0116 11:05:58.731449 139810517626880 make_examples_core.py:367] Task 7/8: 142037 candidates (81932 examples) [29.92s elapsed]
+I0116 11:06:00.380584 140511434571776 make_examples_core.py:367] Task 6/8: 138094 candidates (79004 examples) [37.75s elapsed]
+I0116 11:06:00.688794 140283420848128 make_examples_core.py:367] Task 1/8: 144005 candidates (85028 examples) [22.39s elapsed]
+I0116 11:06:06.955952 140313907945472 make_examples_core.py:367] Task 4/8: 144025 candidates (84220 examples) [25.47s elapsed]
+I0116 11:06:08.520630 139973552287744 make_examples_core.py:367] Task 0/8: 146023 candidates (85931 examples) [30.66s elapsed]
+I0116 11:06:12.512363 139740115177472 make_examples_core.py:367] Task 5/8: 140008 candidates (81404 examples) [34.95s elapsed]
+I0116 11:06:13.269681 140639462100992 make_examples_core.py:367] Task 2/8: 142020 candidates (82405 examples) [35.16s elapsed]
+I0116 11:06:23.045503 140164982493184 make_examples_core.py:367] Task 3/8: 144122 candidates (84491 examples) [28.57s elapsed]
+I0116 11:06:27.272084 139810517626880 make_examples_core.py:367] Task 7/8: 144006 candidates (83042 examples) [28.54s elapsed]
+I0116 11:06:34.357545 139973552287744 make_examples_core.py:367] Task 0/8: 148066 candidates (86880 examples) [25.84s elapsed]
+I0116 11:06:35.895920 140511434571776 make_examples_core.py:367] Task 6/8: 140116 candidates (80262 examples) [35.51s elapsed]
+I0116 11:06:41.857255 139740115177472 make_examples_core.py:367] Task 5/8: 142110 candidates (82427 examples) [29.34s elapsed]
+I0116 11:06:42.551189 140313907945472 make_examples_core.py:367] Task 4/8: 146141 candidates (85195 examples) [35.59s elapsed]
+I0116 11:06:42.911779 140283420848128 make_examples_core.py:367] Task 1/8: 146056 candidates (86124 examples) [42.22s elapsed]
+I0116 11:06:52.247893 140639462100992 make_examples_core.py:367] Task 2/8: 144030 candidates (83332 examples) [38.98s elapsed]
+I0116 11:06:55.669089 140164982493184 make_examples_core.py:367] Task 3/8: 146034 candidates (85268 examples) [32.62s elapsed]
+I0116 11:06:56.124194 139810517626880 make_examples_core.py:367] Task 7/8: 146011 candidates (84247 examples) [28.85s elapsed]
+I0116 11:06:59.848055 140511434571776 make_examples_core.py:367] Task 6/8: 142004 candidates (80987 examples) [23.95s elapsed]
+I0116 11:07:00.716748 139973552287744 make_examples_core.py:367] Task 0/8: 150048 candidates (87686 examples) [26.36s elapsed]
+I0116 11:07:03.292300 139740115177472 make_examples_core.py:367] Task 5/8: 144013 candidates (83308 examples) [21.43s elapsed]
+I0116 11:07:10.399338 140313907945472 make_examples_core.py:367] Task 4/8: 148070 candidates (86061 examples) [27.85s elapsed]
+I0116 11:07:12.920658 140283420848128 make_examples_core.py:367] Task 1/8: 148053 candidates (87005 examples) [30.01s elapsed]
+I0116 11:07:22.098642 140639462100992 make_examples_core.py:367] Task 2/8: 146045 candidates (84152 examples) [29.85s elapsed]
+I0116 11:07:21.504633 140164982493184 make_examples_core.py:367] Task 3/8: 148054 candidates (86188 examples) [25.84s elapsed]
+I0116 11:07:27.993511 139973552287744 make_examples_core.py:367] Task 0/8: 152080 candidates (88900 examples) [27.28s elapsed]
+I0116 11:07:27.668229 140511434571776 make_examples_core.py:367] Task 6/8: 144043 candidates (82052 examples) [27.82s elapsed]
+I0116 11:07:28.114934 139810517626880 make_examples_core.py:367] Task 7/8: 148063 candidates (85294 examples) [31.99s elapsed]
+I0116 11:07:28.824434 139740115177472 make_examples_core.py:367] Task 5/8: 146073 candidates (84395 examples) [25.53s elapsed]
+I0116 11:07:38.561329 140283420848128 make_examples_core.py:367] Task 1/8: 150066 candidates (87946 examples) [25.64s elapsed]
+I0116 11:07:48.681900 140313907945472 make_examples_core.py:367] Task 4/8: 150000 candidates (87048 examples) [38.28s elapsed]
+I0116 11:07:47.990185 140164982493184 make_examples_core.py:367] Task 3/8: 150033 candidates (87166 examples) [26.49s elapsed]
+I0116 11:07:51.107527 140639462100992 make_examples_core.py:367] Task 2/8: 148003 candidates (85298 examples) [29.01s elapsed]
+I0116 11:07:51.426528 140511434571776 make_examples_core.py:367] Task 6/8: 146008 candidates (83023 examples) [23.76s elapsed]
+I0116 11:07:52.397599 139740115177472 make_examples_core.py:367] Task 5/8: 148013 candidates (85311 examples) [23.57s elapsed]
+I0116 11:07:55.133658 139810517626880 make_examples_core.py:367] Task 7/8: 150129 candidates (86260 examples) [27.02s elapsed]
+I0116 11:07:59.873539 139973552287744 make_examples_core.py:367] Task 0/8: 154018 candidates (89836 examples) [31.88s elapsed]
+I0116 11:08:05.835433 140283420848128 make_examples_core.py:367] Task 1/8: 152057 candidates (88734 examples) [27.27s elapsed]
+I0116 11:08:15.674774 140164982493184 make_examples_core.py:367] Task 3/8: 152065 candidates (88194 examples) [27.68s elapsed]
+I0116 11:08:18.302261 139740115177472 make_examples_core.py:367] Task 5/8: 150026 candidates (86277 examples) [25.90s elapsed]
+I0116 11:08:20.898080 140639462100992 make_examples_core.py:367] Task 2/8: 150071 candidates (86218 examples) [29.79s elapsed]
+I0116 11:08:22.181723 140313907945472 make_examples_core.py:367] Task 4/8: 152013 candidates (88102 examples) [33.50s elapsed]
+I0116 11:08:24.485642 139973552287744 make_examples_core.py:367] Task 0/8: 156002 candidates (90995 examples) [24.61s elapsed]
+I0116 11:08:30.431897 139810517626880 make_examples_core.py:367] Task 7/8: 152099 candidates (87337 examples) [35.30s elapsed]
+I0116 11:08:33.860733 140283420848128 make_examples_core.py:367] Task 1/8: 154044 candidates (89711 examples) [28.03s elapsed]
+I0116 11:08:34.844811 140511434571776 make_examples_core.py:367] Task 6/8: 148056 candidates (84029 examples) [43.42s elapsed]
+I0116 11:08:45.784133 140164982493184 make_examples_core.py:367] Task 3/8: 154021 candidates (89331 examples) [30.11s elapsed]
+I0116 11:08:48.066818 139740115177472 make_examples_core.py:367] Task 5/8: 152033 candidates (87117 examples) [29.76s elapsed]
+I0116 11:08:49.346761 140639462100992 make_examples_core.py:367] Task 2/8: 152021 candidates (87100 examples) [28.45s elapsed]
+I0116 11:08:52.266060 140313907945472 make_examples_core.py:367] Task 4/8: 154009 candidates (89233 examples) [30.08s elapsed]
+I0116 11:08:56.079926 139973552287744 make_examples_core.py:367] Task 0/8: 158070 candidates (92109 examples) [31.59s elapsed]
+I0116 11:09:01.409214 139810517626880 make_examples_core.py:367] Task 7/8: 154012 candidates (88182 examples) [30.98s elapsed]
+I0116 11:09:03.434101 140511434571776 make_examples_core.py:367] Task 6/8: 150030 candidates (84992 examples) [28.59s elapsed]
+I0116 11:09:08.628317 140283420848128 make_examples_core.py:367] Task 1/8: 156141 candidates (90623 examples) [34.77s elapsed]
+I0116 11:09:13.877897 139740115177472 make_examples_core.py:367] Task 5/8: 154023 candidates (88205 examples) [25.81s elapsed]
+I0116 11:09:15.118109 140164982493184 make_examples_core.py:367] Task 3/8: 156048 candidates (90528 examples) [29.33s elapsed]
+I0116 11:09:15.675428 140639462100992 make_examples_core.py:367] Task 2/8: 154000 candidates (87997 examples) [26.33s elapsed]
+I0116 11:09:17.857205 140313907945472 make_examples_core.py:367] Task 4/8: 156016 candidates (90227 examples) [25.59s elapsed]
+I0116 11:09:25.636993 139810517626880 make_examples_core.py:367] Task 7/8: 156021 candidates (89323 examples) [24.23s elapsed]
+I0116 11:09:31.347110 139973552287744 make_examples_core.py:367] Task 0/8: 160133 candidates (93301 examples) [35.27s elapsed]
+I0116 11:09:34.543778 140283420848128 make_examples_core.py:367] Task 1/8: 158086 candidates (91680 examples) [25.92s elapsed]
+I0116 11:09:40.774585 140639462100992 make_examples_core.py:367] Task 2/8: 156018 candidates (89100 examples) [25.10s elapsed]
+I0116 11:09:41.624841 140511434571776 make_examples_core.py:367] Task 6/8: 152005 candidates (85937 examples) [38.19s elapsed]
+I0116 11:09:45.523215 140313907945472 make_examples_core.py:367] Task 4/8: 158069 candidates (91395 examples) [27.67s elapsed]
+I0116 11:09:47.110164 139740115177472 make_examples_core.py:367] Task 5/8: 156107 candidates (89214 examples) [33.23s elapsed]
+I0116 11:09:47.553792 140164982493184 make_examples_core.py:367] Task 3/8: 158020 candidates (91548 examples) [32.44s elapsed]
+I0116 11:09:52.739097 139810517626880 make_examples_core.py:367] Task 7/8: 158019 candidates (90203 examples) [27.10s elapsed]
+I0116 11:09:57.048657 140283420848128 make_examples_core.py:367] Task 1/8: 160032 candidates (92591 examples) [22.50s elapsed]
+I0116 11:09:59.982650 139973552287744 make_examples_core.py:367] Task 0/8: 162018 candidates (94170 examples) [28.64s elapsed]
+I0116 11:10:08.317195 140511434571776 make_examples_core.py:367] Task 6/8: 154031 candidates (86892 examples) [26.69s elapsed]
+I0116 11:10:09.345269 140639462100992 make_examples_core.py:367] Task 2/8: 158022 candidates (90127 examples) [28.57s elapsed]
+I0116 11:10:14.702062 139740115177472 make_examples_core.py:367] Task 5/8: 158035 candidates (90216 examples) [27.59s elapsed]
+I0116 11:10:16.400385 140313907945472 make_examples_core.py:367] Task 4/8: 160036 candidates (92415 examples) [30.88s elapsed]
+I0116 11:10:17.100311 140164982493184 make_examples_core.py:367] Task 3/8: 160003 candidates (92891 examples) [29.55s elapsed]
+I0116 11:10:20.497117 139810517626880 make_examples_core.py:367] Task 7/8: 160002 candidates (91312 examples) [27.76s elapsed]
+I0116 11:10:21.966333 140283420848128 make_examples_core.py:367] Task 1/8: 162043 candidates (93618 examples) [24.92s elapsed]
+I0116 11:10:30.633460 139973552287744 make_examples_core.py:367] Task 0/8: 164049 candidates (95168 examples) [30.65s elapsed]
+I0116 11:10:39.597999 140639462100992 make_examples_core.py:367] Task 2/8: 160145 candidates (91401 examples) [30.25s elapsed]
+I0116 11:10:42.358880 139740115177472 make_examples_core.py:367] Task 5/8: 160004 candidates (91239 examples) [27.66s elapsed]
+I0116 11:10:46.433207 140164982493184 make_examples_core.py:367] Task 3/8: 162014 candidates (93890 examples) [29.33s elapsed]
+I0116 11:10:47.662425 140511434571776 make_examples_core.py:367] Task 6/8: 156016 candidates (88140 examples) [39.34s elapsed]
+I0116 11:10:49.105866 140283420848128 make_examples_core.py:367] Task 1/8: 164065 candidates (94912 examples) [27.14s elapsed]
+I0116 11:10:50.251163 139810517626880 make_examples_core.py:367] Task 7/8: 162153 candidates (92343 examples) [29.75s elapsed]
+I0116 11:10:52.754859 140313907945472 make_examples_core.py:367] Task 4/8: 162007 candidates (93608 examples) [36.35s elapsed]
+I0116 11:11:01.122719 139973552287744 make_examples_core.py:367] Task 0/8: 166000 candidates (96212 examples) [30.49s elapsed]
+I0116 11:11:06.684700 140639462100992 make_examples_core.py:367] Task 2/8: 162018 candidates (92279 examples) [27.09s elapsed]
+I0116 11:11:13.596657 139740115177472 make_examples_core.py:367] Task 5/8: 162003 candidates (92284 examples) [31.24s elapsed]
+I0116 11:11:14.276647 140164982493184 make_examples_core.py:367] Task 3/8: 164090 candidates (94942 examples) [27.84s elapsed]
+I0116 11:11:16.173602 140511434571776 make_examples_core.py:367] Task 6/8: 158040 candidates (89340 examples) [28.51s elapsed]
+I0116 11:11:16.113424 139810517626880 make_examples_core.py:367] Task 7/8: 164067 candidates (93246 examples) [25.86s elapsed]
+I0116 11:11:16.332065 140283420848128 make_examples_core.py:367] Task 1/8: 166029 candidates (95836 examples) [27.23s elapsed]
+I0116 11:11:22.961287 140313907945472 make_examples_core.py:367] Task 4/8: 164021 candidates (94808 examples) [30.21s elapsed]
+I0116 11:11:28.159535 139973552287744 make_examples_core.py:367] Task 0/8: 168075 candidates (97231 examples) [27.04s elapsed]
+I0116 11:11:31.197628 140639462100992 make_examples_core.py:367] Task 2/8: 164035 candidates (93370 examples) [24.51s elapsed]
+I0116 11:11:38.894590 140164982493184 make_examples_core.py:367] Task 3/8: 166008 candidates (95715 examples) [24.62s elapsed]
+I0116 11:11:41.747131 140511434571776 make_examples_core.py:367] Task 6/8: 160084 candidates (90420 examples) [25.57s elapsed]
+I0116 11:11:42.941361 139740115177472 make_examples_core.py:367] Task 5/8: 164032 candidates (93456 examples) [29.34s elapsed]
+I0116 11:11:43.577665 140283420848128 make_examples_core.py:367] Task 1/8: 168085 candidates (96708 examples) [27.25s elapsed]
+I0116 11:11:47.133394 139810517626880 make_examples_core.py:367] Task 7/8: 166093 candidates (94223 examples) [31.02s elapsed]
+I0116 11:11:53.183087 140313907945472 make_examples_core.py:367] Task 4/8: 166021 candidates (95662 examples) [30.22s elapsed]
+I0116 11:11:54.004432 139973552287744 make_examples_core.py:367] Task 0/8: 170029 candidates (98149 examples) [25.84s elapsed]
+I0116 11:12:00.375304 140639462100992 make_examples_core.py:367] Task 2/8: 166065 candidates (94405 examples) [29.18s elapsed]
+I0116 11:12:03.393863 140164982493184 make_examples_core.py:367] Task 3/8: 168123 candidates (96766 examples) [24.50s elapsed]
+I0116 11:12:10.711821 140511434571776 make_examples_core.py:367] Task 6/8: 162130 candidates (91529 examples) [28.96s elapsed]
+I0116 11:12:14.039556 140283420848128 make_examples_core.py:367] Task 1/8: 170218 candidates (97648 examples) [30.46s elapsed]
+I0116 11:12:15.058918 139740115177472 make_examples_core.py:367] Task 5/8: 166000 candidates (94450 examples) [32.12s elapsed]
+I0116 11:12:16.058295 139810517626880 make_examples_core.py:367] Task 7/8: 168092 candidates (95109 examples) [28.92s elapsed]
+I0116 11:12:16.654102 139973552287744 make_examples_core.py:367] Task 0/8: 172008 candidates (99069 examples) [22.65s elapsed]
+I0116 11:12:22.742905 140313907945472 make_examples_core.py:367] Task 4/8: 168005 candidates (96534 examples) [29.56s elapsed]
+I0116 11:12:26.997151 140164982493184 make_examples_core.py:367] Task 3/8: 170032 candidates (97811 examples) [23.60s elapsed]
+I0116 11:12:28.025050 140639462100992 make_examples_core.py:367] Task 2/8: 168063 candidates (95294 examples) [27.65s elapsed]
+I0116 11:12:35.126652 140283420848128 make_examples_core.py:367] Task 1/8: 172029 candidates (98589 examples) [21.09s elapsed]
+I0116 11:12:43.089475 139740115177472 make_examples_core.py:367] Task 5/8: 168013 candidates (95471 examples) [28.03s elapsed]
+I0116 11:12:43.275520 139973552287744 make_examples_core.py:367] Task 0/8: 174103 candidates (100249 examples) [26.62s elapsed]
+I0116 11:12:45.088279 140511434571776 make_examples_core.py:367] Task 6/8: 164018 candidates (92507 examples) [34.38s elapsed]
+I0116 11:12:53.805367 140313907945472 make_examples_core.py:367] Task 4/8: 170032 candidates (97475 examples) [31.06s elapsed]
+I0116 11:12:53.623591 140639462100992 make_examples_core.py:367] Task 2/8: 170001 candidates (96260 examples) [25.60s elapsed]
+I0116 11:12:53.746213 139810517626880 make_examples_core.py:367] Task 7/8: 170046 candidates (96130 examples) [37.69s elapsed]
+I0116 11:12:54.042224 140164982493184 make_examples_core.py:367] Task 3/8: 172064 candidates (98894 examples) [27.04s elapsed]
+I0116 11:13:06.878798 140283420848128 make_examples_core.py:367] Task 1/8: 174033 candidates (99545 examples) [31.75s elapsed]
+I0116 11:13:12.759673 140511434571776 make_examples_core.py:367] Task 6/8: 166081 candidates (93647 examples) [27.67s elapsed]
+I0116 11:13:13.460674 139973552287744 make_examples_core.py:367] Task 0/8: 176235 candidates (101198 examples) [30.18s elapsed]
+I0116 11:13:17.075732 139740115177472 make_examples_core.py:367] Task 5/8: 170039 candidates (96581 examples) [33.99s elapsed]
+I0116 11:13:20.031734 140639462100992 make_examples_core.py:367] Task 2/8: 172048 candidates (97095 examples) [26.41s elapsed]
+I0116 11:13:20.673961 140313907945472 make_examples_core.py:367] Task 4/8: 172057 candidates (98459 examples) [26.87s elapsed]
+I0116 11:13:23.333477 140164982493184 make_examples_core.py:367] Task 3/8: 174027 candidates (99963 examples) [29.29s elapsed]
+I0116 11:13:24.495358 139810517626880 make_examples_core.py:367] Task 7/8: 172043 candidates (97192 examples) [30.75s elapsed]
+I0116 11:13:31.969755 140283420848128 make_examples_core.py:367] Task 1/8: 176027 candidates (100666 examples) [25.09s elapsed]
+I0116 11:13:40.901668 139740115177472 make_examples_core.py:367] Task 5/8: 172062 candidates (97502 examples) [23.83s elapsed]
+I0116 11:13:41.073188 139973552287744 make_examples_core.py:367] Task 0/8: 178074 candidates (102173 examples) [27.61s elapsed]
+I0116 11:13:41.050945 140511434571776 make_examples_core.py:367] Task 6/8: 168057 candidates (94464 examples) [28.29s elapsed]
+I0116 11:13:48.467502 140313907945472 make_examples_core.py:367] Task 4/8: 174066 candidates (99411 examples) [27.79s elapsed]
+I0116 11:13:48.466167 140639462100992 make_examples_core.py:367] Task 2/8: 174161 candidates (97987 examples) [28.43s elapsed]
+I0116 11:13:50.207062 140164982493184 make_examples_core.py:367] Task 3/8: 176057 candidates (101068 examples) [26.87s elapsed]
+I0116 11:13:51.335421 139810517626880 make_examples_core.py:367] Task 7/8: 174061 candidates (98108 examples) [26.84s elapsed]
+I0116 11:14:04.026120 139973552287744 make_examples_core.py:367] Task 0/8: 180037 candidates (103196 examples) [22.95s elapsed]
+I0116 11:14:06.920794 140283420848128 make_examples_core.py:367] Task 1/8: 178102 candidates (101583 examples) [34.95s elapsed]
+I0116 11:14:06.782639 140511434571776 make_examples_core.py:367] Task 6/8: 170007 candidates (95359 examples) [25.73s elapsed]
+I0116 11:14:08.200942 139740115177472 make_examples_core.py:367] Task 5/8: 174102 candidates (98438 examples) [27.30s elapsed]
+I0116 11:14:11.006702 140639462100992 make_examples_core.py:367] Task 2/8: 176164 candidates (99168 examples) [22.54s elapsed]
+I0116 11:14:11.750636 140313907945472 make_examples_core.py:367] Task 4/8: 176072 candidates (100278 examples) [23.28s elapsed]
+I0116 11:14:18.243935 140164982493184 make_examples_core.py:367] Task 3/8: 178006 candidates (102059 examples) [28.04s elapsed]
+I0116 11:14:20.456898 139810517626880 make_examples_core.py:367] Task 7/8: 176101 candidates (99139 examples) [29.12s elapsed]
+I0116 11:14:28.229457 139973552287744 make_examples_core.py:367] Task 0/8: 182082 candidates (104260 examples) [24.20s elapsed]
+I0116 11:14:31.803762 139740115177472 make_examples_core.py:367] Task 5/8: 176081 candidates (99466 examples) [23.60s elapsed]
+I0116 11:14:35.076842 140639462100992 make_examples_core.py:367] Task 2/8: 178009 candidates (100209 examples) [24.07s elapsed]
+I0116 11:14:36.073896 140313907945472 make_examples_core.py:367] Task 4/8: 178002 candidates (101296 examples) [24.32s elapsed]
+I0116 11:14:35.823749 140511434571776 make_examples_core.py:367] Task 6/8: 172049 candidates (96341 examples) [29.04s elapsed]
+I0116 11:14:38.498496 140283420848128 make_examples_core.py:367] Task 1/8: 180085 candidates (102661 examples) [31.58s elapsed]
+I0116 11:14:44.611698 140164982493184 make_examples_core.py:367] Task 3/8: 180024 candidates (103266 examples) [26.37s elapsed]
+I0116 11:14:45.269916 139810517626880 make_examples_core.py:367] Task 7/8: 178023 candidates (100094 examples) [24.81s elapsed]
+I0116 11:14:50.682308 139973552287744 make_examples_core.py:367] Task 0/8: 184019 candidates (105418 examples) [22.45s elapsed]
+I0116 11:14:58.253604 139740115177472 make_examples_core.py:367] Task 5/8: 178036 candidates (100417 examples) [26.45s elapsed]
+I0116 11:15:00.008977 140639462100992 make_examples_core.py:367] Task 2/8: 180065 candidates (101176 examples) [24.93s elapsed]
+I0116 11:15:02.594230 140313907945472 make_examples_core.py:367] Task 4/8: 180010 candidates (102392 examples) [26.52s elapsed]
+I0116 11:15:04.383274 140511434571776 make_examples_core.py:367] Task 6/8: 174068 candidates (97371 examples) [28.56s elapsed]
+I0116 11:15:05.524833 140283420848128 make_examples_core.py:367] Task 1/8: 182099 candidates (103748 examples) [27.03s elapsed]
+I0116 11:15:10.539450 139810517626880 make_examples_core.py:367] Task 7/8: 180025 candidates (101066 examples) [25.27s elapsed]
+I0116 11:15:15.957302 140164982493184 make_examples_core.py:367] Task 3/8: 182062 candidates (104448 examples) [31.35s elapsed]
+I0116 11:15:24.504211 139740115177472 make_examples_core.py:367] Task 5/8: 180072 candidates (101507 examples) [26.25s elapsed]
+I0116 11:15:25.854718 140313907945472 make_examples_core.py:367] Task 4/8: 182090 candidates (103462 examples) [23.26s elapsed]
+I0116 11:15:26.091383 139973552287744 make_examples_core.py:367] Task 0/8: 186030 candidates (106478 examples) [35.41s elapsed]
+I0116 11:15:28.686490 140283420848128 make_examples_core.py:367] Task 1/8: 184029 candidates (104702 examples) [23.16s elapsed]
+I0116 11:15:30.241993 140639462100992 make_examples_core.py:367] Task 2/8: 182189 candidates (102420 examples) [30.23s elapsed]
+I0116 11:15:33.406749 139810517626880 make_examples_core.py:367] Task 7/8: 182044 candidates (102194 examples) [22.87s elapsed]
+I0116 11:15:33.968638 140511434571776 make_examples_core.py:367] Task 6/8: 176004 candidates (98349 examples) [29.59s elapsed]
+I0116 11:15:39.909225 140164982493184 make_examples_core.py:367] Task 3/8: 184003 candidates (105486 examples) [23.95s elapsed]
+I0116 11:15:49.249455 140283420848128 make_examples_core.py:367] Task 1/8: 186041 candidates (105671 examples) [20.56s elapsed]
+I0116 11:15:56.901078 140639462100992 make_examples_core.py:367] Task 2/8: 184012 candidates (103226 examples) [26.66s elapsed]
+I0116 11:15:57.749436 139973552287744 make_examples_core.py:367] Task 0/8: 188084 candidates (107687 examples) [31.66s elapsed]
+I0116 11:15:58.655450 140313907945472 make_examples_core.py:367] Task 4/8: 184041 candidates (104488 examples) [32.80s elapsed]
+I0116 11:16:03.159223 139740115177472 make_examples_core.py:367] Task 5/8: 182041 candidates (102493 examples) [38.65s elapsed]
+I0116 11:16:04.130161 140511434571776 make_examples_core.py:367] Task 6/8: 178054 candidates (99530 examples) [30.16s elapsed]
+I0116 11:16:04.887228 139810517626880 make_examples_core.py:367] Task 7/8: 184005 candidates (103303 examples) [31.48s elapsed]
+I0116 11:16:09.539683 140164982493184 make_examples_core.py:367] Task 3/8: 186017 candidates (106593 examples) [29.63s elapsed]
+I0116 11:16:11.596927 140283420848128 make_examples_core.py:367] Task 1/8: 188019 candidates (106699 examples) [22.35s elapsed]
+I0116 11:16:21.446276 140639462100992 make_examples_core.py:367] Task 2/8: 186158 candidates (104376 examples) [24.54s elapsed]
+I0116 11:16:23.747424 140313907945472 make_examples_core.py:367] Task 4/8: 186008 candidates (105541 examples) [25.09s elapsed]
+I0116 11:16:26.958375 139973552287744 make_examples_core.py:367] Task 0/8: 190061 candidates (108394 examples) [29.21s elapsed]
+I0116 11:16:31.206899 140511434571776 make_examples_core.py:367] Task 6/8: 180110 candidates (100645 examples) [27.08s elapsed]
+I0116 11:16:33.157221 139810517626880 make_examples_core.py:367] Task 7/8: 186020 candidates (104601 examples) [28.27s elapsed]
+I0116 11:16:35.986132 140164982493184 make_examples_core.py:367] Task 3/8: 188058 candidates (107459 examples) [26.45s elapsed]
+I0116 11:16:36.599221 139740115177472 make_examples_core.py:367] Task 5/8: 184136 candidates (103678 examples) [33.44s elapsed]
+I0116 11:16:44.781155 140283420848128 make_examples_core.py:367] Task 1/8: 190136 candidates (107712 examples) [33.18s elapsed]
+I0116 11:16:48.797630 140313907945472 make_examples_core.py:367] Task 4/8: 188014 candidates (106668 examples) [25.05s elapsed]
+I0116 11:16:49.332235 140639462100992 make_examples_core.py:367] Task 2/8: 188090 candidates (105291 examples) [27.89s elapsed]
+I0116 11:16:53.835524 139973552287744 make_examples_core.py:367] Task 0/8: 192045 candidates (109233 examples) [26.88s elapsed]
+I0116 11:16:54.446108 140511434571776 make_examples_core.py:367] Task 6/8: 182022 candidates (101566 examples) [23.24s elapsed]
+I0116 11:17:00.594371 140164982493184 make_examples_core.py:367] Task 3/8: 190090 candidates (108449 examples) [24.61s elapsed]
+I0116 11:17:02.447259 139740115177472 make_examples_core.py:367] Task 5/8: 186041 candidates (104801 examples) [25.85s elapsed]
+I0116 11:17:03.556120 139810517626880 make_examples_core.py:367] Task 7/8: 188001 candidates (105621 examples) [30.40s elapsed]
+I0116 11:17:13.785215 140283420848128 make_examples_core.py:367] Task 1/8: 192061 candidates (108560 examples) [29.00s elapsed]
+I0116 11:17:17.914293 140511434571776 make_examples_core.py:367] Task 6/8: 184036 candidates (102366 examples) [23.47s elapsed]
+I0116 11:17:18.780307 140313907945472 make_examples_core.py:367] Task 4/8: 190019 candidates (107563 examples) [29.98s elapsed]
+I0116 11:17:20.681071 140639462100992 make_examples_core.py:367] Task 2/8: 190128 candidates (106555 examples) [31.35s elapsed]
+I0116 11:17:25.058572 140164982493184 make_examples_core.py:367] Task 3/8: 192029 candidates (109354 examples) [24.46s elapsed]
+I0116 11:17:29.664014 139973552287744 make_examples_core.py:367] Task 0/8: 194070 candidates (110168 examples) [35.83s elapsed]
+I0116 11:17:38.138212 139810517626880 make_examples_core.py:367] Task 7/8: 190087 candidates (106667 examples) [34.58s elapsed]
+I0116 11:17:42.729304 140283420848128 make_examples_core.py:367] Task 1/8: 194029 candidates (109599 examples) [28.94s elapsed]
+I0116 11:17:43.098194 140313907945472 make_examples_core.py:367] Task 4/8: 192094 candidates (108512 examples) [24.32s elapsed]
+I0116 11:17:43.029845 140639462100992 make_examples_core.py:367] Task 2/8: 192048 candidates (107489 examples) [22.35s elapsed]
+I0116 11:17:44.215402 140511434571776 make_examples_core.py:367] Task 6/8: 186033 candidates (103529 examples) [26.30s elapsed]
+I0116 11:17:45.460178 139740115177472 make_examples_core.py:367] Task 5/8: 188006 candidates (105901 examples) [43.01s elapsed]
+I0116 11:17:57.399548 139973552287744 make_examples_core.py:367] Task 0/8: 196003 candidates (110990 examples) [27.74s elapsed]
+I0116 11:18:02.139060 139810517626880 make_examples_core.py:367] Task 7/8: 192081 candidates (107618 examples) [24.00s elapsed]
+I0116 11:18:09.587658 140639462100992 make_examples_core.py:367] Task 2/8: 194132 candidates (108461 examples) [26.56s elapsed]
+I0116 11:18:11.770335 139740115177472 make_examples_core.py:367] Task 5/8: 190041 candidates (106925 examples) [26.31s elapsed]
+I0116 11:18:16.033854 140164982493184 make_examples_core.py:367] Task 3/8: 194011 candidates (110323 examples) [50.97s elapsed]
+I0116 11:18:17.990915 140313907945472 make_examples_core.py:367] Task 4/8: 194026 candidates (109651 examples) [34.89s elapsed]
+I0116 11:18:17.615080 140283420848128 make_examples_core.py:367] Task 1/8: 196002 candidates (110507 examples) [34.89s elapsed]
+I0116 11:18:24.788033 139973552287744 make_examples_core.py:367] Task 0/8: 198007 candidates (111985 examples) [27.39s elapsed]
+I0116 11:18:32.490477 139810517626880 make_examples_core.py:367] Task 7/8: 194086 candidates (108538 examples) [30.35s elapsed]
+I0116 11:18:33.432098 140511434571776 make_examples_core.py:367] Task 6/8: 188087 candidates (104458 examples) [49.22s elapsed]
+I0116 11:18:37.317573 140639462100992 make_examples_core.py:367] Task 2/8: 196003 candidates (109278 examples) [27.73s elapsed]
+I0116 11:18:38.256404 139740115177472 make_examples_core.py:367] Task 5/8: 192065 candidates (107770 examples) [26.49s elapsed]
+I0116 11:18:42.950577 140164982493184 make_examples_core.py:367] Task 3/8: 196065 candidates (111378 examples) [26.92s elapsed]
+I0116 11:18:47.271481 140283420848128 make_examples_core.py:367] Task 1/8: 198084 candidates (111490 examples) [29.66s elapsed]
+I0116 11:18:56.121757 140313907945472 make_examples_core.py:367] Task 4/8: 196035 candidates (110675 examples) [38.13s elapsed]
+I0116 11:18:56.234498 139973552287744 make_examples_core.py:367] Task 0/8: 200013 candidates (113069 examples) [31.45s elapsed]
+I0116 11:18:57.866927 139810517626880 make_examples_core.py:367] Task 7/8: 196025 candidates (109473 examples) [25.38s elapsed]
+I0116 11:19:04.431456 140511434571776 make_examples_core.py:367] Task 6/8: 190049 candidates (105445 examples) [31.00s elapsed]
+I0116 11:19:06.676794 140639462100992 make_examples_core.py:367] Task 2/8: 198018 candidates (110392 examples) [29.36s elapsed]
+I0116 11:19:09.136147 140164982493184 make_examples_core.py:367] Task 3/8: 198093 candidates (112140 examples) [26.19s elapsed]
+I0116 11:19:10.071954 139740115177472 make_examples_core.py:367] Task 5/8: 194129 candidates (108710 examples) [31.82s elapsed]
+I0116 11:19:14.114361 140283420848128 make_examples_core.py:367] Task 1/8: 200094 candidates (112448 examples) [26.84s elapsed]
+I0116 11:19:30.411085 140313907945472 make_examples_core.py:367] Task 4/8: 198001 candidates (111630 examples) [34.29s elapsed]
+I0116 11:19:34.429533 139810517626880 make_examples_core.py:367] Task 7/8: 198087 candidates (110598 examples) [36.56s elapsed]
+I0116 11:19:35.425834 140164982493184 make_examples_core.py:367] Task 3/8: 200026 candidates (112953 examples) [26.29s elapsed]
+I0116 11:19:36.127784 140639462100992 make_examples_core.py:367] Task 2/8: 200007 candidates (111413 examples) [29.45s elapsed]
+I0116 11:19:37.769439 139973552287744 make_examples_core.py:367] Task 0/8: 202017 candidates (114123 examples) [41.53s elapsed]
+I0116 11:19:38.629839 140511434571776 make_examples_core.py:367] Task 6/8: 192002 candidates (106372 examples) [34.20s elapsed]
+I0116 11:19:41.910920 140283420848128 make_examples_core.py:367] Task 1/8: 202144 candidates (113468 examples) [27.80s elapsed]
+I0116 11:19:52.228952 139740115177472 make_examples_core.py:367] Task 5/8: 196029 candidates (109438 examples) [42.16s elapsed]
+I0116 11:19:58.223312 140164982493184 make_examples_core.py:367] Task 3/8: 202006 candidates (113795 examples) [22.80s elapsed]
+I0116 11:19:59.968225 139810517626880 make_examples_core.py:367] Task 7/8: 200061 candidates (111331 examples) [25.54s elapsed]
+I0116 11:20:05.960595 139973552287744 make_examples_core.py:367] Task 0/8: 204037 candidates (115090 examples) [28.19s elapsed]
+I0116 11:20:08.259545 140283420848128 make_examples_core.py:367] Task 1/8: 204024 candidates (114512 examples) [26.35s elapsed]
+I0116 11:20:14.340748 140639462100992 make_examples_core.py:367] Task 2/8: 202015 candidates (112272 examples) [38.21s elapsed]
+I0116 11:20:14.673639 140511434571776 make_examples_core.py:367] Task 6/8: 194017 candidates (107288 examples) [36.04s elapsed]
+I0116 11:20:15.570489 140313907945472 make_examples_core.py:367] Task 4/8: 200198 candidates (112729 examples) [45.16s elapsed]
+I0116 11:20:17.480369 139740115177472 make_examples_core.py:367] Task 5/8: 198000 candidates (110386 examples) [25.25s elapsed]
+I0116 11:20:24.648917 140164982493184 make_examples_core.py:367] Task 3/8: 204025 candidates (114445 examples) [26.43s elapsed]
+I0116 11:20:28.671154 139810517626880 make_examples_core.py:367] Task 7/8: 202048 candidates (112486 examples) [28.70s elapsed]
+I0116 11:20:39.125991 140283420848128 make_examples_core.py:367] Task 1/8: 206002 candidates (115367 examples) [30.87s elapsed]
+I0116 11:20:39.708753 139973552287744 make_examples_core.py:367] Task 0/8: 206022 candidates (116148 examples) [33.75s elapsed]
+I0116 11:20:40.799711 140313907945472 make_examples_core.py:367] Task 4/8: 202032 candidates (113531 examples) [25.23s elapsed]
+I0116 11:20:46.433745 140639462100992 make_examples_core.py:367] Task 2/8: 204017 candidates (113320 examples) [32.09s elapsed]
+I0116 11:20:49.968864 140511434571776 make_examples_core.py:367] Task 6/8: 196058 candidates (108160 examples) [35.29s elapsed]
+I0116 11:20:54.148820 140164982493184 make_examples_core.py:367] Task 3/8: 206046 candidates (115201 examples) [29.50s elapsed]
+I0116 11:20:56.647651 139740115177472 make_examples_core.py:367] Task 5/8: 200149 candidates (111545 examples) [39.17s elapsed]
+I0116 11:21:01.519068 139810517626880 make_examples_core.py:367] Task 7/8: 204045 candidates (113367 examples) [32.85s elapsed]
+I0116 11:21:06.683166 140283420848128 make_examples_core.py:367] Task 1/8: 208050 candidates (116474 examples) [27.56s elapsed]
+I0116 11:21:06.439240 139973552287744 make_examples_core.py:367] Task 0/8: 208001 candidates (117090 examples) [26.73s elapsed]
+I0116 11:21:17.208170 140511434571776 make_examples_core.py:367] Task 6/8: 198044 candidates (109123 examples) [27.24s elapsed]
+I0116 11:21:18.764351 140313907945472 make_examples_core.py:367] Task 4/8: 204028 candidates (114474 examples) [37.96s elapsed]
+I0116 11:21:18.981249 140639462100992 make_examples_core.py:367] Task 2/8: 206018 candidates (114284 examples) [32.55s elapsed]
+I0116 11:21:23.075201 140164982493184 make_examples_core.py:367] Task 3/8: 208081 candidates (116261 examples) [28.93s elapsed]
+I0116 11:21:30.405771 139740115177472 make_examples_core.py:367] Task 5/8: 202059 candidates (112554 examples) [33.76s elapsed]
+I0116 11:21:34.385290 140283420848128 make_examples_core.py:367] Task 1/8: 210002 candidates (117406 examples) [27.70s elapsed]
+I0116 11:21:35.675685 139973552287744 make_examples_core.py:367] Task 0/8: 210064 candidates (117980 examples) [29.24s elapsed]
+I0116 11:21:39.866497 139810517626880 make_examples_core.py:367] Task 7/8: 206081 candidates (114232 examples) [38.35s elapsed]
+I0116 11:21:45.647207 140639462100992 make_examples_core.py:367] Task 2/8: 208021 candidates (115170 examples) [26.67s elapsed]
+I0116 11:21:47.457598 140313907945472 make_examples_core.py:367] Task 4/8: 206038 candidates (115567 examples) [28.69s elapsed]
+I0116 11:21:49.201841 140511434571776 make_examples_core.py:367] Task 6/8: 200023 candidates (110216 examples) [31.99s elapsed]
+I0116 11:21:52.440924 140164982493184 make_examples_core.py:367] Task 3/8: 210034 candidates (117077 examples) [29.37s elapsed]
+I0116 11:21:59.397329 139740115177472 make_examples_core.py:367] Task 5/8: 204015 candidates (113511 examples) [28.99s elapsed]
+I0116 11:22:03.675019 140283420848128 make_examples_core.py:367] Task 1/8: 212011 candidates (118541 examples) [29.29s elapsed]
+I0116 11:22:06.744051 139810517626880 make_examples_core.py:367] Task 7/8: 208019 candidates (115212 examples) [26.88s elapsed]
+I0116 11:22:11.332534 140639462100992 make_examples_core.py:367] Task 2/8: 210009 candidates (115818 examples) [25.69s elapsed]
+I0116 11:22:13.411267 139973552287744 make_examples_core.py:367] Task 0/8: 212096 candidates (118715 examples) [37.74s elapsed]
+I0116 11:22:16.420629 140313907945472 make_examples_core.py:367] Task 4/8: 208075 candidates (116492 examples) [28.96s elapsed]
+I0116 11:22:16.594211 140511434571776 make_examples_core.py:367] Task 6/8: 202039 candidates (111284 examples) [27.39s elapsed]
+I0116 11:22:19.859508 139740115177472 make_examples_core.py:367] Task 5/8: 206048 candidates (114416 examples) [20.46s elapsed]
+I0116 11:22:26.049132 140164982493184 make_examples_core.py:367] Task 3/8: 212053 candidates (118104 examples) [33.61s elapsed]
+I0116 11:22:33.537277 139810517626880 make_examples_core.py:367] Task 7/8: 210015 candidates (116011 examples) [26.79s elapsed]
+I0116 11:22:39.816854 140283420848128 make_examples_core.py:367] Task 1/8: 214143 candidates (119820 examples) [36.14s elapsed]
+I0116 11:22:40.946526 140639462100992 make_examples_core.py:367] Task 2/8: 212013 candidates (116796 examples) [29.61s elapsed]
+I0116 11:22:45.928318 140313907945472 make_examples_core.py:367] Task 4/8: 210040 candidates (117482 examples) [29.51s elapsed]
+I0116 11:22:49.262001 139740115177472 make_examples_core.py:367] Task 5/8: 208025 candidates (115334 examples) [29.40s elapsed]
+I0116 11:22:49.235636 139973552287744 make_examples_core.py:367] Task 0/8: 214035 candidates (119473 examples) [35.82s elapsed]
+I0116 11:22:52.736800 140164982493184 make_examples_core.py:367] Task 3/8: 214111 candidates (119025 examples) [26.69s elapsed]
+I0116 11:23:07.731722 139810517626880 make_examples_core.py:367] Task 7/8: 212045 candidates (116977 examples) [34.19s elapsed]
+I0116 11:23:12.280755 140283420848128 make_examples_core.py:367] Task 1/8: 216097 candidates (120487 examples) [32.46s elapsed]
+I0116 11:23:17.200394 140511434571776 make_examples_core.py:367] Task 6/8: 204036 candidates (112460 examples) [60.61s elapsed]
+I0116 11:23:20.057978 139973552287744 make_examples_core.py:367] Task 0/8: 216067 candidates (120287 examples) [30.82s elapsed]
+I0116 11:23:20.472972 139740115177472 make_examples_core.py:367] Task 5/8: 210003 candidates (116399 examples) [31.21s elapsed]
+I0116 11:23:23.777858 140313907945472 make_examples_core.py:367] Task 4/8: 212043 candidates (118612 examples) [37.85s elapsed]
+I0116 11:23:25.663758 140639462100992 make_examples_core.py:367] Task 2/8: 214113 candidates (117715 examples) [44.72s elapsed]
+I0116 11:23:30.437838 140164982493184 make_examples_core.py:367] Task 3/8: 216125 candidates (120031 examples) [37.70s elapsed]
+I0116 11:23:39.640619 140283420848128 make_examples_core.py:367] Task 1/8: 218014 candidates (121155 examples) [27.36s elapsed]
+I0116 11:23:40.750875 139810517626880 make_examples_core.py:367] Task 7/8: 214011 candidates (117897 examples) [33.02s elapsed]
+I0116 11:23:46.461416 140511434571776 make_examples_core.py:367] Task 6/8: 206076 candidates (113356 examples) [29.26s elapsed]
+I0116 11:23:52.451714 140639462100992 make_examples_core.py:367] Task 2/8: 216036 candidates (118824 examples) [26.79s elapsed]
+I0116 11:23:54.610999 139973552287744 make_examples_core.py:367] Task 0/8: 218003 candidates (121166 examples) [34.55s elapsed]
+I0116 11:23:57.594772 139740115177472 make_examples_core.py:367] Task 5/8: 212018 candidates (117301 examples) [37.12s elapsed]
+I0116 11:23:58.108071 140313907945472 make_examples_core.py:367] Task 4/8: 214113 candidates (119635 examples) [34.33s elapsed]
+I0116 11:24:04.196809 140164982493184 make_examples_core.py:367] Task 3/8: 218055 candidates (121002 examples) [33.76s elapsed]
+I0116 11:24:08.609038 140283420848128 make_examples_core.py:367] Task 1/8: 220029 candidates (121964 examples) [28.97s elapsed]
+I0116 11:24:13.243067 139810517626880 make_examples_core.py:367] Task 7/8: 216008 candidates (118679 examples) [32.49s elapsed]
+I0116 11:24:14.992678 140511434571776 make_examples_core.py:367] Task 6/8: 208044 candidates (114302 examples) [28.53s elapsed]
+I0116 11:24:17.471678 139973552287744 make_examples_core.py:367] Task 0/8: 220125 candidates (122184 examples) [22.86s elapsed]
+I0116 11:24:18.458151 140639462100992 make_examples_core.py:367] Task 2/8: 218011 candidates (119828 examples) [26.01s elapsed]
+I0116 11:24:27.384735 139740115177472 make_examples_core.py:367] Task 5/8: 214048 candidates (118240 examples) [29.79s elapsed]
+I0116 11:24:26.860810 139973552287744 make_examples_core.py:367] Task 0/8: Writing example info to /output/tmp_chr22/make_examples.tfrecord-00000-of-00008.gz.example_info.json
+I0116 11:24:26.861043 139973552287744 make_examples_core.py:3685] example_shape = [100, 221, 7]
+I0116 11:24:26.861098 139973552287744 make_examples_core.py:3686] example_channels = [1, 2, 3, 4, 5, 6, 19]
+I0116 11:24:26.861679 139973552287744 make_examples_core.py:367] Task 0/8: Summary stats:
+	220921 candidate variants found
+	122687 examples written
+	150367 small model examples called
+I0116 11:24:30.634536 140313907945472 make_examples_core.py:367] Task 4/8: 216009 candidates (120534 examples) [32.53s elapsed]
+I0116 11:24:31.823143 140283420848128 make_examples_core.py:367] Task 1/8: 222057 candidates (122697 examples) [23.21s elapsed]
+I0116 11:24:39.421900 140164982493184 make_examples_core.py:367] Task 3/8: 220056 candidates (121847 examples) [35.22s elapsed]
+I0116 11:24:40.080325 140511434571776 make_examples_core.py:367] Task 6/8: 210094 candidates (115349 examples) [25.09s elapsed]
+I0116 11:24:41.293378 140639462100992 make_examples_core.py:367] Task 2/8: 220037 candidates (120606 examples) [22.84s elapsed]
+I0116 11:24:45.667883 139810517626880 make_examples_core.py:367] Task 7/8: 218002 candidates (119691 examples) [32.42s elapsed]
+I0116 11:24:51.925650 139740115177472 make_examples_core.py:367] Task 5/8: 216003 candidates (119061 examples) [24.54s elapsed]
+I0116 11:25:01.372559 140283420848128 make_examples_core.py:367] Task 1/8: 224193 candidates (123685 examples) [29.55s elapsed]
+I0116 11:25:06.252119 140639462100992 make_examples_core.py:367] Task 2/8: 222055 candidates (121353 examples) [24.96s elapsed]
+I0116 11:25:06.558457 140313907945472 make_examples_core.py:367] Task 4/8: 218007 candidates (121707 examples) [35.92s elapsed]
+I0116 11:25:07.281899 140164982493184 make_examples_core.py:367] Task 3/8: 222031 candidates (122895 examples) [27.86s elapsed]
+I0116 11:25:08.462799 140511434571776 make_examples_core.py:367] Task 6/8: 212027 candidates (116272 examples) [28.38s elapsed]
+I0116 11:25:13.357919 139810517626880 make_examples_core.py:367] Task 7/8: 220119 candidates (120526 examples) [27.69s elapsed]
+I0116 11:25:24.617187 140283420848128 make_examples_core.py:367] Task 1/8: 226113 candidates (124695 examples) [23.24s elapsed]
+I0116 11:25:29.933007 140283420848128 make_examples_core.py:367] Task 1/8: Writing example info to /output/tmp_chr22/make_examples.tfrecord-00001-of-00008.gz.example_info.json
+I0116 11:25:29.933175 140283420848128 make_examples_core.py:3685] example_shape = [100, 221, 7]
+I0116 11:25:29.933227 140283420848128 make_examples_core.py:3686] example_channels = [1, 2, 3, 4, 5, 6, 19]
+I0116 11:25:29.933619 140283420848128 make_examples_core.py:367] Task 1/8: Summary stats:
+	226429 candidate variants found
+	124919 examples written
+	155332 small model examples called
+I0116 11:25:33.703258 140313907945472 make_examples_core.py:367] Task 4/8: 220024 candidates (122577 examples) [27.14s elapsed]
+I0116 11:25:35.871800 140164982493184 make_examples_core.py:367] Task 3/8: 224047 candidates (123842 examples) [28.59s elapsed]
+I0116 11:25:36.529765 139740115177472 make_examples_core.py:367] Task 5/8: 218001 candidates (119917 examples) [44.60s elapsed]
+I0116 11:25:36.906267 140639462100992 make_examples_core.py:367] Task 2/8: 224006 candidates (122204 examples) [30.65s elapsed]
+I0116 11:25:40.245685 140511434571776 make_examples_core.py:367] Task 6/8: 214099 candidates (117325 examples) [31.78s elapsed]
+I0116 11:25:40.035691 139810517626880 make_examples_core.py:367] Task 7/8: 222034 candidates (121397 examples) [26.68s elapsed]
+I0116 11:25:59.827475 140313907945472 make_examples_core.py:367] Task 4/8: 222015 candidates (123566 examples) [26.12s elapsed]
+I0116 11:26:00.191808 140164982493184 make_examples_core.py:367] Task 3/8: 226036 candidates (124909 examples) [24.32s elapsed]
+I0116 11:26:03.601982 139810517626880 make_examples_core.py:367] Task 7/8: 224055 candidates (122507 examples) [23.57s elapsed]
+I0116 11:26:05.400829 140639462100992 make_examples_core.py:367] Task 2/8: 226023 candidates (123121 examples) [28.49s elapsed]
+I0116 11:26:07.124579 139740115177472 make_examples_core.py:367] Task 5/8: 220054 candidates (121003 examples) [30.59s elapsed]
+I0116 11:26:12.254805 140164982493184 make_examples_core.py:367] Task 3/8: Writing example info to /output/tmp_chr22/make_examples.tfrecord-00003-of-00008.gz.example_info.json
+I0116 11:26:12.255024 140164982493184 make_examples_core.py:3685] example_shape = [100, 221, 7]
+I0116 11:26:12.255074 140164982493184 make_examples_core.py:3686] example_channels = [1, 2, 3, 4, 5, 6, 19]
+I0116 11:26:12.255635 140164982493184 make_examples_core.py:367] Task 3/8: Summary stats:
+	227043 candidate variants found
+	125463 examples written
+	156588 small model examples called
+I0116 11:26:17.692374 140511434571776 make_examples_core.py:367] Task 6/8: 216111 candidates (118378 examples) [37.45s elapsed]
+I0116 11:26:26.656523 139810517626880 make_examples_core.py:367] Task 7/8: 226033 candidates (123514 examples) [23.05s elapsed]
+I0116 11:26:27.467759 139810517626880 make_examples_core.py:367] Task 7/8: Writing example info to /output/tmp_chr22/make_examples.tfrecord-00007-of-00008.gz.example_info.json
+I0116 11:26:27.467981 139810517626880 make_examples_core.py:3685] example_shape = [100, 221, 7]
+I0116 11:26:27.468032 139810517626880 make_examples_core.py:3686] example_channels = [1, 2, 3, 4, 5, 6, 19]
+I0116 11:26:27.468688 139810517626880 make_examples_core.py:367] Task 7/8: Summary stats:
+	226122 candidate variants found
+	123589 examples written
+	156732 small model examples called
+I0116 11:26:33.384298 140313907945472 make_examples_core.py:367] Task 4/8: 224015 candidates (124418 examples) [33.56s elapsed]
+I0116 11:26:36.292811 140639462100992 make_examples_core.py:367] Task 2/8: 228032 candidates (124141 examples) [30.89s elapsed]
+I0116 11:26:43.520593 139740115177472 make_examples_core.py:367] Task 5/8: 222008 candidates (122009 examples) [36.40s elapsed]
+I0116 11:26:52.834831 140511434571776 make_examples_core.py:367] Task 6/8: 218057 candidates (119236 examples) [35.14s elapsed]
+I0116 11:26:58.453657 140313907945472 make_examples_core.py:367] Task 4/8: 226019 candidates (125573 examples) [25.07s elapsed]
+I0116 11:27:03.285747 140639462100992 make_examples_core.py:367] Task 2/8: 230018 candidates (125217 examples) [26.99s elapsed]
+I0116 11:27:08.129994 140639462100992 make_examples_core.py:367] Task 2/8: Writing example info to /output/tmp_chr22/make_examples.tfrecord-00002-of-00008.gz.example_info.json
+I0116 11:27:08.130216 140639462100992 make_examples_core.py:3685] example_shape = [100, 221, 7]
+I0116 11:27:08.130269 140639462100992 make_examples_core.py:3686] example_channels = [1, 2, 3, 4, 5, 6, 19]
+I0116 11:27:08.130775 140639462100992 make_examples_core.py:367] Task 2/8: Summary stats:
+	230396 candidate variants found
+	125440 examples written
+	160809 small model examples called
+I0116 11:27:08.845446 139740115177472 make_examples_core.py:367] Task 5/8: 224066 candidates (123180 examples) [25.32s elapsed]
+I0116 11:27:13.305756 140313907945472 make_examples_core.py:367] Task 4/8: Writing example info to /output/tmp_chr22/make_examples.tfrecord-00004-of-00008.gz.example_info.json
+I0116 11:27:13.305948 140313907945472 make_examples_core.py:3685] example_shape = [100, 221, 7]
+I0116 11:27:13.306005 140313907945472 make_examples_core.py:3686] example_channels = [1, 2, 3, 4, 5, 6, 19]
+I0116 11:27:13.306607 140313907945472 make_examples_core.py:367] Task 4/8: Summary stats:
+	227292 candidate variants found
+	126392 examples written
+	157172 small model examples called
+I0116 11:27:26.808093 140511434571776 make_examples_core.py:367] Task 6/8: 220075 candidates (120396 examples) [33.97s elapsed]
+I0116 11:27:32.064650 139740115177472 make_examples_core.py:367] Task 5/8: Writing example info to /output/tmp_chr22/make_examples.tfrecord-00005-of-00008.gz.example_info.json
+I0116 11:27:32.064986 139740115177472 make_examples_core.py:3685] example_shape = [100, 221, 7]
+I0116 11:27:32.065045 139740115177472 make_examples_core.py:3686] example_channels = [1, 2, 3, 4, 5, 6, 19]
+I0116 11:27:32.065753 139740115177472 make_examples_core.py:367] Task 5/8: Summary stats:
+	225743 candidate variants found
+	124131 examples written
+	155963 small model examples called
+I0116 11:27:54.008373 140511434571776 make_examples_core.py:367] Task 6/8: 222055 candidates (121555 examples) [27.20s elapsed]
+I0116 11:28:15.082033 140511434571776 make_examples_core.py:367] Task 6/8: Writing example info to /output/tmp_chr22/make_examples.tfrecord-00006-of-00008.gz.example_info.json
+I0116 11:28:15.082385 140511434571776 make_examples_core.py:3685] example_shape = [100, 221, 7]
+I0116 11:28:15.082440 140511434571776 make_examples_core.py:3686] example_channels = [1, 2, 3, 4, 5, 6, 19]
+I0116 11:28:15.083085 140511434571776 make_examples_core.py:367] Task 6/8: Summary stats:
+	223700 candidate variants found
+	122496 examples written
+	156522 small model examples called
+
+real	56m36.182s
+user	468m52.531s
+sys	22m12.519s
+
+***** Running the command:*****
+time /opt/deepvariant/bin/call_variants --outfile "/output/tmp_chr22/call_variants_output.tfrecord.gz" --examples "/output/tmp_chr22/make_examples.tfrecord@8.gz" --checkpoint "/opt/models/wgs"
+
+2026-01-16 11:28:19.068174: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+I0116 11:28:21.468353 139822722256896 call_variants.py:1058] call_variants: env = {'PYTHONPATH': '/tmp/Bazel.runfiles_wpise0ez/runfiles:/tmp/Bazel.runfiles_wpise0ez/runfiles/com_google_protobuf/python:/tmp/Bazel.runfiles_wpise0ez/runfiles/absl_py:/tmp/Bazel.runfiles_wpise0ez/runfiles/bazel_tools:/tmp/Bazel.runfiles_wpise0ez/runfiles/com_google_deepvariant:/tmp/Bazel.runfiles_wpise0ez/runfiles/com_google_protobuf:/tmp/Bazel.runfiles_wpise0ez/runfiles/six_archive', 'RUNFILES_DIR': '/tmp/Bazel.runfiles_wpise0ez/runfiles', 'PYTHONSAFEPATH': '1', 'HOSTNAME': '02ca6286a1ca', 'TF_CPP_MIN_LOG_LEVEL': '1', 'PWD': '/opt/deepvariant', '_': '/usr/bin/python3', 'HOME': '/', 'DV_BIN_PATH': '/opt/deepvariant/bin', 'TF_USE_LEGACY_KERAS': '1', 'TPU_ML_PLATFORM': 'Tensorflow', 'SHLVL': '3', 'LC_CTYPE': 'C.UTF-8', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/deepvariant/bin:/opt/conda/envs/bio/bin', 'TF2_BEHAVIOR': '1'}
+INFO:tensorflow:Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:CPU:0',)
+I0116 11:28:21.511814 139822722256896 mirrored_strategy.py:423] Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:CPU:0',)
+I0116 11:28:21.541097 139822722256896 call_variants.py:783] Number of devices: 1
+I0116 11:28:21.703416 139822722256896 call_variants.py:835] Per-replica batch size is 1024. Global batch size is 1024.
+I0116 11:28:21.704208 139822722256896 call_variants.py:845] Use saved model: True
+I0116 11:28:21.704696 139822722256896 dv_utils.py:333] From /output/tmp_chr22/make_examples.tfrecord-00000-of-00008.gz.example_info.json: Shape of input examples: [100, 221, 7], Channels of input examples: [1, 2, 3, 4, 5, 6, 19].
+I0116 11:28:28.614790 139822722256896 dv_utils.py:333] From /opt/models/wgs/model.example_info.json: Shape of input examples: [100, 221, 7], Channels of input examples: [1, 2, 3, 4, 5, 6, 19].
+I0116 11:28:28.615173 139822722256896 call_variants.py:887] example_shape: [100, 221, 7]
+I0116 11:28:29.512464 139822722256896 call_variants.py:953] Total 1 writing processes started.
+2026-01-16 11:28:29.671531: W tensorflow/core/framework/dataset.cc:959] Input of GeneratorDatasetOp::Dataset will not be optimized because the dataset does not implement the AsGraphDefInternal() method needed to apply optimizations.
+I0116 11:28:33.672852 139822722256896 call_variants.py:1031] Predicted 1024 examples in 1 batches [0.406 sec per 100].
+I0116 11:30:46.734634 139822722256896 call_variants.py:1031] Predicted 52224 examples in 51 batches [0.263 sec per 100].
+I0116 11:32:53.052412 139822722256896 call_variants.py:1031] Predicted 103424 examples in 101 batches [0.255 sec per 100].
+I0116 11:34:55.248250 139822722256896 call_variants.py:1031] Predicted 154624 examples in 151 batches [0.249 sec per 100].
+I0116 11:36:59.396821 139822722256896 call_variants.py:1031] Predicted 205824 examples in 201 batches [0.248 sec per 100].
+I0116 11:38:59.129930 139822722256896 call_variants.py:1031] Predicted 257024 examples in 251 batches [0.245 sec per 100].
+I0116 11:41:01.570478 139822722256896 call_variants.py:1031] Predicted 308224 examples in 301 batches [0.244 sec per 100].
+I0116 11:43:05.064878 139822722256896 call_variants.py:1031] Predicted 359424 examples in 351 batches [0.244 sec per 100].
+I0116 11:45:06.213757 139822722256896 call_variants.py:1031] Predicted 410624 examples in 401 batches [0.243 sec per 100].
+I0116 11:47:07.535003 139822722256896 call_variants.py:1031] Predicted 461824 examples in 451 batches [0.242 sec per 100].
+I0116 11:49:11.737418 139822722256896 call_variants.py:1031] Predicted 513024 examples in 501 batches [0.242 sec per 100].
+I0116 11:51:12.669699 139822722256896 call_variants.py:1031] Predicted 564224 examples in 551 batches [0.242 sec per 100].
+I0116 11:53:17.951749 139822722256896 call_variants.py:1031] Predicted 615424 examples in 601 batches [0.242 sec per 100].
+I0116 11:55:18.374294 139822722256896 call_variants.py:1031] Predicted 666624 examples in 651 batches [0.241 sec per 100].
+I0116 11:57:21.630070 139822722256896 call_variants.py:1031] Predicted 717824 examples in 701 batches [0.241 sec per 100].
+I0116 11:59:23.180912 139822722256896 call_variants.py:1031] Predicted 769024 examples in 751 batches [0.241 sec per 100].
+I0116 12:01:26.908805 139822722256896 call_variants.py:1031] Predicted 820224 examples in 801 batches [0.241 sec per 100].
+I0116 12:03:28.793588 139822722256896 call_variants.py:1031] Predicted 871424 examples in 851 batches [0.241 sec per 100].
+I0116 12:05:31.447104 139822722256896 call_variants.py:1031] Predicted 922624 examples in 901 batches [0.241 sec per 100].
+I0116 12:07:35.964505 139822722256896 call_variants.py:1031] Predicted 973824 examples in 951 batches [0.241 sec per 100].
+2026-01-16 12:08:27.033246: W tensorflow/core/framework/local_rendezvous.cc:404] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node MultiDeviceIteratorGetNextFromShard}}]]
+2026-01-16 12:08:30.173633: W tensorflow/core/framework/local_rendezvous.cc:404] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+I0116 12:08:30.329664 139822722256896 call_variants.py:597] Wrote 995117 examples over 972 batches. Closing writer.
+I0116 12:08:30.450234 139822722256896 call_variants.py:1107] Complete: call_variants.
+
+real	40m17.721s
+user	2385m50.771s
+sys	2488m26.716s
+
+***** Running the command:*****
+time /opt/deepvariant/bin/postprocess_variants --ref "/ref/chr22.fa" --infile "/output/tmp_chr22/call_variants_output.tfrecord.gz" --outfile "/output/chr22.vcf.gz" --cpus "8" --multiallelic_mode "product" --small_model_cvo_records "/output/tmp_chr22/make_examples_call_variant_outputs.tfrecord@8.gz" --gvcf_outfile "/output/chr22.g.vcf.gz" --nonvariant_site_tfrecord_path "/output/tmp_chr22/gvcf.tfrecord@8.gz"
+
+2026-01-16 12:08:36.781745: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+I0116 12:08:39.353915 139910702223360 postprocess_variants.py:1675] Using sample name from call_variants output. Sample name: default
+I0116 12:08:39.475518 139910702223360 postprocess_variants.py:1937] Running postprocess_variants with parallelism using 8 CPUs over 8 partitions.
+I0116 12:08:48.049589 139910702223360 postprocess_variants.py:1541] Processing region chr22:50818464-chr22:50818468
+I0116 12:08:48.050013 139910702223360 postprocess_variants.py:1548] CVO sorting took 0.13896967172622682 minutes
+I0116 12:08:48.050804 139910702223360 postprocess_variants.py:1806] Processing variants (and writing to temporary files) took 0.13898292779922486 minutes
+I0116 12:08:48.828492 139910702223360 postprocess_variants.py:1541] Processing region chr22:0-chr22:12704616
+I0116 12:08:48.828967 139910702223360 postprocess_variants.py:1548] CVO sorting took 0.15198038021723428 minutes
+I0116 12:08:48.829792 139910702223360 postprocess_variants.py:1552] Transforming call_variants_output to variants.
+I0116 12:08:48.829845 139910702223360 postprocess_variants.py:1560] Processed 109483 variants.
+I0116 12:08:48.829930 139910702223360 postprocess_variants.py:1806] Processing variants (and writing to temporary files) took 0.1519965370496114 minutes
+I0116 12:08:50.213960 139910702223360 postprocess_variants.py:1541] Processing region chr22:12704616-chr22:19056924
+I0116 12:08:50.214588 139910702223360 postprocess_variants.py:1548] CVO sorting took 0.17507588466008503 minutes
+I0116 12:08:50.215795 139910702223360 postprocess_variants.py:1552] Transforming call_variants_output to variants.
+I0116 12:08:50.216006 139910702223360 postprocess_variants.py:1560] Processed 256417 variants.
+I0116 12:08:50.216152 139910702223360 postprocess_variants.py:1806] Processing variants (and writing to temporary files) took 0.1751021107037862 minutes
+I0116 12:08:50.786863 139910702223360 postprocess_variants.py:1541] Processing region chr22:44466156-chr22:50818464
+I0116 12:08:50.787356 139910702223360 postprocess_variants.py:1548] CVO sorting took 0.18459461132685342 minutes
+I0116 12:08:50.788234 139910702223360 postprocess_variants.py:1552] Transforming call_variants_output to variants.
+I0116 12:08:50.788448 139910702223360 postprocess_variants.py:1560] Processed 308222 variants.
+I0116 12:08:50.788534 139910702223360 postprocess_variants.py:1806] Processing variants (and writing to temporary files) took 0.18461436827977498 minutes
+I0116 12:08:51.267001 139910702223360 postprocess_variants.py:1541] Processing region chr22:25409232-chr22:31761540
+I0116 12:08:51.267487 139910702223360 postprocess_variants.py:1548] CVO sorting took 0.19261366526285809 minutes
+I0116 12:08:51.268344 139910702223360 postprocess_variants.py:1552] Transforming call_variants_output to variants.
+I0116 12:08:51.268406 139910702223360 postprocess_variants.py:1560] Processed 394665 variants.
+I0116 12:08:51.268486 139910702223360 postprocess_variants.py:1806] Processing variants (and writing to temporary files) took 0.19263046185175578 minutes
+I0116 12:08:51.397813 139910702223360 postprocess_variants.py:1541] Processing region chr22:19056924-chr22:25409232
+I0116 12:08:51.398306 139910702223360 postprocess_variants.py:1548] CVO sorting took 0.19479904969533285 minutes
+I0116 12:08:51.399191 139910702223360 postprocess_variants.py:1552] Transforming call_variants_output to variants.
+I0116 12:08:51.399247 139910702223360 postprocess_variants.py:1560] Processed 371639 variants.
+I0116 12:08:51.399332 139910702223360 postprocess_variants.py:1806] Processing variants (and writing to temporary files) took 0.19481629530588787 minutes
+I0116 12:08:51.528066 139910702223360 postprocess_variants.py:1541] Processing region chr22:31761540-chr22:38113848
+I0116 12:08:51.528563 139910702223360 postprocess_variants.py:1548] CVO sorting took 0.19696067969004313 minutes
+I0116 12:08:51.529482 139910702223360 postprocess_variants.py:1552] Transforming call_variants_output to variants.
+I0116 12:08:51.529540 139910702223360 postprocess_variants.py:1560] Processed 385999 variants.
+I0116 12:08:51.529624 139910702223360 postprocess_variants.py:1806] Processing variants (and writing to temporary files) took 0.19697850545247395 minutes
+I0116 12:08:51.808815 139910702223360 postprocess_variants.py:1541] Processing region chr22:38113848-chr22:44466156
+I0116 12:08:51.809299 139910702223360 postprocess_variants.py:1548] CVO sorting took 0.20163818995157878 minutes
+I0116 12:08:51.810215 139910702223360 postprocess_variants.py:1552] Transforming call_variants_output to variants.
+I0116 12:08:51.810272 139910702223360 postprocess_variants.py:1560] Processed 418177 variants.
+I0116 12:08:51.810350 139910702223360 postprocess_variants.py:1806] Processing variants (and writing to temporary files) took 0.20165586074193317 minutes
+I0116 12:09:00.674672 139910702223360 postprocess_variants.py:1885] VCF and gVCF creation took 0.21039443413416545 minutes.
+I0116 12:09:21.484816 139910702223360 postprocess_variants.py:1885] VCF and gVCF creation took 0.5442456444104512 minutes.
+I0116 12:09:50.993134 139910702223360 postprocess_variants.py:1885] VCF and gVCF creation took 1.0129460175832112 minutes.
+I0116 12:10:01.153086 139910702223360 postprocess_variants.py:1885] VCF and gVCF creation took 1.1727402885754903 minutes.
+I0116 12:10:13.532012 139910702223360 postprocess_variants.py:1885] VCF and gVCF creation took 1.3688760161399842 minutes.
+I0116 12:10:16.795928 139910702223360 postprocess_variants.py:1885] VCF and gVCF creation took 1.421102778116862 minutes.
+I0116 12:10:19.696932 139910702223360 postprocess_variants.py:1885] VCF and gVCF creation took 1.473805320262909 minutes.
+I0116 12:10:22.947000 139910702223360 postprocess_variants.py:1885] VCF and gVCF creation took 1.5189420143763224 minutes.
+Checking the headers of 8 files.
+Done, the headers are compatible.
+Checking the headers of 8 files.
+Done, the headers are compatible.
+I0116 12:10:28.019160 139910702223360 postprocess_variants.py:2338] Indexing VCF and gVCF took 0.07567322651545207 minutes.
+
+real	1m55.129s
+user	10m22.823s
+sys	0m15.371s

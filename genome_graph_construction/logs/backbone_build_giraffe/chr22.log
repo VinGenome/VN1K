@@ -1,0 +1,18 @@
+Decompressing GFA...
+Building short-read giraffe indexes...
+[vg autoindex] Executing command: vg autoindex --workflow giraffe -g results/backbone/chr22/vn_pangenome.chr22.backbone.tmp.gfa -p results/backbone/chr22/vn_pangenome.chr22.backbone -t 32
+[IndexRegistry]: Checking for haplotype lines in GFA.
+[IndexRegistry]: Constructing a GBZ from GFA input.
+[IndexRegistry]: Constructing distance index for Giraffe.
+[IndexRegistry]: Constructing minimizer index and associated zipcodes.
+	use parameters -k 29 -w 11
+Building long-read giraffe indexes...
+[vg autoindex] Executing command: vg autoindex --workflow lr-giraffe -g results/backbone/chr22/vn_pangenome.chr22.backbone.tmp.gfa -p results/backbone/chr22/vn_pangenome.chr22.backbone -t 32
+[IndexRegistry]: Checking for haplotype lines in GFA.
+[vg autoindex] Guessing that results/backbone/chr22/vn_pangenome.chr22.backbone.dist is Giraffe Distance Index
+[vg autoindex] Guessing that results/backbone/chr22/vn_pangenome.chr22.backbone.giraffe.gbz is Giraffe GBZ
+[IndexRegistry]: Constructing minimizer index and associated zipcodes.
+	use parameters -k 31 -w 50 -W 
+[IndexRegistry]: Finding frequent kmers using the fast algorithm
+[IndexRegistry]: Found 252 kmers with more than 500 hits
+Backbone index build complete (SR + LR).

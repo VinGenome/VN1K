@@ -1,0 +1,12 @@
+Aligning HG02059 (preset: hifi) to backbone chr22...
+warning[MinimizerMapper::align_sequence_between]: Trimmed back tips 83 times on graph between 920108+9 as 293+ and 920331+10 as 1+ leaving 299 nodes and 2 tips for read m54329U_210430_224654/7012434/ccs
+warning[MinimizerMapper::align_sequence_between]: Trimmed back tips 83 times on graph between 920108+9 as 293+ and 920331+10 as 1+ leaving 299 nodes and 2 tips for read m54329U_210505_001822/75499671/ccs
+warning[MinimizerMapper::align_sequence_between]: Trimmed back tips 83 times on graph between 920108+9 as 293+ and 920331+10 as 1+ leaving 299 nodes and 2 tips for read m54329U_210430_224654/721578/ccs
+T9:	warning[MinimizerMapper::map_from_chains]: No seeds found for m54329U_210505_001822/41616751/ccs!
+T10:	warning[MinimizerMapper::map_from_chains]: No seeds found for m54329U_210505_001822/57737979/ccs!
+T4:	warning[MinimizerMapper::map_from_chains]: No seeds found for m54329U_210505_001822/67634624/ccs!
+T10:	warning[MinimizerMapper::map_from_chains]: No seeds found for m54329U_210505_001822/152373845/ccs!
+T5:	warning[MinimizerMapper::map_from_chains]: No seeds found for m54329U_210430_224654/68026848/ccs!
+T8:	warning[MinimizerMapper::map_from_chains]: No seeds found for m54329U_210430_224654/101582193/ccs!
+T8:	warning[MinimizerMapper::map_from_chains]: No seeds found for m54329U_210430_224654/114688718/ccs!
+Alignment complete
