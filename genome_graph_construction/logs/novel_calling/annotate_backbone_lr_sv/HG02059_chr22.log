@@ -1,0 +1,4 @@
+Annotating results/novel_calling/backbone_lr/HG02059/chr22/sv_unannot.vcf.gz -> results/called_variants/novel_calling_backbone_lr/HG02059/chr22_sv.tmp.vcf.gz
+Filtered out 0 variants with |SVLEN| < 50
+Kept 549 variants
+Done!

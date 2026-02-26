@@ -1,0 +1,18 @@
+Converting VG to GFA...
+Building short-read giraffe indexes...
+[vg autoindex] Executing command: vg autoindex --workflow giraffe -g results/indexes/chr22/vn_pangenome.chr22.gfa -p results/indexes/chr22/vn_pangenome.chr22 -t 32
+[IndexRegistry]: Checking for haplotype lines in GFA.
+[IndexRegistry]: Constructing a GBZ from GFA input.
+[IndexRegistry]: Constructing distance index for Giraffe.
+[IndexRegistry]: Constructing minimizer index and associated zipcodes.
+	use parameters -k 29 -w 11
+Building long-read giraffe indexes...
+[vg autoindex] Executing command: vg autoindex --workflow lr-giraffe -g results/indexes/chr22/vn_pangenome.chr22.gfa -p results/indexes/chr22/vn_pangenome.chr22 -t 32
+[IndexRegistry]: Checking for haplotype lines in GFA.
+[vg autoindex] Guessing that results/indexes/chr22/vn_pangenome.chr22.dist is Giraffe Distance Index
+[vg autoindex] Guessing that results/indexes/chr22/vn_pangenome.chr22.giraffe.gbz is Giraffe GBZ
+[IndexRegistry]: Constructing minimizer index and associated zipcodes.
+	use parameters -k 31 -w 50 -W 
+[IndexRegistry]: Finding frequent kmers using the fast algorithm
+[IndexRegistry]: Found 252 kmers with more than 500 hits
+Index build complete.

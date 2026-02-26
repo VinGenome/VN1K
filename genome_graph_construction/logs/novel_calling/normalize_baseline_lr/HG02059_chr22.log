@@ -1,0 +1,17 @@
+decompose v0.5
+
+options:     input VCF file        results/novel_calling/baseline_lr/HG02059/chr22/raw_calls.vcf.gz
+         [s] smart decomposition   false (experimental)
+         [o] output VCF file       -
+
+
+stats: no. variants                 : 87920
+       no. biallelic variants       : 86313
+       no. multiallelic variants    : 1607
+
+       no. additional biallelics    : 1607
+       total no. of biallelics      : 89527
+
+Time elapsed: 0.41s
+
+Lines   total/split/joined/realigned/removed/skipped:	89527/0/0/9580/0/0

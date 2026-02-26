@@ -1,0 +1,176 @@
+# Vietnamese Pangenome Graph Pipeline Configuration
+# ================================================
+
+# Project settings
+project_name: "vn_pangenome"
+output_dir: "results"
+
+# Per-chromosome FASTAs (already organized with ref + assemblies)
+# Each FASTA contains:
+#   - GRCh38 chromosome sequence (>grch38#0#chrN)
+#   - T2T/CHM13 chromosome sequence (>t2t#0#chrN)
+#   - Assembly contigs mapped to this chromosome (>sample#1#contig_name)
+per_chrom_fastas:
+  # Directory containing per-chromosome FASTAs
+  # Files should be named: chr1.fa.gz, chr2.fa.gz, ..., chrY.fa.gz
+  directory: "/home/giangvm1/bit_bucket/pangenom/pipeline/old_code/genome_graph_pipeline/results_w2/01_graph_construction/partitions/by_chromosome"
+  pattern: "{chrom}.fa.gz"
+
+# Reference names in the per-chromosome FASTAs (for cactus --reference option)
+reference_names:
+  - "grch38"
+  - "t2t"
+
+# Assembly sample names in the per-chromosome FASTAs
+assembly_names:
+  - "VN1K_920_ragtag"
+  - "VN1K_007_ragtag"
+  - "HG01596"
+  - "HG02018"
+
+# Optional: Path to whole-genome references (for VCF coordinate validation)
+references:
+  GRCh38: "/home/giangvm1/bit_bucket/pangenom/pipeline/old_code/genome_graph_pipeline/references/Homo_sapiens_assembly38.fasta"
+  CHM13: "/home/giangvm1/bit_bucket/pangenom/pipeline/old_code/genome_graph_pipeline/references/chm13v2.0.fa"
+
+# Chromosomes to process
+chromosomes:
+  # - chr1
+  # - chr2
+  # - chr3
+  # - chr4
+  # - chr5
+  # - chr6
+  # - chr7
+  # - chr8
+  # - chr9
+  # - chr10
+  # - chr11
+  # - chr12
+  # - chr13
+  # - chr14
+  # - chr15
+  # - chr16
+  # - chr17
+  # - chr18
+  # - chr19
+  # - chr20
+  # - chr21
+  - chr22
+  # - chrX
+  # - chrY
+
+# Variant inputs (per chromosome)
+variants:
+  # SNPs/indels VCF directory (per chromosome)
+  # Files should be named: chr1.vcf.gz, chr2.vcf.gz, etc.
+  snps_indels_dir: "/home/giangvm1/bit_bucket/pangenom/pipeline/old_code/genome_graph_mc_pipeline/vn1k_variants"
+  snps_indels_pattern: "{chrom}.vcf.gz"
+
+  # MAF filtering for SNPs/indels
+  # Set to filter variants by Minor Allele Frequency
+  maf_filter:
+    enabled: true
+    min_maf: 0.05      # Minimum MAF (1%)
+    max_maf: 0.5      # Maximum MAF (99%)
+    # INFO field name for MAF (adjust based on your VCF)
+    # Common names: MAF, AF, AF_ALT, EAS_AF, etc.
+    maf_field: "MAF"
+
+  # Manta SV directory (1011 individual VCFs, whole genome)
+  # manta_dir: "/mnt/nas/share/GiangVM/SangNV_transfer/Short_read_SV/Manta_1011_samples"
+  manta_dir: "/mnt/nas/share/GiangVM/SangNV_transfer/Short_read_SV/Manta_1011_samples"
+
+  manta_pattern: "{sample}.vcf.gz"
+
+  # pbsv long-read SV VCFs (4 pools, whole genome)
+  pbsv_vcfs:
+    - "/mnt/nas/share/GiangVM/SangNV_transfer/VGP_Data/Pool1.pbsv.filtered.vcf.gz"
+    - "/mnt/nas/share/GiangVM/SangNV_transfer/VGP_Data/Pool2.pbsv.filtered.vcf.gz"
+    - "/mnt/nas/share/GiangVM/SangNV_transfer/VGP_Data/Pool3.pbsv.filtered.vcf.gz"
+    - "/mnt/nas/share/GiangVM/SangNV_transfer/VGP_Data/Pool4.pbsv.filtered.vcf.gz"
+# SV merging parameters (SURVIVOR)
+survivor:
+  max_distance: 500        # Max distance between breakpoints (bp)
+  min_sv_size: 50          # Minimum SV size (bp)
+  same_type: 1             # Require same SV type (1=yes, 0=no)
+  same_strand: 1           # Require same strand (1=yes, 0=no)
+  estimate_distance: 0     # Estimate distance based on SV size
+
+  # Support thresholds
+  manta_min_support: 10    # 1% of 1000 samples
+  pbsv_min_support: 1      # Any long-read support
+  final_min_support: 1     # Keep if in either platform
+
+# Synthetic contig parameters (for SV integration)
+sv_contig:
+  flank_size: 2000         # Flanking sequence size (bp)
+
+# Cactus-pangenome parameters
+cactus:
+  max_cores: 64
+  max_memory: "256G"
+
+# Minigraph parameters
+minigraph:
+  threads: 32
+  preset: "ggs"            # Graph generation preset
+
+# VG parameters
+vg:
+  threads: 32
+  max_node_length: 32
+
+# Alignment parameters
+alignment:
+  # BWA-MEM (short reads, linear)
+  bwa:
+    threads: 16
+    mem_gb: 32
+
+  # Minimap2 (long reads, linear)
+  minimap2:
+    threads: 16
+    mem_gb: 32
+
+  # vg giraffe (graph-based)
+  giraffe:
+    threads: 16
+    mem_gb: 64
+
+# Variant calling parameters
+variant_calling:
+  # DeepVariant (both linear and graph)
+  deepvariant:
+    threads: 8
+    mem_gb: 32
+    # Model types: WGS (Illumina), PACBIO (HiFi/CLR), HYBRID_PACBIO_ILLUMINA
+    # Automatically selected based on platform in samples.tsv
+    docker_image: "google/deepvariant:1.10.0-beta"
+
+  # Manta SV caller (short reads)
+  manta:
+    threads: 8
+    mem_gb: 32
+    docker_image: "quay.io/biocontainers/manta:1.6.0--h9ee0642_2"
+
+  # Sniffles SV caller (long reads)
+  sniffles:
+    threads: 4
+    mem_gb: 16
+    docker_image: "quay.io/biocontainers/sniffles:2.4--pyhdfd78af_0"
+
+# Graph surjection parameters
+surject:
+  threads: 8
+  mem_gb: 32
+
+# Resource defaults
+resources:
+  default_threads: 8
+  high_mem_gb: 128
+  low_mem_gb: 16
+
+#evaluation samples
+samples_files: 'config/samples.tsv'
+

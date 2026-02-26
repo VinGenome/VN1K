@@ -1,0 +1,12 @@
+[M::mm_idx_gen::1.465*1.00] collected minimizers
+[M::mm_idx_gen::1.576*1.60] sorted minimizers
+[M::main::1.576*1.60] loaded/built the index for 1 target sequence(s)
+[M::mm_mapopt_update::1.647*1.57] mid_occ = 101
+[M::mm_idx_stat] kmer size: 19; skip: 19; is_hpc: 0; #seq: 1
+[M::mm_idx_stat::1.702*1.55] distinct minimizers: 3026605 (94.34% are singletons); average occurrences: 1.229; average spacing: 13.666; total length: 50818468
+[M::worker_pipeline::36.078*11.65] mapped 26105 sequences
+[M::worker_pipeline::64.213*12.68] mapped 11758 sequences
+[M::main] Version: 2.28-r1209
+[M::main] CMD: minimap2 -ax map-hifi -t 16 -R @RG\tID:HG02059\tSM:HG02059\tPL:PACBIO results/backbone/ref_by_chrom/chr22.fa /home/giangvm1/bit_bucket/pangenom/pipeline/old_code/genome_graph_mc_pipeline/workflow_full/HG02059_longread.fastq.gz
+[M::main] Real time: 64.372 sec; CPU: 814.289 sec; Peak RSS: 8.000 GB
+[bam_sort_core] merging from 0 files and 4 in-memory blocks...

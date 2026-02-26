@@ -1,0 +1,21 @@
+>|> 20260115 20:33:15.396 -|- INFO -|- AlignSettings -|- 0x7f7cdafc6c00|| -|- Using 12 threads for alignments, 4 threads for sorting, and 3G bytes RAM for sorting.
+>|> 20260115 20:33:15.396 -|- WARN -|- CheckPositionalArgs -|- 0x7f7cdafc6c00|| -|- Input is FASTQ. Output BAM file cannot be used for polishing with GenomicConsensus!
+>|> 20260115 20:33:15.396 -|- INFO -|- CheckPositionalArgs -|- 0x7f7cdafc6c00|| -|- READ input file: "/home/giangvm1/bit_bucket/pangenom/pipeline/old_code/genome_graph_mc_pipeline/workflow_full/HG02059_longread.fastq.gz"
+>|> 20260115 20:33:15.396 -|- INFO -|- CheckPositionalArgs -|- 0x7f7cdafc6c00|| -|- REF  input file: "results/backbone/ref_by_chrom/chr22.fa"
+>|> 20260115 20:33:15.396 -|- INFO -|- Index -|- 0x7f7cdafc6c00|| -|- Start reading/building index
+>|> 20260115 20:33:16.978 -|- INFO -|- Index -|- 0x7f7cdafc6c00|| -|- Finished reading/building index
+>|> 20260115 20:35:03.097 -|- INFO -|- operator() -|- 0x7f7cd47af700|| -|- Merged sorted output from 0 files and 4 in-memory blocks
+>|> 20260115 20:35:03.097 -|- INFO -|- Close -|- 0x7f7cdafc6c00|| -|- Generating BAI
+>|> 20260115 20:35:04.834 -|- INFO -|- Runner -|- 0x7f7cdafc6c00|| -|- Mapped Reads: 35009
+>|> 20260115 20:35:04.834 -|- INFO -|- Runner -|- 0x7f7cdafc6c00|| -|- Alignments: 35913
+>|> 20260115 20:35:04.834 -|- INFO -|- Runner -|- 0x7f7cdafc6c00|| -|- Mapped Bases: 657318449
+>|> 20260115 20:35:04.834 -|- INFO -|- Runner -|- 0x7f7cdafc6c00|| -|- Mean Gap-Compressed Sequence Identity: 99.0999%
+>|> 20260115 20:35:04.834 -|- INFO -|- Runner -|- 0x7f7cdafc6c00|| -|- Max Mapped Read Length: 35321
+>|> 20260115 20:35:04.834 -|- INFO -|- Runner -|- 0x7f7cdafc6c00|| -|- Mean Mapped Read Length: 18303.1
+>|> 20260115 20:35:04.834 -|- INFO -|- Runner -|- 0x7f7cdafc6c00|| -|- Index Build/Read Time: 1s 647ms 
+>|> 20260115 20:35:04.834 -|- INFO -|- Runner -|- 0x7f7cdafc6c00|| -|- Alignment Time: 1m 35s 
+>|> 20260115 20:35:04.834 -|- INFO -|- Runner -|- 0x7f7cdafc6c00|| -|- Sort Merge Time: 10s 88ms 
+>|> 20260115 20:35:04.834 -|- INFO -|- Runner -|- 0x7f7cdafc6c00|| -|- BAI Generation Time: 1s 736ms 
+>|> 20260115 20:35:04.834 -|- INFO -|- Runner -|- 0x7f7cdafc6c00|| -|- Run Time: 1m 49s 
+>|> 20260115 20:35:04.834 -|- INFO -|- Runner -|- 0x7f7cdafc6c00|| -|- CPU Time: 21m 48s 
+>|> 20260115 20:35:04.834 -|- INFO -|- Runner -|- 0x7f7cdafc6c00|| -|- Peak RSS: 8.005 GB

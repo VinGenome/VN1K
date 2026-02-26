@@ -1,0 +1,474 @@
+2026-01-16 02:42:33.915039: I external/local_tsl/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2026-01-16 02:42:34.548176: I external/local_tsl/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2026-01-16 02:42:37.001347: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-01-16 02:42:40.015984: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+I0116 02:42:45.487443 139767533473792 run_deepvariant.py:621] Creating a directory for intermediate results in /output/tmp_chr22
+
+***** Intermediate results will be written to /output/tmp_chr22 in docker. ****
+
+
+***** Running the command:*****
+time seq 0 7 | parallel -q --halt 2 --line-buffer /opt/deepvariant/bin/make_examples --mode calling --ref "/ref/chr22.fa" --reads "/input/chr22.sorted.bam" --examples "/output/tmp_chr22/make_examples.tfrecord@8.gz" --checkpoint "/opt/models/wgs" --gvcf "/output/tmp_chr22/gvcf.tfrecord@8.gz" --task {}
+
+I0116 02:42:45.488394 139767533473792 run_deepvariant.py:857] env = {'HOSTNAME': 'f72e7198eb3f', 'PWD': '/opt/deepvariant', 'HOME': '/', 'DV_BIN_PATH': '/opt/deepvariant/bin', 'TF_USE_LEGACY_KERAS': '1', 'SHLVL': '1', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/deepvariant/bin:/opt/conda/envs/bio/bin', '_': '/usr/bin/python3', 'LC_CTYPE': 'C.UTF-8', 'TF2_BEHAVIOR': '1', 'TPU_ML_PLATFORM': 'Tensorflow', 'TF_CPP_MIN_LOG_LEVEL': '1'}
+2026-01-16 02:42:49.759488: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-01-16 02:42:50.180883: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-01-16 02:42:50.248679: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-01-16 02:42:50.441646: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-01-16 02:42:50.470689: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-01-16 02:42:50.439491: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-01-16 02:42:50.436350: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-01-16 02:42:50.506057: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/tmp/Bazel.runfiles_3ffxlb6u/runfiles/absl_py/absl/flags/_validators.py:233: UserWarning: Flag --mode has a non-None default value; therefore, mark_flag_as_required will pass even if flag is not specified in the command line!
+  mark_flag_as_required(flag_name, flag_values)
+I0116 02:42:52.239573 139626954600448 make_examples_core.py:3773] model.example_info filename: /opt/models/wgs/model.example_info.json
+I0116 02:42:52.239859 139626954600448 make_examples_core.py:3777] Reading flags_for_calling from /opt/models/wgs/model.example_info.json
+I0116 02:42:52.240190 139626954600448 make_examples_core.py:3794] Flags for calling:
+call_small_model_examples: True
+pileup_image_height: 100
+pileup_image_width: 221
+small_model_indel_gq_threshold: 28
+small_model_snp_gq_threshold: 20
+small_model_vaf_context_window_size: 51
+track_ref_reads: True
+trained_small_model_path: /opt/smallmodels/wgs
+I0116 02:42:52.240962 139626954600448 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.242278 139626954600448 dv_utils.py:333] From /opt/models/wgs/model.example_info.json: Shape of input examples: [100, 221, 7], Channels of input examples: [1, 2, 3, 4, 5, 6, 19].
+I0116 02:42:52.242508 139626954600448 make_examples_options.py:1204] Parsing AUX Fields: []
+W0116 02:42:52.242853 139626954600448 make_examples_options.py:1255] Automatically setting --trim_reads_for_pileup to True because --alt_aligned_pileup is set.
+I0116 02:42:52.273635 139626954600448 make_examples_core.py:367] Task 6/8: Preparing inputs
+I0116 02:42:52.274399 139626954600448 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.275029 139626954600448 make_examples_core.py:367] Task 6/8: Common contigs are ['chr22']
+/tmp/Bazel.runfiles_ynag3aah/runfiles/absl_py/absl/flags/_validators.py:233: UserWarning: Flag --mode has a non-None default value; therefore, mark_flag_as_required will pass even if flag is not specified in the command line!
+  mark_flag_as_required(flag_name, flag_values)
+I0116 02:42:52.291909 139891623690240 make_examples_core.py:3773] model.example_info filename: /opt/models/wgs/model.example_info.json
+I0116 02:42:52.292175 139891623690240 make_examples_core.py:3777] Reading flags_for_calling from /opt/models/wgs/model.example_info.json
+I0116 02:42:52.292452 139891623690240 make_examples_core.py:3794] Flags for calling:
+call_small_model_examples: True
+pileup_image_height: 100
+pileup_image_width: 221
+small_model_indel_gq_threshold: 28
+small_model_snp_gq_threshold: 20
+small_model_vaf_context_window_size: 51
+track_ref_reads: True
+trained_small_model_path: /opt/smallmodels/wgs
+I0116 02:42:52.293136 139891623690240 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.294294 139891623690240 dv_utils.py:333] From /opt/models/wgs/model.example_info.json: Shape of input examples: [100, 221, 7], Channels of input examples: [1, 2, 3, 4, 5, 6, 19].
+I0116 02:42:52.294486 139891623690240 make_examples_options.py:1204] Parsing AUX Fields: []
+W0116 02:42:52.294714 139891623690240 make_examples_options.py:1255] Automatically setting --trim_reads_for_pileup to True because --alt_aligned_pileup is set.
+I0116 02:42:52.327312 139891623690240 make_examples_core.py:367] Task 2/8: Preparing inputs
+I0116 02:42:52.327908 139891623690240 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.328514 139891623690240 make_examples_core.py:367] Task 2/8: Common contigs are ['chr22']
+/tmp/Bazel.runfiles__bbbbd3v/runfiles/absl_py/absl/flags/_validators.py:233: UserWarning: Flag --mode has a non-None default value; therefore, mark_flag_as_required will pass even if flag is not specified in the command line!
+  mark_flag_as_required(flag_name, flag_values)
+I0116 02:42:52.207822 139731265855488 make_examples_core.py:3773] model.example_info filename: /opt/models/wgs/model.example_info.json
+I0116 02:42:52.208095 139731265855488 make_examples_core.py:3777] Reading flags_for_calling from /opt/models/wgs/model.example_info.json
+I0116 02:42:52.208371 139731265855488 make_examples_core.py:3794] Flags for calling:
+call_small_model_examples: True
+pileup_image_height: 100
+pileup_image_width: 221
+small_model_indel_gq_threshold: 28
+small_model_snp_gq_threshold: 20
+small_model_vaf_context_window_size: 51
+track_ref_reads: True
+trained_small_model_path: /opt/smallmodels/wgs
+I0116 02:42:52.209124 139731265855488 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.210365 139731265855488 dv_utils.py:333] From /opt/models/wgs/model.example_info.json: Shape of input examples: [100, 221, 7], Channels of input examples: [1, 2, 3, 4, 5, 6, 19].
+I0116 02:42:52.210567 139731265855488 make_examples_options.py:1204] Parsing AUX Fields: []
+W0116 02:42:52.210801 139731265855488 make_examples_options.py:1255] Automatically setting --trim_reads_for_pileup to True because --alt_aligned_pileup is set.
+I0116 02:42:52.241742 139731265855488 make_examples_core.py:367] Task 3/8: Preparing inputs
+I0116 02:42:52.242516 139731265855488 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.243145 139731265855488 make_examples_core.py:367] Task 3/8: Common contigs are ['chr22']
+I0116 02:42:52.357719 139731265855488 make_examples_core.py:367] Task 3/8: Starting from v0.9.0, --use_ref_for_cram is default to true. If you are using CRAM input, note that we will decode CRAM using the reference you passed in with --ref
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768531372.357984     238 sam_reader.cc:997] Setting HTS_OPT_BLOCK_SIZE to 134217728
+I0116 02:42:52.389952 139626954600448 make_examples_core.py:367] Task 6/8: Starting from v0.9.0, --use_ref_for_cram is default to true. If you are using CRAM input, note that we will decode CRAM using the reference you passed in with --ref
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768531372.390208     242 sam_reader.cc:997] Setting HTS_OPT_BLOCK_SIZE to 134217728
+I0116 02:42:52.463531 139626954600448 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.443706 139891623690240 make_examples_core.py:367] Task 2/8: Starting from v0.9.0, --use_ref_for_cram is default to true. If you are using CRAM input, note that we will decode CRAM using the reference you passed in with --ref
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768531372.443963     241 sam_reader.cc:997] Setting HTS_OPT_BLOCK_SIZE to 134217728
+I0116 02:42:52.429076 139731265855488 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+/tmp/Bazel.runfiles__qcja0vn/runfiles/absl_py/absl/flags/_validators.py:233: UserWarning: Flag --mode has a non-None default value; therefore, mark_flag_as_required will pass even if flag is not specified in the command line!
+  mark_flag_as_required(flag_name, flag_values)
+I0116 02:42:52.503536 140443075272704 make_examples_core.py:3773] model.example_info filename: /opt/models/wgs/model.example_info.json
+I0116 02:42:52.503826 140443075272704 make_examples_core.py:3777] Reading flags_for_calling from /opt/models/wgs/model.example_info.json
+I0116 02:42:52.504168 140443075272704 make_examples_core.py:3794] Flags for calling:
+call_small_model_examples: True
+pileup_image_height: 100
+pileup_image_width: 221
+small_model_indel_gq_threshold: 28
+small_model_snp_gq_threshold: 20
+small_model_vaf_context_window_size: 51
+track_ref_reads: True
+trained_small_model_path: /opt/smallmodels/wgs
+I0116 02:42:52.504937 140443075272704 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.506214 140443075272704 dv_utils.py:333] From /opt/models/wgs/model.example_info.json: Shape of input examples: [100, 221, 7], Channels of input examples: [1, 2, 3, 4, 5, 6, 19].
+I0116 02:42:52.506432 140443075272704 make_examples_options.py:1204] Parsing AUX Fields: []
+W0116 02:42:52.506741 140443075272704 make_examples_options.py:1255] Automatically setting --trim_reads_for_pileup to True because --alt_aligned_pileup is set.
+I0116 02:42:52.536554 140443075272704 make_examples_core.py:367] Task 7/8: Preparing inputs
+I0116 02:42:52.537348 140443075272704 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.537970 140443075272704 make_examples_core.py:367] Task 7/8: Common contigs are ['chr22']
+I0116 02:42:52.514825 139891623690240 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+/tmp/Bazel.runfiles_e2gzrxwc/runfiles/absl_py/absl/flags/_validators.py:233: UserWarning: Flag --mode has a non-None default value; therefore, mark_flag_as_required will pass even if flag is not specified in the command line!
+  mark_flag_as_required(flag_name, flag_values)
+I0116 02:42:52.516795 139626643443712 make_examples_core.py:3773] model.example_info filename: /opt/models/wgs/model.example_info.json
+I0116 02:42:52.517152 139626643443712 make_examples_core.py:3777] Reading flags_for_calling from /opt/models/wgs/model.example_info.json
+I0116 02:42:52.517500 139626643443712 make_examples_core.py:3794] Flags for calling:
+call_small_model_examples: True
+pileup_image_height: 100
+pileup_image_width: 221
+small_model_indel_gq_threshold: 28
+small_model_snp_gq_threshold: 20
+small_model_vaf_context_window_size: 51
+track_ref_reads: True
+trained_small_model_path: /opt/smallmodels/wgs
+I0116 02:42:52.518303 139626643443712 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.519565 139626643443712 dv_utils.py:333] From /opt/models/wgs/model.example_info.json: Shape of input examples: [100, 221, 7], Channels of input examples: [1, 2, 3, 4, 5, 6, 19].
+I0116 02:42:52.519768 139626643443712 make_examples_options.py:1204] Parsing AUX Fields: []
+W0116 02:42:52.519988 139626643443712 make_examples_options.py:1255] Automatically setting --trim_reads_for_pileup to True because --alt_aligned_pileup is set.
+I0116 02:42:52.549105 139626643443712 make_examples_core.py:367] Task 1/8: Preparing inputs
+I0116 02:42:52.549827 139626643443712 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.550437 139626643443712 make_examples_core.py:367] Task 1/8: Common contigs are ['chr22']
+/tmp/Bazel.runfiles_do9fxarz/runfiles/absl_py/absl/flags/_validators.py:233: UserWarning: Flag --mode has a non-None default value; therefore, mark_flag_as_required will pass even if flag is not specified in the command line!
+  mark_flag_as_required(flag_name, flag_values)
+I0116 02:42:52.633141 140034703532032 make_examples_core.py:3773] model.example_info filename: /opt/models/wgs/model.example_info.json
+I0116 02:42:52.633535 140034703532032 make_examples_core.py:3777] Reading flags_for_calling from /opt/models/wgs/model.example_info.json
+I0116 02:42:52.633893 140034703532032 make_examples_core.py:3794] Flags for calling:
+call_small_model_examples: True
+pileup_image_height: 100
+pileup_image_width: 221
+small_model_indel_gq_threshold: 28
+small_model_snp_gq_threshold: 20
+small_model_vaf_context_window_size: 51
+track_ref_reads: True
+trained_small_model_path: /opt/smallmodels/wgs
+I0116 02:42:52.634717 140034703532032 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.636010 140034703532032 dv_utils.py:333] From /opt/models/wgs/model.example_info.json: Shape of input examples: [100, 221, 7], Channels of input examples: [1, 2, 3, 4, 5, 6, 19].
+I0116 02:42:52.636224 140034703532032 make_examples_options.py:1204] Parsing AUX Fields: []
+W0116 02:42:52.636512 140034703532032 make_examples_options.py:1255] Automatically setting --trim_reads_for_pileup to True because --alt_aligned_pileup is set.
+I0116 02:42:52.652039 140443075272704 make_examples_core.py:367] Task 7/8: Starting from v0.9.0, --use_ref_for_cram is default to true. If you are using CRAM input, note that we will decode CRAM using the reference you passed in with --ref
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768531372.652290     240 sam_reader.cc:997] Setting HTS_OPT_BLOCK_SIZE to 134217728
+I0116 02:42:52.665694 139626643443712 make_examples_core.py:367] Task 1/8: Starting from v0.9.0, --use_ref_for_cram is default to true. If you are using CRAM input, note that we will decode CRAM using the reference you passed in with --ref
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768531372.666028     235 sam_reader.cc:997] Setting HTS_OPT_BLOCK_SIZE to 134217728
+I0116 02:42:52.671790 140034703532032 make_examples_core.py:367] Task 4/8: Preparing inputs
+I0116 02:42:52.673269 140034703532032 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.674649 140034703532032 make_examples_core.py:367] Task 4/8: Common contigs are ['chr22']
+/tmp/Bazel.runfiles_k5g_t03a/runfiles/absl_py/absl/flags/_validators.py:233: UserWarning: Flag --mode has a non-None default value; therefore, mark_flag_as_required will pass even if flag is not specified in the command line!
+  mark_flag_as_required(flag_name, flag_values)
+I0116 02:42:52.701433 139854178910208 make_examples_core.py:3773] model.example_info filename: /opt/models/wgs/model.example_info.json
+I0116 02:42:52.701706 139854178910208 make_examples_core.py:3777] Reading flags_for_calling from /opt/models/wgs/model.example_info.json
+I0116 02:42:52.701975 139854178910208 make_examples_core.py:3794] Flags for calling:
+call_small_model_examples: True
+pileup_image_height: 100
+pileup_image_width: 221
+small_model_indel_gq_threshold: 28
+small_model_snp_gq_threshold: 20
+small_model_vaf_context_window_size: 51
+track_ref_reads: True
+trained_small_model_path: /opt/smallmodels/wgs
+I0116 02:42:52.702676 139854178910208 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.703881 139854178910208 dv_utils.py:333] From /opt/models/wgs/model.example_info.json: Shape of input examples: [100, 221, 7], Channels of input examples: [1, 2, 3, 4, 5, 6, 19].
+I0116 02:42:52.704086 139854178910208 make_examples_options.py:1204] Parsing AUX Fields: []
+W0116 02:42:52.704361 139854178910208 make_examples_options.py:1255] Automatically setting --trim_reads_for_pileup to True because --alt_aligned_pileup is set.
+I0116 02:42:52.727372 140443075272704 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.732698 139626643443712 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.735154 139854178910208 make_examples_core.py:367] Task 0/8: Preparing inputs
+I0116 02:42:52.736013 139854178910208 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.736828 139854178910208 make_examples_core.py:367] Task 0/8: Common contigs are ['chr22']
+/tmp/Bazel.runfiles_xs41_tjt/runfiles/absl_py/absl/flags/_validators.py:233: UserWarning: Flag --mode has a non-None default value; therefore, mark_flag_as_required will pass even if flag is not specified in the command line!
+  mark_flag_as_required(flag_name, flag_values)
+I0116 02:42:52.780816 140251836350464 make_examples_core.py:3773] model.example_info filename: /opt/models/wgs/model.example_info.json
+I0116 02:42:52.781084 140251836350464 make_examples_core.py:3777] Reading flags_for_calling from /opt/models/wgs/model.example_info.json
+I0116 02:42:52.781371 140251836350464 make_examples_core.py:3794] Flags for calling:
+call_small_model_examples: True
+pileup_image_height: 100
+pileup_image_width: 221
+small_model_indel_gq_threshold: 28
+small_model_snp_gq_threshold: 20
+small_model_vaf_context_window_size: 51
+track_ref_reads: True
+trained_small_model_path: /opt/smallmodels/wgs
+I0116 02:42:52.782059 140251836350464 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.783212 140251836350464 dv_utils.py:333] From /opt/models/wgs/model.example_info.json: Shape of input examples: [100, 221, 7], Channels of input examples: [1, 2, 3, 4, 5, 6, 19].
+I0116 02:42:52.783406 140251836350464 make_examples_options.py:1204] Parsing AUX Fields: []
+W0116 02:42:52.783627 140251836350464 make_examples_options.py:1255] Automatically setting --trim_reads_for_pileup to True because --alt_aligned_pileup is set.
+I0116 02:42:52.809401 140251836350464 make_examples_core.py:367] Task 5/8: Preparing inputs
+I0116 02:42:52.810112 140251836350464 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.810738 140251836350464 make_examples_core.py:367] Task 5/8: Common contigs are ['chr22']
+I0116 02:42:52.819328 140034703532032 make_examples_core.py:367] Task 4/8: Starting from v0.9.0, --use_ref_for_cram is default to true. If you are using CRAM input, note that we will decode CRAM using the reference you passed in with --ref
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768531372.819783     236 sam_reader.cc:997] Setting HTS_OPT_BLOCK_SIZE to 134217728
+I0116 02:42:52.867631 139854178910208 make_examples_core.py:367] Task 0/8: Starting from v0.9.0, --use_ref_for_cram is default to true. If you are using CRAM input, note that we will decode CRAM using the reference you passed in with --ref
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768531372.867888     237 sam_reader.cc:997] Setting HTS_OPT_BLOCK_SIZE to 134217728
+I0116 02:42:52.885179 140034703532032 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.911906 139626954600448 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.912255 139626954600448 make_examples_core.py:367] Task 6/8: Writing gvcf records to /output/tmp_chr22/gvcf.tfrecord-00006-of-00008.gz
+I0116 02:42:52.914427 139626954600448 make_examples_core.py:367] Task 6/8: Writing examples to /output/tmp_chr22/make_examples.tfrecord-00006-of-00008.gz
+I0116 02:42:52.914496 139626954600448 make_examples_core.py:367] Task 6/8: Overhead for preparing inputs: 0 seconds
+I0116 02:42:52.916965 139891623690240 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:52.917310 139891623690240 make_examples_core.py:367] Task 2/8: Writing gvcf records to /output/tmp_chr22/gvcf.tfrecord-00002-of-00008.gz
+I0116 02:42:52.919514 139891623690240 make_examples_core.py:367] Task 2/8: Writing examples to /output/tmp_chr22/make_examples.tfrecord-00002-of-00008.gz
+I0116 02:42:52.919620 139891623690240 make_examples_core.py:367] Task 2/8: Overhead for preparing inputs: 0 seconds
+I0116 02:42:52.925692 140251836350464 make_examples_core.py:367] Task 5/8: Starting from v0.9.0, --use_ref_for_cram is default to true. If you are using CRAM input, note that we will decode CRAM using the reference you passed in with --ref
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768531372.925951     239 sam_reader.cc:997] Setting HTS_OPT_BLOCK_SIZE to 134217728
+I0116 02:42:52.925409 139626954600448 make_examples_core.py:367] Task 6/8: 0 candidates (0 examples) [0.01s elapsed]
+I0116 02:42:52.930167 139891623690240 make_examples_core.py:367] Task 2/8: 0 candidates (0 examples) [0.01s elapsed]
+I0116 02:42:52.939855 139854178910208 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:53.000990 140251836350464 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:53.035965 139731265855488 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:53.036766 139731265855488 make_examples_core.py:367] Task 3/8: Writing gvcf records to /output/tmp_chr22/gvcf.tfrecord-00003-of-00008.gz
+I0116 02:42:53.041841 139731265855488 make_examples_core.py:367] Task 3/8: Writing examples to /output/tmp_chr22/make_examples.tfrecord-00003-of-00008.gz
+I0116 02:42:53.042034 139731265855488 make_examples_core.py:367] Task 3/8: Overhead for preparing inputs: 0 seconds
+I0116 02:42:53.071062 139731265855488 make_examples_core.py:367] Task 3/8: 0 candidates (0 examples) [0.03s elapsed]
+I0116 02:42:53.195240 140443075272704 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:53.195651 140443075272704 make_examples_core.py:367] Task 7/8: Writing gvcf records to /output/tmp_chr22/gvcf.tfrecord-00007-of-00008.gz
+I0116 02:42:53.198200 140443075272704 make_examples_core.py:367] Task 7/8: Writing examples to /output/tmp_chr22/make_examples.tfrecord-00007-of-00008.gz
+I0116 02:42:53.198290 140443075272704 make_examples_core.py:367] Task 7/8: Overhead for preparing inputs: 0 seconds
+I0116 02:42:53.212641 140443075272704 make_examples_core.py:367] Task 7/8: 0 candidates (0 examples) [0.01s elapsed]
+I0116 02:42:53.262464 139626643443712 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:53.263020 139626643443712 make_examples_core.py:367] Task 1/8: Writing gvcf records to /output/tmp_chr22/gvcf.tfrecord-00001-of-00008.gz
+I0116 02:42:53.266132 139626643443712 make_examples_core.py:367] Task 1/8: Writing examples to /output/tmp_chr22/make_examples.tfrecord-00001-of-00008.gz
+I0116 02:42:53.266247 139626643443712 make_examples_core.py:367] Task 1/8: Overhead for preparing inputs: 0 seconds
+I0116 02:42:53.283824 139626643443712 make_examples_core.py:367] Task 1/8: 0 candidates (0 examples) [0.02s elapsed]
+I0116 02:42:53.381574 140251836350464 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:53.381921 140251836350464 make_examples_core.py:367] Task 5/8: Writing gvcf records to /output/tmp_chr22/gvcf.tfrecord-00005-of-00008.gz
+I0116 02:42:53.383837 140251836350464 make_examples_core.py:367] Task 5/8: Writing examples to /output/tmp_chr22/make_examples.tfrecord-00005-of-00008.gz
+I0116 02:42:53.383900 140251836350464 make_examples_core.py:367] Task 5/8: Overhead for preparing inputs: 0 seconds
+I0116 02:42:53.394760 140251836350464 make_examples_core.py:367] Task 5/8: 0 candidates (0 examples) [0.01s elapsed]
+I0116 02:42:53.390908 140034703532032 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:53.391425 140034703532032 make_examples_core.py:367] Task 4/8: Writing gvcf records to /output/tmp_chr22/gvcf.tfrecord-00004-of-00008.gz
+I0116 02:42:53.394371 140034703532032 make_examples_core.py:367] Task 4/8: Writing examples to /output/tmp_chr22/make_examples.tfrecord-00004-of-00008.gz
+I0116 02:42:53.394474 140034703532032 make_examples_core.py:367] Task 4/8: Overhead for preparing inputs: 0 seconds
+I0116 02:42:53.405419 140034703532032 make_examples_core.py:367] Task 4/8: 0 candidates (0 examples) [0.01s elapsed]
+I0116 02:42:53.443836 139854178910208 genomics_reader.py:223] Reading /input/chr22.sorted.bam with NativeSamReader
+I0116 02:42:53.444294 139854178910208 make_examples_core.py:367] Task 0/8: Writing gvcf records to /output/tmp_chr22/gvcf.tfrecord-00000-of-00008.gz
+I0116 02:42:53.447472 139854178910208 make_examples_core.py:367] Task 0/8: Writing examples to /output/tmp_chr22/make_examples.tfrecord-00000-of-00008.gz
+I0116 02:42:53.447579 139854178910208 make_examples_core.py:367] Task 0/8: Overhead for preparing inputs: 0 seconds
+I0116 02:42:53.465311 139854178910208 make_examples_core.py:367] Task 0/8: 0 candidates (0 examples) [0.02s elapsed]
+I0116 02:43:31.696188 139626954600448 make_examples_core.py:367] Task 6/8: 2031 candidates (1797 examples) [38.77s elapsed]
+I0116 02:43:32.258386 140251836350464 make_examples_core.py:367] Task 5/8: 2003 candidates (1791 examples) [38.86s elapsed]
+I0116 02:43:32.329041 139891623690240 make_examples_core.py:367] Task 2/8: 2006 candidates (1805 examples) [39.40s elapsed]
+I0116 02:43:32.936359 139626643443712 make_examples_core.py:367] Task 1/8: 2019 candidates (1890 examples) [39.65s elapsed]
+I0116 02:43:34.189131 140034703532032 make_examples_core.py:367] Task 4/8: 2000 candidates (1826 examples) [40.78s elapsed]
+I0116 02:43:35.589834 139854178910208 make_examples_core.py:367] Task 0/8: 2001 candidates (1874 examples) [42.12s elapsed]
+I0116 02:43:36.115641 139731265855488 make_examples_core.py:367] Task 3/8: 2011 candidates (1732 examples) [43.04s elapsed]
+I0116 02:43:37.980306 140443075272704 make_examples_core.py:367] Task 7/8: 2002 candidates (1847 examples) [44.77s elapsed]
+I0116 02:44:06.041212 139626643443712 make_examples_core.py:367] Task 1/8: 4001 candidates (3691 examples) [33.10s elapsed]
+I0116 02:44:06.805761 139891623690240 make_examples_core.py:367] Task 2/8: 4005 candidates (3466 examples) [34.48s elapsed]
+I0116 02:44:08.020703 139626954600448 make_examples_core.py:367] Task 6/8: 4000 candidates (3480 examples) [36.32s elapsed]
+I0116 02:44:12.733388 140251836350464 make_examples_core.py:367] Task 5/8: 4000 candidates (3569 examples) [40.47s elapsed]
+I0116 02:44:13.762036 139731265855488 make_examples_core.py:367] Task 3/8: 4039 candidates (3316 examples) [37.65s elapsed]
+I0116 02:44:14.060508 140034703532032 make_examples_core.py:367] Task 4/8: 4002 candidates (3503 examples) [39.87s elapsed]
+I0116 02:44:15.022810 140443075272704 make_examples_core.py:367] Task 7/8: 4005 candidates (3591 examples) [37.04s elapsed]
+I0116 02:44:15.707941 139854178910208 make_examples_core.py:367] Task 0/8: 4005 candidates (3579 examples) [40.12s elapsed]
+I0116 02:44:39.047066 139891623690240 make_examples_core.py:367] Task 2/8: 6010 candidates (4698 examples) [32.24s elapsed]
+I0116 02:44:44.374299 139731265855488 make_examples_core.py:367] Task 3/8: 6002 candidates (4487 examples) [30.61s elapsed]
+I0116 02:44:46.494238 139626954600448 make_examples_core.py:367] Task 6/8: 6004 candidates (4552 examples) [38.47s elapsed]
+I0116 02:44:47.075969 139626643443712 make_examples_core.py:367] Task 1/8: 6007 candidates (4857 examples) [41.03s elapsed]
+I0116 02:44:50.301330 140251836350464 make_examples_core.py:367] Task 5/8: 6001 candidates (4827 examples) [37.57s elapsed]
+I0116 02:44:52.686987 140443075272704 make_examples_core.py:367] Task 7/8: 6002 candidates (4698 examples) [37.66s elapsed]
+I0116 02:44:54.404082 139854178910208 make_examples_core.py:367] Task 0/8: 6006 candidates (4695 examples) [38.70s elapsed]
+I0116 02:44:56.175993 140034703532032 make_examples_core.py:367] Task 4/8: 6025 candidates (4671 examples) [42.11s elapsed]
+I0116 02:45:19.549044 139891623690240 make_examples_core.py:367] Task 2/8: 8003 candidates (5469 examples) [40.50s elapsed]
+I0116 02:45:24.489988 139626954600448 make_examples_core.py:367] Task 6/8: 8001 candidates (5308 examples) [38.00s elapsed]
+I0116 02:45:27.014109 139731265855488 make_examples_core.py:367] Task 3/8: 8021 candidates (5319 examples) [42.64s elapsed]
+I0116 02:45:30.979673 140251836350464 make_examples_core.py:367] Task 5/8: 8027 candidates (5741 examples) [40.68s elapsed]
+I0116 02:45:32.997589 139626643443712 make_examples_core.py:367] Task 1/8: 8007 candidates (5713 examples) [45.92s elapsed]
+I0116 02:45:34.828377 140443075272704 make_examples_core.py:367] Task 7/8: 8000 candidates (5358 examples) [42.14s elapsed]
+I0116 02:45:35.041772 139854178910208 make_examples_core.py:367] Task 0/8: 8005 candidates (5453 examples) [40.64s elapsed]
+I0116 02:45:45.582576 140034703532032 make_examples_core.py:367] Task 4/8: 8000 candidates (5497 examples) [49.41s elapsed]
+I0116 02:46:09.426755 139891623690240 make_examples_core.py:367] Task 2/8: 10000 candidates (5915 examples) [49.88s elapsed]
+I0116 02:46:13.661527 139731265855488 make_examples_core.py:367] Task 3/8: 10002 candidates (5906 examples) [46.65s elapsed]
+I0116 02:46:14.783931 139626954600448 make_examples_core.py:367] Task 6/8: 10001 candidates (5840 examples) [50.29s elapsed]
+I0116 02:46:18.407390 140251836350464 make_examples_core.py:367] Task 5/8: 10000 candidates (6311 examples) [47.43s elapsed]
+I0116 02:46:20.105253 140443075272704 make_examples_core.py:367] Task 7/8: 10002 candidates (5822 examples) [45.28s elapsed]
+I0116 02:46:21.054137 139626643443712 make_examples_core.py:367] Task 1/8: 10008 candidates (6191 examples) [48.06s elapsed]
+I0116 02:46:23.248033 139854178910208 make_examples_core.py:367] Task 0/8: 10000 candidates (5978 examples) [48.21s elapsed]
+I0116 02:46:32.193495 140034703532032 make_examples_core.py:367] Task 4/8: 10001 candidates (6090 examples) [46.61s elapsed]
+I0116 02:46:54.703442 139891623690240 make_examples_core.py:367] Task 2/8: 12001 candidates (6446 examples) [45.28s elapsed]
+I0116 02:47:03.833193 139626954600448 make_examples_core.py:367] Task 6/8: 12002 candidates (6292 examples) [49.05s elapsed]
+I0116 02:47:06.229401 140251836350464 make_examples_core.py:367] Task 5/8: 12004 candidates (6810 examples) [47.82s elapsed]
+I0116 02:47:05.882209 139731265855488 make_examples_core.py:367] Task 3/8: 12002 candidates (6414 examples) [52.22s elapsed]
+I0116 02:47:08.378426 140443075272704 make_examples_core.py:367] Task 7/8: 12000 candidates (6335 examples) [48.27s elapsed]
+I0116 02:47:09.289867 139626643443712 make_examples_core.py:367] Task 1/8: 12002 candidates (6666 examples) [48.24s elapsed]
+I0116 02:47:12.376778 139854178910208 make_examples_core.py:367] Task 0/8: 12000 candidates (6531 examples) [49.13s elapsed]
+I0116 02:47:21.250557 140034703532032 make_examples_core.py:367] Task 4/8: 12001 candidates (6681 examples) [49.06s elapsed]
+I0116 02:47:41.398037 139891623690240 make_examples_core.py:367] Task 2/8: 14005 candidates (6945 examples) [46.69s elapsed]
+I0116 02:48:00.454185 140251836350464 make_examples_core.py:367] Task 5/8: 14006 candidates (7347 examples) [54.22s elapsed]
+I0116 02:48:01.013920 139626954600448 make_examples_core.py:367] Task 6/8: 14000 candidates (6722 examples) [57.18s elapsed]
+I0116 02:48:05.358844 139731265855488 make_examples_core.py:367] Task 3/8: 14014 candidates (6897 examples) [59.48s elapsed]
+I0116 02:48:10.207185 139626643443712 make_examples_core.py:367] Task 1/8: 14000 candidates (7182 examples) [60.92s elapsed]
+I0116 02:48:16.862669 139854178910208 make_examples_core.py:367] Task 0/8: 14007 candidates (6961 examples) [64.49s elapsed]
+I0116 02:48:20.432957 140443075272704 make_examples_core.py:367] Task 7/8: 14017 candidates (6808 examples) [72.05s elapsed]
+I0116 02:48:24.779266 140034703532032 make_examples_core.py:367] Task 4/8: 14000 candidates (7120 examples) [63.53s elapsed]
+I0116 02:48:51.751068 139891623690240 make_examples_core.py:367] Task 2/8: 16013 candidates (7480 examples) [70.35s elapsed]
+I0116 02:49:04.532149 139731265855488 make_examples_core.py:367] Task 3/8: 16002 candidates (7524 examples) [59.17s elapsed]
+I0116 02:49:07.418033 139626954600448 make_examples_core.py:367] Task 6/8: 16000 candidates (7162 examples) [66.40s elapsed]
+I0116 02:49:15.037556 139626643443712 make_examples_core.py:367] Task 1/8: 16008 candidates (7673 examples) [64.83s elapsed]
+I0116 02:49:15.801097 140251836350464 make_examples_core.py:367] Task 5/8: 16003 candidates (7742 examples) [75.35s elapsed]
+I0116 02:49:19.976896 140443075272704 make_examples_core.py:367] Task 7/8: 16002 candidates (7293 examples) [59.54s elapsed]
+I0116 02:49:27.395625 139854178910208 make_examples_core.py:367] Task 0/8: 16000 candidates (7607 examples) [70.53s elapsed]
+I0116 02:49:35.396037 140034703532032 make_examples_core.py:367] Task 4/8: 16008 candidates (7628 examples) [70.62s elapsed]
+I0116 02:50:03.176795 139891623690240 make_examples_core.py:367] Task 2/8: 18014 candidates (7996 examples) [71.43s elapsed]
+I0116 02:50:07.561314 139626954600448 make_examples_core.py:367] Task 6/8: Writing example info to /output/tmp_chr22/make_examples.tfrecord-00006-of-00008.gz.example_info.json
+I0116 02:50:07.561697 139626954600448 make_examples_core.py:3685] example_shape = [100, 221, 7]
+I0116 02:50:07.561784 139626954600448 make_examples_core.py:3686] example_channels = [1, 2, 3, 4, 5, 6, 19]
+I0116 02:50:07.562572 139626954600448 make_examples_core.py:367] Task 6/8: Summary stats:
+	17821 candidate variants found
+	 7676 examples written
+	11269 small model examples called
+I0116 02:50:10.694741 139731265855488 make_examples_core.py:367] Task 3/8: 18003 candidates (8133 examples) [66.16s elapsed]
+I0116 02:50:15.217785 139891623690240 make_examples_core.py:367] Task 2/8: Writing example info to /output/tmp_chr22/make_examples.tfrecord-00002-of-00008.gz.example_info.json
+I0116 02:50:15.218601 139891623690240 make_examples_core.py:3685] example_shape = [100, 221, 7]
+I0116 02:50:15.218763 139891623690240 make_examples_core.py:3686] example_channels = [1, 2, 3, 4, 5, 6, 19]
+I0116 02:50:15.221987 139891623690240 make_examples_core.py:367] Task 2/8: Summary stats:
+	18451 candidate variants found
+	 8131 examples written
+	11512 small model examples called
+I0116 02:50:18.095664 139731265855488 make_examples_core.py:367] Task 3/8: Writing example info to /output/tmp_chr22/make_examples.tfrecord-00003-of-00008.gz.example_info.json
+I0116 02:50:18.096253 139731265855488 make_examples_core.py:3685] example_shape = [100, 221, 7]
+I0116 02:50:18.096419 139731265855488 make_examples_core.py:3686] example_channels = [1, 2, 3, 4, 5, 6, 19]
+I0116 02:50:18.098240 139731265855488 make_examples_core.py:367] Task 3/8: Summary stats:
+	18194 candidate variants found
+	 8205 examples written
+	11594 small model examples called
+I0116 02:50:22.712978 139626643443712 make_examples_core.py:367] Task 1/8: 18020 candidates (8220 examples) [67.67s elapsed]
+I0116 02:50:24.635002 140443075272704 make_examples_core.py:367] Task 7/8: 18004 candidates (7857 examples) [64.66s elapsed]
+I0116 02:50:25.751586 140251836350464 make_examples_core.py:367] Task 5/8: 18003 candidates (8374 examples) [69.95s elapsed]
+I0116 02:50:26.111068 140443075272704 make_examples_core.py:367] Task 7/8: Writing example info to /output/tmp_chr22/make_examples.tfrecord-00007-of-00008.gz.example_info.json
+I0116 02:50:26.111715 140443075272704 make_examples_core.py:3685] example_shape = [100, 221, 7]
+I0116 02:50:26.111864 140443075272704 make_examples_core.py:3686] example_channels = [1, 2, 3, 4, 5, 6, 19]
+I0116 02:50:26.113275 140443075272704 make_examples_core.py:367] Task 7/8: Summary stats:
+	18044 candidate variants found
+	 7877 examples written
+	11400 small model examples called
+I0116 02:50:28.502447 139626643443712 make_examples_core.py:367] Task 1/8: Writing example info to /output/tmp_chr22/make_examples.tfrecord-00001-of-00008.gz.example_info.json
+I0116 02:50:28.502781 139626643443712 make_examples_core.py:3685] example_shape = [100, 221, 7]
+I0116 02:50:28.502857 139626643443712 make_examples_core.py:3686] example_channels = [1, 2, 3, 4, 5, 6, 19]
+I0116 02:50:28.503484 139626643443712 make_examples_core.py:367] Task 1/8: Summary stats:
+	18200 candidate variants found
+	 8286 examples written
+	11177 small model examples called
+I0116 02:50:35.736043 140034703532032 make_examples_core.py:367] Task 4/8: 18000 candidates (8296 examples) [60.34s elapsed]
+I0116 02:50:35.965137 139854178910208 make_examples_core.py:367] Task 0/8: 18007 candidates (8035 examples) [68.57s elapsed]
+I0116 02:50:40.863619 140034703532032 make_examples_core.py:367] Task 4/8: Writing example info to /output/tmp_chr22/make_examples.tfrecord-00004-of-00008.gz.example_info.json
+I0116 02:50:40.865139 140034703532032 make_examples_core.py:3685] example_shape = [100, 221, 7]
+I0116 02:50:40.865359 140034703532032 make_examples_core.py:3686] example_channels = [1, 2, 3, 4, 5, 6, 19]
+I0116 02:50:40.868410 140034703532032 make_examples_core.py:367] Task 4/8: Summary stats:
+	18140 candidate variants found
+	 8353 examples written
+	11273 small model examples called
+I0116 02:50:49.064595 139854178910208 make_examples_core.py:367] Task 0/8: Writing example info to /output/tmp_chr22/make_examples.tfrecord-00000-of-00008.gz.example_info.json
+I0116 02:50:49.065429 139854178910208 make_examples_core.py:3685] example_shape = [100, 221, 7]
+I0116 02:50:49.065548 139854178910208 make_examples_core.py:3686] example_channels = [1, 2, 3, 4, 5, 6, 19]
+I0116 02:50:49.067080 139854178910208 make_examples_core.py:367] Task 0/8: Summary stats:
+	18400 candidate variants found
+	 8171 examples written
+	11562 small model examples called
+I0116 02:50:52.179406 140251836350464 make_examples_core.py:367] Task 5/8: Writing example info to /output/tmp_chr22/make_examples.tfrecord-00005-of-00008.gz.example_info.json
+I0116 02:50:52.179747 140251836350464 make_examples_core.py:3685] example_shape = [100, 221, 7]
+I0116 02:50:52.179825 140251836350464 make_examples_core.py:3686] example_channels = [1, 2, 3, 4, 5, 6, 19]
+I0116 02:50:52.180544 140251836350464 make_examples_core.py:367] Task 5/8: Summary stats:
+	18817 candidate variants found
+	 8666 examples written
+	11539 small model examples called
+
+real	8m8.422s
+user	62m26.193s
+sys	0m47.409s
+
+***** Running the command:*****
+time /opt/deepvariant/bin/call_variants --outfile "/output/tmp_chr22/call_variants_output.tfrecord.gz" --examples "/output/tmp_chr22/make_examples.tfrecord@8.gz" --checkpoint "/opt/models/wgs"
+
+2026-01-16 02:50:57.334921: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+I0116 02:51:01.124352 139853660385280 call_variants.py:1058] call_variants: env = {'PYTHONPATH': '/tmp/Bazel.runfiles_s0duz5iu/runfiles:/tmp/Bazel.runfiles_s0duz5iu/runfiles/com_google_protobuf/python:/tmp/Bazel.runfiles_s0duz5iu/runfiles/absl_py:/tmp/Bazel.runfiles_s0duz5iu/runfiles/bazel_tools:/tmp/Bazel.runfiles_s0duz5iu/runfiles/com_google_deepvariant:/tmp/Bazel.runfiles_s0duz5iu/runfiles/com_google_protobuf:/tmp/Bazel.runfiles_s0duz5iu/runfiles/six_archive', 'RUNFILES_DIR': '/tmp/Bazel.runfiles_s0duz5iu/runfiles', 'PYTHONSAFEPATH': '1', 'HOSTNAME': 'f72e7198eb3f', 'TF_CPP_MIN_LOG_LEVEL': '1', 'PWD': '/opt/deepvariant', '_': '/usr/bin/python3', 'HOME': '/', 'DV_BIN_PATH': '/opt/deepvariant/bin', 'TF_USE_LEGACY_KERAS': '1', 'TPU_ML_PLATFORM': 'Tensorflow', 'SHLVL': '3', 'LC_CTYPE': 'C.UTF-8', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/deepvariant/bin:/opt/conda/envs/bio/bin', 'TF2_BEHAVIOR': '1'}
+INFO:tensorflow:Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:CPU:0',)
+I0116 02:51:01.278453 139853660385280 mirrored_strategy.py:423] Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:CPU:0',)
+I0116 02:51:01.356022 139853660385280 call_variants.py:783] Number of devices: 1
+I0116 02:51:01.723946 139853660385280 call_variants.py:835] Per-replica batch size is 1024. Global batch size is 1024.
+I0116 02:51:01.725591 139853660385280 call_variants.py:845] Use saved model: True
+I0116 02:51:01.726442 139853660385280 dv_utils.py:333] From /output/tmp_chr22/make_examples.tfrecord-00000-of-00008.gz.example_info.json: Shape of input examples: [100, 221, 7], Channels of input examples: [1, 2, 3, 4, 5, 6, 19].
+I0116 02:51:15.799027 139853660385280 dv_utils.py:333] From /opt/models/wgs/model.example_info.json: Shape of input examples: [100, 221, 7], Channels of input examples: [1, 2, 3, 4, 5, 6, 19].
+I0116 02:51:15.799911 139853660385280 call_variants.py:887] example_shape: [100, 221, 7]
+I0116 02:51:17.331964 139853660385280 call_variants.py:953] Total 1 writing processes started.
+2026-01-16 02:51:17.569791: W tensorflow/core/framework/dataset.cc:959] Input of GeneratorDatasetOp::Dataset will not be optimized because the dataset does not implement the AsGraphDefInternal() method needed to apply optimizations.
+I0116 02:51:32.422663 139853660385280 call_variants.py:1031] Predicted 1024 examples in 1 batches [1.474 sec per 100].
+I0116 02:55:33.409890 139853660385280 call_variants.py:1031] Predicted 52224 examples in 51 batches [0.490 sec per 100].
+2026-01-16 02:56:16.839357: W tensorflow/core/framework/local_rendezvous.cc:404] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node MultiDeviceIteratorGetNextFromShard}}]]
+2026-01-16 02:56:20.430191: W tensorflow/core/framework/local_rendezvous.cc:404] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+I0116 02:56:20.563966 139853660385280 call_variants.py:597] Wrote 65365 examples over 64 batches. Closing writer.
+I0116 02:56:20.687546 139853660385280 call_variants.py:1107] Complete: call_variants.
+
+real	5m30.809s
+user	112m7.625s
+sys	121m45.210s
+
+***** Running the command:*****
+time /opt/deepvariant/bin/postprocess_variants --ref "/ref/chr22.fa" --infile "/output/tmp_chr22/call_variants_output.tfrecord.gz" --outfile "/output/chr22.vcf.gz" --cpus "8" --multiallelic_mode "product" --small_model_cvo_records "/output/tmp_chr22/make_examples_call_variant_outputs.tfrecord@8.gz" --gvcf_outfile "/output/chr22.g.vcf.gz" --nonvariant_site_tfrecord_path "/output/tmp_chr22/gvcf.tfrecord@8.gz"
+
+2026-01-16 02:56:27.425819: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+I0116 02:56:30.101976 140229121507328 postprocess_variants.py:1675] Using sample name from call_variants output. Sample name: HG02080
+I0116 02:56:30.221265 140229121507328 postprocess_variants.py:1937] Running postprocess_variants with parallelism using 8 CPUs over 8 partitions.
+I0116 02:56:31.413469 140229121507328 postprocess_variants.py:1541] Processing region chr22:50818464-chr22:50818468
+I0116 02:56:31.414036 140229121507328 postprocess_variants.py:1548] CVO sorting took 0.0155166228612264 minutes
+I0116 02:56:31.415311 140229121507328 postprocess_variants.py:1806] Processing variants (and writing to temporary files) took 0.015537913640340168 minutes
+I0116 02:56:31.560765 140229121507328 postprocess_variants.py:1541] Processing region chr22:38113848-chr22:44466156
+I0116 02:56:31.561422 140229121507328 postprocess_variants.py:1548] CVO sorting took 0.017974146207173667 minutes
+I0116 02:56:31.562730 140229121507328 postprocess_variants.py:1552] Transforming call_variants_output to variants.
+I0116 02:56:31.562842 140229121507328 postprocess_variants.py:1560] Processed 20044 variants.
+I0116 02:56:31.562987 140229121507328 postprocess_variants.py:1806] Processing variants (and writing to temporary files) took 0.018000467618306478 minutes
+I0116 02:56:31.584869 140229121507328 postprocess_variants.py:1541] Processing region chr22:25409232-chr22:31761540
+I0116 02:56:31.585540 140229121507328 postprocess_variants.py:1548] CVO sorting took 0.01838268041610718 minutes
+I0116 02:56:31.586876 140229121507328 postprocess_variants.py:1552] Transforming call_variants_output to variants.
+I0116 02:56:31.586989 140229121507328 postprocess_variants.py:1560] Processed 17697 variants.
+I0116 02:56:31.587159 140229121507328 postprocess_variants.py:1806] Processing variants (and writing to temporary files) took 0.018409883975982665 minutes
+I0116 02:56:31.592319 140229121507328 postprocess_variants.py:1541] Processing region chr22:31761540-chr22:38113848
+I0116 02:56:31.593034 140229121507328 postprocess_variants.py:1548] CVO sorting took 0.01850509246190389 minutes
+I0116 02:56:31.594347 140229121507328 postprocess_variants.py:1552] Transforming call_variants_output to variants.
+I0116 02:56:31.594458 140229121507328 postprocess_variants.py:1560] Processed 18424 variants.
+I0116 02:56:31.594606 140229121507328 postprocess_variants.py:1806] Processing variants (and writing to temporary files) took 0.018531433741251626 minutes
+I0116 02:56:31.597345 140229121507328 postprocess_variants.py:1541] Processing region chr22:19056924-chr22:25409232
+I0116 02:56:31.598084 140229121507328 postprocess_variants.py:1548] CVO sorting took 0.018597749869028728 minutes
+I0116 02:56:31.599473 140229121507328 postprocess_variants.py:1552] Transforming call_variants_output to variants.
+I0116 02:56:31.599587 140229121507328 postprocess_variants.py:1560] Processed 23932 variants.
+I0116 02:56:31.599730 140229121507328 postprocess_variants.py:1806] Processing variants (and writing to temporary files) took 0.018625497817993164 minutes
+I0116 02:56:31.608640 140229121507328 postprocess_variants.py:1541] Processing region chr22:44466156-chr22:50818464
+I0116 02:56:31.609330 140229121507328 postprocess_variants.py:1548] CVO sorting took 0.01876922051111857 minutes
+I0116 02:56:31.610685 140229121507328 postprocess_variants.py:1552] Transforming call_variants_output to variants.
+I0116 02:56:31.610920 140229121507328 postprocess_variants.py:1560] Processed 25886 variants.
+I0116 02:56:31.611118 140229121507328 postprocess_variants.py:1806] Processing variants (and writing to temporary files) took 0.01879916191101074 minutes
+I0116 02:56:31.662941 140229121507328 postprocess_variants.py:1541] Processing region chr22:12704616-chr22:19056924
+I0116 02:56:31.663663 140229121507328 postprocess_variants.py:1548] CVO sorting took 0.01969412962595622 minutes
+I0116 02:56:31.665032 140229121507328 postprocess_variants.py:1552] Transforming call_variants_output to variants.
+I0116 02:56:31.665142 140229121507328 postprocess_variants.py:1560] Processed 23841 variants.
+I0116 02:56:31.665297 140229121507328 postprocess_variants.py:1806] Processing variants (and writing to temporary files) took 0.019721623261769614 minutes
+I0116 02:56:31.704879 140229121507328 postprocess_variants.py:1541] Processing region chr22:0-chr22:12704616
+I0116 02:56:31.705794 140229121507328 postprocess_variants.py:1548] CVO sorting took 0.020394531885782878 minutes
+I0116 02:56:31.707148 140229121507328 postprocess_variants.py:1552] Transforming call_variants_output to variants.
+I0116 02:56:31.707258 140229121507328 postprocess_variants.py:1560] Processed 26867 variants.
+I0116 02:56:31.707407 140229121507328 postprocess_variants.py:1806] Processing variants (and writing to temporary files) took 0.020421707630157472 minutes
+I0116 02:56:35.144932 140229121507328 postprocess_variants.py:1885] VCF and gVCF creation took 0.06215510368347168 minutes.
+I0116 02:56:37.937288 140229121507328 postprocess_variants.py:1885] VCF and gVCF creation took 0.10583236217498779 minutes.
+I0116 02:56:37.980521 140229121507328 postprocess_variants.py:1885] VCF and gVCF creation took 0.10642908016840617 minutes.
+I0116 02:56:38.234686 140229121507328 postprocess_variants.py:1885] VCF and gVCF creation took 0.1111920197804769 minutes.
+I0116 02:56:39.220616 140229121507328 postprocess_variants.py:1885] VCF and gVCF creation took 0.1270114302635193 minutes.
+I0116 02:56:39.278465 140229121507328 postprocess_variants.py:1885] VCF and gVCF creation took 0.1277860641479492 minutes.
+I0116 02:56:39.332890 140229121507328 postprocess_variants.py:1885] VCF and gVCF creation took 0.12779014507929484 minutes.
+I0116 02:56:39.528582 140229121507328 postprocess_variants.py:1885] VCF and gVCF creation took 0.13034909566243488 minutes.
+Checking the headers of 8 files.
+Done, the headers are compatible.
+Checking the headers of 8 files.
+Done, the headers are compatible.
+I0116 02:56:40.682633 140229121507328 postprocess_variants.py:2338] Indexing VCF and gVCF took 0.016580859820048015 minutes.
+
+real	0m16.961s
+user	1m17.462s
+sys	0m10.029s

@@ -1,0 +1,20 @@
+decompose v0.5
+
+options:     input VCF file        results/called_variants/vg_call_backbone_lr/HG02080/chr22.vcf.gz
+         [s] smart decomposition   false (experimental)
+         [o] output VCF file       -
+
+
+stats: no. variants                 : 104037
+       no. biallelic variants       : 100910
+       no. multiallelic variants    : 3127
+
+       no. additional biallelics    : 4202
+       total no. of biallelics      : 108239
+
+Time elapsed: 0.49s
+
+Lines   total/split/joined/realigned/removed/skipped:	108239/0/0/10395/0/0
+Merging 1 temporary files
+Done
+Cleaning

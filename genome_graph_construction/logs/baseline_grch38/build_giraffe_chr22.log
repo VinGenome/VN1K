@@ -1,0 +1,21 @@
+Converting VG to GFA...
+Building short-read giraffe indexes...
+[vg autoindex] Executing command: vg autoindex --workflow giraffe -g results/baseline_grch38/indexes/chr22/grch38_only.chr22.gfa -p results/baseline_grch38/indexes/chr22/grch38_only.chr22 -t 32
+[IndexRegistry]: Checking for haplotype lines in GFA.
+[IndexRegistry]: Constructing VG graph from GFA input.
+[IndexRegistry]: Constructing XG graph from VG graph.
+[IndexRegistry]: Constructing a greedy path cover GBWT
+[IndexRegistry]: Constructing GBZ using NamedNodeBackTranslation.
+[IndexRegistry]: Constructing distance index for Giraffe.
+[IndexRegistry]: Constructing minimizer index and associated zipcodes.
+	use parameters -k 29 -w 11
+Building long-read giraffe indexes...
+[vg autoindex] Executing command: vg autoindex --workflow lr-giraffe -g results/baseline_grch38/indexes/chr22/grch38_only.chr22.gfa -p results/baseline_grch38/indexes/chr22/grch38_only.chr22 -t 32
+[IndexRegistry]: Checking for haplotype lines in GFA.
+[vg autoindex] Guessing that results/baseline_grch38/indexes/chr22/grch38_only.chr22.dist is Giraffe Distance Index
+[vg autoindex] Guessing that results/baseline_grch38/indexes/chr22/grch38_only.chr22.giraffe.gbz is Giraffe GBZ
+[IndexRegistry]: Constructing minimizer index and associated zipcodes.
+	use parameters -k 31 -w 50 -W 
+[IndexRegistry]: Finding frequent kmers using the fast algorithm
+[IndexRegistry]: Found 217 kmers with more than 500 hits
+GRCh38 baseline indexes complete.

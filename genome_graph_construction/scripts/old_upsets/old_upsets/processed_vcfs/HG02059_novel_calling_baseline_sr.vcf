@@ -1,0 +1,38 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##contig=<ID=chr22,length=50818468>
+##INFO=<ID=AT,Number=R,Type=String,Description="Allele Traversal as path in graph">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Total Depth">
+##FORMAT=<ID=AD,Number=.,Type=Integer,Description="Allelic depths for the ref and alt alleles in the order listed">
+##FORMAT=<ID=MAD,Number=1,Type=Integer,Description="Minimum site allele depth">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read Depth">
+##FORMAT=<ID=GL,Number=G,Type=Float,Description="Genotype Likelihood, log10-scaled likelihoods of the data given the called genotype for each possible genotype generated from the reference and alternate alleles given the sample ploidy">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality, the Phred-scaled probability estimate of the called genotype">
+##FORMAT=<ID=GP,Number=1,Type=Float,Description="Genotype Probability, the log-scaled posterior probability of the called genotype">
+##FORMAT=<ID=XD,Number=1,Type=Float,Description="eXpected Depth, background coverage as used for the Poisson model">
+##FILTER=<ID=lowad,Description="Variant does not meet minimum allele read support threshold of 1">
+##FILTER=<ID=lowdepth,Description="Variant has read depth less than 4">
+##SAMPLE=<ID=HG02059>
+##INFO=<ID=OLD_MULTIALLELIC,Number=1,Type=String,Description="Original chr:pos:ref:alt encoding">
+##bcftools_normVersion=1.21+htslib-1.21
+##bcftools_normCommand=norm -m -any -f results/backbone/ref_by_chrom/chr22.fa -Oz -o results/novel_calling/baseline_sr/HG02059/chr22/normalized.vcf.gz; Date=Wed Jan 14 11:07:31 2026
+##bcftools_viewVersion=1.21+htslib-1.21
+##bcftools_viewCommand=view -f PASS -i abs(strlen(ALT)-strlen(REF))>=50 -Oz -o results/novel_calling/baseline_sr/HG02059/chr22/sv_unannot.vcf.gz results/novel_calling/baseline_sr/HG02059/chr22/normalized.vcf.gz; Date=Wed Jan 14 11:07:33 2026
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=SVLEN,Number=1,Type=Integer,Description="Difference in length between REF and ALT alleles">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##bcftools_viewVersion=1.20+htslib-1.20
+##bcftools_viewCommand=view -c 1 /home/giangvm1/bit_bucket/pangenom/pipeline/old_code/genome_graph_mc_pipeline/results/called_variants/novel_calling_baseline_sr/HG02059/chr22_sv.vcf.gz; Date=Wed Jan 14 15:12:22 2026
+##bcftools_filterVersion=1.20+htslib-1.20
+##bcftools_filterCommand=filter -i '(SVTYPE=="DEL" || SVTYPE=="INS") & ABS(SVLEN) >=50'; Date=Wed Jan 14 15:12:22 2026
+##bcftools_viewCommand=view -o /home/giangvm1/bit_bucket/pangenom/pipeline/old_code/genome_graph_mc_pipeline/scripts/old_upsets/old_upsets/processed_vcfs/HG02059_novel_calling_baseline_sr.vcf; Date=Wed Jan 14 15:12:22 2026
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	HG02059_novel_calling_baseline_sr
+chr22	18990062	>593440>1708809	CTGATCACATTTCAACATGAGATTTGGAGGGGCCAGACCTCAAAACTGCATCAGATACATTCATGT	C	101.06	PASS	AT=>593440>1635668>593441>593442>1708809,>593440>593442>1708809,>593440>1708809;DP=6;OLD_MULTIALLELIC=chr22:18990062:CTGATCACATTTCAACATGAGATTTGGAGGGGCCAGACCTCAAAACTGCATCAGATACATTCATGT/CTCAGATACATTCATGT/C;SVTYPE=DEL;SVLEN=-65;AC=1;AN=1	GT:DP:GL	./1:6:-18.1064,-14.5261,-9.85085
+chr22	23622665	>738209>1635798	TTTTCATAGAGACCATTTAAAAAAGAATATGAAAATGCTACAATTAAAAATAGTCATGA	T	70.3162	PASS	AT=>738209>1757737>738210>738211>1635798,>738209>1635798;DP=19;SVTYPE=DEL;SVLEN=-58;AC=1;AN=2	GT:DP:AD:GL:GQ:GP:XD:MAD	0/1:19:13,6:-10.6413,-4.08675,-24.8156:65:-1.09861:33.8152:6
+chr22	25180036	>786877>1689598	TCTGAAAGAGGCAAGACCTGGTGCTCTGGAGCCCTTGGGCTACCCGAGGAA	T	120.615	PASS	AT=>786877>1761327>1761328>786878>1689597>1689598,>786877>1761327>1689598;DP=9;SVTYPE=DEL;SVLEN=-50;AC=2;AN=2	GT:DP:AD:GL:GQ:GP:XD:MAD	1/1:9:2,7:-18.3626,-6.80142,-8.06227:80:-1.09861:31.0276:7
+chr22	29818400	>931825>1840255	GCCTACACACACACACACACACACACACACACACACACACACACACACACACACACACAC	G	126.258	PASS	AT=>931825>931826>1599413>1599414>931827>1863504>931828>1840255,>931825>931826>1863504>931828>1840255,>931825>1599413>1840255;DP=27;OLD_MULTIALLELIC=chr22:29818400:GCCTACACACACACACACACACACACACACACACACACACACACACACACACACACACAC/GCCT/G;SVTYPE=DEL;SVLEN=-59;AC=1;AN=1	GT:DP:GL	./1:27:-22.6125,-25.2013,-23.665
+chr22	29818403	>931825>1840255	TACACACACACACACACACACACACACACACACACACACACACACACACACACACAC	T	126.258	PASS	AT=>931825>931826>1599413>1599414>931827>1863504>931828>1840255,>931825>931826>1863504>931828>1840255,>931825>1599413>1840255;DP=27;OLD_MULTIALLELIC=chr22:29818400:GCCTACACACACACACACACACACACACACACACACACACACACACACACACACACACAC/GCCT/G;SVTYPE=DEL;SVLEN=-56;AC=1;AN=1	GT:DP:GL	1/.:27:-22.6125,-13.9575,-10.9696
+chr22	43589280	>1362165>1635688	CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAGTACAG	C	119.67	PASS	AT=>1362165>1362166>1362167>1635688,>1362165>1635688;DP=6;SVTYPE=DEL;SVLEN=-50;AC=2;AN=2	GT:DP:AD:GL:GQ:GP:XD:MAD	1/1:6:0,6:-19.7919,-9.62429,-8.32326:13:-1.1474:32.1927:6
+chr22	45967454	>1436483>1677529	GGCTCCCACTGCATGTGGCCCCTTCCAATTGGGAAGTCCTCCAGAATGCACT	G	95.7963	PASS	AT=>1436483>1799752>1799753>1436484>1436485>1677528>1677529,>1436483>1677528>1677529;DP=8;SVTYPE=DEL;SVLEN=-51;AC=2;AN=2	GT:DP:AD:GL:GQ:GP:XD:MAD	1/1:8:1,6:-17.6363,-8.6812,-9.07477:83:-1.09861:32.9531:6

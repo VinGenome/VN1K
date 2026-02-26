@@ -1,0 +1,7 @@
+2026-01-15 23:58:10,531 - INFO - Loading reference from results/backbone/ref_by_chrom/chr22.fa
+2026-01-15 23:58:10,531 - WARNING - pyfaidx not available, using simple FASTA parser (slower)
+2026-01-15 23:58:10,990 - INFO - Contigs written: 729
+2026-01-15 23:58:10,990 - INFO - Skipped - no alt: 0
+2026-01-15 23:58:10,990 - INFO - Skipped - symbolic: 37
+2026-01-15 23:58:10,990 - INFO - Skipped - no ref chrom: 0
+2026-01-15 23:58:10,990 - INFO - Skipped - errors: 0

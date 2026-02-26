@@ -1,0 +1,22 @@
+# Sample Sheet Template
+# Tab-separated file defining samples to process
+#
+# Columns:
+#   sample_id   - Unique sample identifier (required)
+#   platform    - Sequencing platform: ILLUMINA, PACBIO, ONT (required)
+#   r1          - Path to R1 FASTQ (for short reads)
+#   r2          - Path to R2 FASTQ (for short reads)
+#   long_reads  - Path to long reads FASTQ (for PacBio/ONT)
+#   read_type   - Long read type: hifi, clr, ont (for long reads)
+#
+# Notes:
+#   - Use absolute paths or paths relative to the Snakefile
+#   - Leave empty fields for inapplicable columns
+#   - Lines starting with # are comments
+#
+sample_id	platform	r1	r2	long_reads	read_type
+#HG02080	ILLUMINA	/home/giangvm1/bit_bucket/pangenom/pipeline/old_code/genome_graph_mc_pipeline/workflow_full/HG02080_R1.fastq.gz	/home/giangvm1/bit_bucket/pangenom/pipeline/old_code/genome_graph_mc_pipeline/workflow_full/HG02080_R2.fastq.gz		
+#HG02059	ILLUMINA	/home/giangvm1/bit_bucket/pangenom/pipeline/old_code/genome_graph_mc_pipeline/workflow_full/HG02059_R1.fastq.gz	/home/giangvm1/bit_bucket/pangenom/pipeline/old_code/genome_graph_mc_pipeline/workflow_full/HG02059_R2.fastq.gz		
+VN005	ILLUMINA	/mnt/WD/VGP/short-read/fastq/VN_01_00_0005_01_01/VN_01_00_0005_01_01_R1.filtered.trimmed.fastq.gz	/mnt/WD/VGP/short-read/fastq/VN_01_00_0005_01_01/VN_01_00_0005_01_01_R2.filtered.trimmed.fastq.gz		
+#HG02080	PACBIO			/home/giangvm1/bit_bucket/pangenom/pipeline/old_code/genome_graph_mc_pipeline/workflow_full/HG02080.longread.fastq.gz	hifi
+#HG02059	PACBIO			/home/giangvm1/bit_bucket/pangenom/pipeline/old_code/genome_graph_mc_pipeline/workflow_full/HG02059_longread.fastq.gz	hifi

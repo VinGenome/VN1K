@@ -1,0 +1,6 @@
+Building VG graph from linear reference...
+warning:[vg::Constructor] Unsupported IUPAC ambiguity codes found in chr22; coercing to N.
+Graph construction complete
+nodes	1588078
+edges	1588077
+length	50818468

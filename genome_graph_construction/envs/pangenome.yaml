@@ -1,0 +1,35 @@
+# Conda environment for Vietnamese Pangenome Pipeline
+name: pangenome
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  # Core workflow
+  - python>=3.9
+  - snakemake>=7.0
+  - pandas
+  - pyyaml
+
+  # Variant manipulation
+  - bcftools>=1.17
+  - htslib>=1.17
+  - tabix
+  - survivor>=1.0.7
+
+  # Graph tools
+  - minigraph>=0.20
+  - vg>=1.50
+
+  # Python libraries for SV contig script
+  - pysam>=0.21
+  - pyfaidx>=0.7
+
+  # Cactus for minigraph-cactus
+  # Note: May need separate installation
+  # pip install cactus
+
+  # Utilities
+  - pigz
+  - samtools>=1.17
+  - bgzip

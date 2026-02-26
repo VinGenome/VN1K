@@ -1,0 +1,9 @@
+[WARNING][1;31m it is recommended to add -c for graph generation[0m
+[M::main::1.487*1.00] loaded the graph from "results/backbone/chr22/vn_pangenome.chr22.gfa.gz"
+[M::mg_index::2.826*1.60] indexed the graph
+[M::mg_opt_update::2.910*1.59] occ_max1=96; lc_max_occ=2
+[M::ggen_map::2.920*1.58] loaded file "results/pangenome/chr22/novel_sv_contigs.fa"
+[M::ggen_map::6.625*14.06] mapped 729 sequence(s) to the graph
+[M::main] Version: 0.21-r606
+[M::main] CMD: minigraph -xggs -t 32 results/backbone/chr22/vn_pangenome.chr22.gfa.gz results/pangenome/chr22/novel_sv_contigs.fa
+[M::main] Real time: 7.687 sec; CPU: 94.177 sec; Peak RSS: 2.908 GB

@@ -1,0 +1,5 @@
+warning[vg::Watchdog]: Thread 4 has been checked in for 10 seconds processing: A00858:10:HLHLYDSXX:2:2457:31846:16939, A00858:10:HLHLYDSXX:2:2457:31846:16939
+warning[vg::Watchdog]: Thread 4 finally checked out after 253 seconds and 0 kb memory growth processing: A00858:10:HLHLYDSXX:2:2457:31846:16939, A00858:10:HLHLYDSXX:2:2457:31846:16939
+warning[vg::Watchdog]: Thread 2 has been checked in for 10 seconds processing: A00858:10:HLHLYDSXX:4:2246:23619:18975, A00858:10:HLHLYDSXX:4:2246:23619:18975
+warning[vg::Watchdog]: Thread 2 finally checked out after 245 seconds and 0 kb memory growth processing: A00858:10:HLHLYDSXX:4:2246:23619:18975, A00858:10:HLHLYDSXX:4:2246:23619:18975
+[bam_sort_core] merging from 8 files and 4 in-memory blocks...

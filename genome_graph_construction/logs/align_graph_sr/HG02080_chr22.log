@@ -1,0 +1,2 @@
+Guessing that results/indexes/chr22/vn_pangenome.chr22.shortread.zipcodes is Short Read Zipcodes
+warning[vg::giraffe]: Refusing to perform too-large rescue alignment of 150 bp against 10816 bp ordered subgraph for read A00296:136:HVVLTDSXX:1:1628:22019:6872 which would use more than 1572864 cells and might exhaust Dozeu's allocator; suppressing further warnings.

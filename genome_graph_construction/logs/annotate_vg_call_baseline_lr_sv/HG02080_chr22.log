@@ -1,0 +1,4 @@
+Annotating results/called_variants/vg_call_baseline_lr/HG02080/chr22_sv_unannot.vcf.gz -> results/called_variants/vg_call_baseline_lr/HG02080/chr22_sv.tmp.vcf.gz
+Filtered out 0 variants with |SVLEN| < 50
+Kept 0 variants
+Done!
