@@ -1,0 +1,19 @@
+FROM pytorch/pytorch:2.3.0-cuda12.1-cudnn8-runtime
+
+WORKDIR /app
+
+RUN apt-get update
+RUN apt-get install -y vim gcc
+RUN apt-get install -y parallel
+RUN apt-get install -y bcftools ffmpeg libsm6 libxext6
+
+# COPY ./SV_Deeplearning_serve.py ./
+# COPY ./requirements.txt ./
+COPY  ./ /app
+RUN chmod 777 /app/tools/SURVIVOR/Debug/SURVIVOR
+
+RUN python -m pip install --upgrade pip
+RUN pip install -r requirements.txt
+
+CMD ["/bin/bash"]
+# CMD ["python", "SV_Deeplearning_serve.py"]
