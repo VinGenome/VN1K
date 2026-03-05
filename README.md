@@ -13,23 +13,7 @@
 - **GWAS and clinical use** — Association and clinical interpretation workflows.
 - **MEIS** — Supporting tools and workflows for Mobile Element Insertions.
 
-Detailed methods are described in the manuscript in this preprint at https://www.biorxiv.org/content/10.1101/2025.04.15.648991v2.full.pdf).
-
----
-
-## Programing languages
-
-The VN1K uses following programing languages:
-
-- **C++** — Core tools and performance-critical components  
-- **Shell** — Pipeline orchestration and automation  
-- **Python** — Analysis scripts and utilities  
-- **R** — Statistics and visualization  
-- **Makefile** — Build and workflow automation  
-- **Jupyter Notebook** — Interactive analysis  
-- **Nextflow** — Workflow management where applicable  
-
----
+Detailed methods are described in the manuscript in this preprint at https://www.biorxiv.org/content/10.1101/2025.04.15.648991v2.full.pdf.
 
 ## Citation and contact
 
