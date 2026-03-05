@@ -18,6 +18,6 @@ Detailed methods are described in the manuscript in this preprint at https://www
 ## Citation and contact
 
 If you use VN1K data or code, please cite the VN1K publication (Nature Communications, as appropriate) and the repository:
-1. Tran, T. T., Hoang, T. H., Tran, M. H., Nguyen, N. T., Nguyen, D. T., Pham, T. M., ... & Vo, N. S. (2025). VN1K: a genome graph-based and function-driven multi-omics and phenomics resource for the Vietnamese population. bioRxiv, 2025-04.
+1. Trang TH Tran, Tham H Hoang, Mai H Tran, Nguyen T Nguyen, Dat T Nguyen, Tien M Pham, Nam N Nguyen, Giang M Vu, Vinh C Duong, Quang T Vu, Thien K Nguyen, Sang V Nguyen, Hien Q Vu, Trang M Nguyen, Toan Dang, Hoang Nguyen, Tuan Do, Cuong Le, Hung TT Nguyen, Nam Q Le, Quang-Huy Nguyen, Linh T Le, Thang Pham, Minh Dao, Duc M Vu, Huong TT Le, Tho D Ngo, Liem T Nguyen, Yen Hoang, Dat X Dao, Giang H Phan, Loan Nguyen, Chi Trung Ha, Hung N Luu, Vinh Le, Thinh Tran, Ly Le, Nguyen Thuy Duong, Duc-Hau Le, Quan Nguyen, Van H Vu, Nam S Vo (2025). VN1K: a genome graph-based and function-driven multi-omics and phenomics resource for the Vietnamese population. bioRxiv, 2025-04.
 2. Repository: [https://github.com/VinGenome/VN1K](https://github.com/VinGenome/VN1K)
 
