@@ -1,12 +1,10 @@
 # VN1K: a genome graph-based and function-driven multi-omics and phenomics resource for the Vietnamese population 
 
-**VN1K** is a population-scale genomic resource and analysis framework for the Vietnamese 1000 Genomes initiative. This repository provides code for end-to-end analysis and implementation, from raw data quality control and variant calling through genome-graph construction, imputation, structural-variant detection, and GWAS/clinical applications.
+**VN1K** is a population-scale genomic resource and analysis framework for the 1000 Vietnamese Genomes initiative. In this repository, we provides detailed codes and implementations for end-to-end analysis, from raw data quality control and variant calling through genome-graph construction, imputation, structural-variant detection, mobile elements and GWAS/clinical applications.
 
 ---
 
 ## Overview
-
-VN1K’s codebase supports:
 
 - **Quality control and variant calling** — Processing pipelines for WGS and related data.
 - **Genome graph construction** — Building and using population-aware genome graphs.
