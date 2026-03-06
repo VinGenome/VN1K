@@ -1,4 +1,4 @@
-setwd("/media/namnn12/c8dd9b23-05cc-4a61-a5b1-b70e0a8654ea/project/plot_code/1KVG_imputation")
+setwd("1KVG_imputation")
 #!/usr/bin/env Rscript
 #
 library(data.table)
