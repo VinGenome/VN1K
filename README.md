@@ -142,6 +142,7 @@ Module-specific details: see the README in each subfolder (`QC_and_variant_calli
 ### Research papers and resources
 
 - VN1K manuscript: [bioRxiv 2025.04.15.648991](https://www.biorxiv.org/content/10.1101/2025.04.15.648991v2.full.pdf)
+- MASH Data Portal: https://genome.vinbigdata.org/
 - GRCh38: [NCBI GRC human data](https://www.ncbi.nlm.nih.gov/grc/human/data)
 - 1000 Genomes Project: [www.internationalgenome.org](https://www.internationalgenome.org/)
 - gnomAD: [gnomad.broadinstitute.org](https://gnomad.broadinstitute.org/)
