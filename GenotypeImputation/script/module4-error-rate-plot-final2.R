@@ -1,4 +1,4 @@
-setwd("/home/namnn12/project/plot_code/1KVG_imputation/")
+setwd("1KVG_imputation/")
 
 library(ggplot2)
 library(stringr)
