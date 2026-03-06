@@ -37,44 +37,44 @@ source("./script/plot/function.plot_hqvariants.R")
 
 
 # PID
-INPUT="/home/vinhdc/Bioinfomatics/NAS/share/vinhdc/1KVG_imputation_panel/Impute_KHV/impute/KHV.chip.omni_broad_sanger_combined.20140818.snps.genotypes.20.addchr.hg38.CCDG_14151_B01_GRM_WGS_2020-08-05_chr20.Total.QC.99KHV.dose.vcf.gz"
+INPUT="1KVG_imputation_panel/Impute_KHV/impute/KHV.chip.omni_broad_sanger_combined.20140818.snps.genotypes.20.addchr.hg38.CCDG_14151_B01_GRM_WGS_2020-08-05_chr20.Total.QC.99KHV.dose.vcf.gz"
 QUERY1="source ~/.bashrc ; bcftools query -l"
 COMMAND1=paste(QUERY1, INPUT) # colnames
 df1 <- fread(cmd=COMMAND1, header=FALSE, col.names="PID")
 print(df1)
 
 # 1kgp
-INPUT="/home/vinhdc/Bioinfomatics/NAS/share/vinhdc/1KVG_imputation_panel/Impute_KHV/impute/KHV.chip.omni_broad_sanger_combined.20140818.snps.genotypes.20.addchr.hg38.CCDG_14151_B01_GRM_WGS_2020-08-05_chr20.Total.QC.RemoveKHV.dose.vcf.gz"
-QUERY2="source ~/.bashrc ; bcftools query -S /home/vinhdc/Bioinfomatics/NAS/share/vinhdc/1KVG_imputation_panel/samples_KHV_99.txt -i 'INFO/IMPUTED=1' -f '%CHROM:%POS:%REF:%ALT[\t%DS]\n'"
+INPUT="1KVG_imputation_panel/Impute_KHV/impute/KHV.chip.omni_broad_sanger_combined.20140818.snps.genotypes.20.addchr.hg38.CCDG_14151_B01_GRM_WGS_2020-08-05_chr20.Total.QC.RemoveKHV.dose.vcf.gz"
+QUERY2="source ~/.bashrc ; bcftools query -S 1KVG_imputation_panel/samples_KHV_99.txt -i 'INFO/IMPUTED=1' -f '%CHROM:%POS:%REF:%ALT[\t%DS]\n'"
 COMMAND2=paste(QUERY2, INPUT) # dosage
 ds.1KGP <- fread(cmd=COMMAND2, sep="\t", header=FALSE,
              col.names = c("ID", df1$PID))
 # 1kgp
-INPUT="/home/vinhdc/Bioinfomatics/NAS/share/vinhdc/1KVG_imputation_panel/Impute_KHV/impute/KHV.chip.omni_broad_sanger_combined.20140818.snps.genotypes.20.addchr.hg38.merge-SG10K-vn916.chr20_forimpute.dose.vcf.gz"
-QUERY2="source ~/.bashrc ; bcftools query -S /home/vinhdc/Bioinfomatics/NAS/share/vinhdc/1KVG_imputation_panel/samples_KHV_99.txt -i 'INFO/IMPUTED=1' -f '%CHROM:%POS:%REF:%ALT[\t%DS]\n'"
+INPUT="1KVG_imputation_panel/Impute_KHV/impute/KHV.chip.omni_broad_sanger_combined.20140818.snps.genotypes.20.addchr.hg38.merge-SG10K-vn916.chr20_forimpute.dose.vcf.gz"
+QUERY2="source ~/.bashrc ; bcftools query -S 1KVG_imputation_panel/samples_KHV_99.txt -i 'INFO/IMPUTED=1' -f '%CHROM:%POS:%REF:%ALT[\t%DS]\n'"
 COMMAND2=paste(QUERY2, INPUT) # dosage
 ds.VN916_SG10K <- fread(cmd=COMMAND2, sep="\t", header=FALSE,
              col.names = c("ID", df1$PID))
 # vn914VN916_SG10K
-INPUT="/home/vinhdc/Bioinfomatics/NAS/share/vinhdc/1KVG_imputation_panel/Impute_KHV/impute/KHV.chip.omni_broad_sanger_combined.20140818.snps.genotypes.20.addchr.hg38.merge-1KGP3-vn916.chr20_forprephase.removeKHV.dose.vcf.gz"
-QUERY2="source ~/.bashrc ; bcftools query -S /home/vinhdc/Bioinfomatics/NAS/share/vinhdc/1KVG_imputation_panel/samples_KHV_99.txt -i 'INFO/IMPUTED=1' -f '%CHROM:%POS:%REF:%ALT[\t%DS]\n'"
+INPUT="1KVG_imputation_panel/Impute_KHV/impute/KHV.chip.omni_broad_sanger_combined.20140818.snps.genotypes.20.addchr.hg38.merge-1KGP3-vn916.chr20_forprephase.removeKHV.dose.vcf.gz"
+QUERY2="source ~/.bashrc ; bcftools query -S 1KVG_imputation_panel/samples_KHV_99.txt -i 'INFO/IMPUTED=1' -f '%CHROM:%POS:%REF:%ALT[\t%DS]\n'"
 COMMAND2=paste(QUERY2, INPUT) # dosage
 ds.VN916_1KGP <- fread(cmd=COMMAND2, sep="\t", header=FALSE,
              col.names = c("ID", df1$PID))
 # merge
-INPUT="/home/vinhdc/Bioinfomatics/NAS/share/vinhdc/1KVG_imputation_panel/Impute_KHV/impute/KHV.chip.omni_broad_sanger_combined.20140818.snps.genotypes.20.addchr.hg38.SG10K.chr20.hg38_QC2.QC.dose.vcf.gz"
-QUERY2="source ~/.bashrc ; bcftools query -S /home/vinhdc/Bioinfomatics/NAS/share/vinhdc/1KVG_imputation_panel/samples_KHV_99.txt -i 'INFO/IMPUTED=1' -f '%CHROM:%POS:%REF:%ALT[\t%DS]\n'"
+INPUT="1KVG_imputation_panel/Impute_KHV/impute/KHV.chip.omni_broad_sanger_combined.20140818.snps.genotypes.20.addchr.hg38.SG10K.chr20.hg38_QC2.QC.dose.vcf.gz"
+QUERY2="source ~/.bashrc ; bcftools query -S 1KVG_imputation_panel/samples_KHV_99.txt -i 'INFO/IMPUTED=1' -f '%CHROM:%POS:%REF:%ALT[\t%DS]\n'"
 COMMAND2=paste(QUERY2, INPUT) # dosage
 ds.SG10K <- fread(cmd=COMMAND2, sep="\t", header=FALSE,
              col.names = c("ID", df1$PID))
 # SG10K
-INPUT="/home/vinhdc/Bioinfomatics/NAS/share/vinhdc/1KVG_imputation_panel/Impute_KHV/impute/KHV.chip.omni_broad_sanger_combined.20140818.snps.genotypes.20.addchr.hg38.VN_916.HaplotypeData.chr20.QC.dose.vcf.gz"
-QUERY2="source ~/.bashrc ; bcftools query -S /home/vinhdc/Bioinfomatics/NAS/share/vinhdc/1KVG_imputation_panel/samples_KHV_99.txt -i 'INFO/IMPUTED=1' -f '%CHROM:%POS:%REF:%ALT[\t%DS]\n'"
+INPUT="1KVG_imputation_panel/Impute_KHV/impute/KHV.chip.omni_broad_sanger_combined.20140818.snps.genotypes.20.addchr.hg38.VN_916.HaplotypeData.chr20.QC.dose.vcf.gz"
+QUERY2="source ~/.bashrc ; bcftools query -S 1KVG_imputation_panel/samples_KHV_99.txt -i 'INFO/IMPUTED=1' -f '%CHROM:%POS:%REF:%ALT[\t%DS]\n'"
 COMMAND2=paste(QUERY2, INPUT) # dosage
 ds.VN916 <- fread(cmd=COMMAND2, sep="\t", header=FALSE,
                   col.names = c("ID", df1$PID))
 # true
-INPUT="/home/vinhdc/Bioinfomatics/NAS/share/vinhdc/1KVG_imputation_panel/Reference_Final/CCDG_14151_B01_GRM_WGS_2020-08-05_chr20.Total.QC.vcf.gz"
+INPUT="1KVG_imputation_panel/Reference_Final/CCDG_14151_B01_GRM_WGS_2020-08-05_chr20.Total.QC.vcf.gz"
 fwrite(df1, file="samples_list.txt", quote=FALSE, col.names=FALSE)
 QUERY="source ~/.bashrc ; bcftools query -S samples_list.txt -f '%CHROM:%POS:%REF:%ALT[\t%GT]\n'"
 COMMAND=paste(QUERY, INPUT)
@@ -89,7 +89,7 @@ mat <- as_tibble(mat) %>%
   mutate(across(matches("HG"), as.numeric))
 
 #### import MAF from 1KGP3 ####
-MAF_1KGP3 <- fread(file="~/Bioinfomatics/NAS/share/vinhdc/MAF_1KGP/MAF_20.txt", sep="\t", header=TRUE)
+MAF_1KGP3 <- fread(file="MAF_1KGP/MAF_20.txt", sep="\t", header=TRUE)
 MAF_1KGP3 %>%
   # cbind(cut(MAF_1KGP3$MAF,c(1e-4,1e-3,5e-3,1e-2,5e-2,0.2,0.5))) %>%
   cbind(cut(MAF_1KGP3$MAF,c(0,1e-3,1e-2,0.05,0.1,0.5))) %>%
@@ -119,19 +119,19 @@ p3 <- plot_accuracy(x=ls(pattern="r2_"), output="images/accuracy_5-ref-panel_KHV
 
 # #### import rsq ####
 # # 1KGP3
-# rsq_1KGP <- fread(file="/mnt/nas_share/vinhdc/1KVG_imputation_panel/Impute_APMRA/APMRA96.chr20.CCDG_14151_B01_GRM_WGS_2020-08-05_chr20.Total.QC.info", sep="\t", header = TRUE) %>%
+# rsq_1KGP <- fread(file="1KVG_imputation_panel/Impute_APMRA/APMRA96.chr20.CCDG_14151_B01_GRM_WGS_2020-08-05_chr20.Total.QC.info", sep="\t", header = TRUE) %>%
 #   select(c(1,7,8)) %>% mutate(across(Genotyped, as.factor))
 # # test920
-# rsq_VN916 <- fread(file="/mnt/nas_share/vinhdc/1KVG_imputation_panel/Impute_APMRA/APMRA96.chr20.VN_916.HaplotypeData.chr20.QC.info", sep="\t", header = TRUE) %>%
+# rsq_VN916 <- fread(file="1KVG_imputation_panel/Impute_APMRA/APMRA96.chr20.VN_916.HaplotypeData.chr20.QC.info", sep="\t", header = TRUE) %>%
 #   select(c(1,7,8)) %>% mutate(across(Genotyped, as.factor))
 # # merge
-# rsq_VN916_1KGP <- fread(file="/mnt/nas_share/vinhdc/1KVG_imputation_panel/Impute_APMRA/APMRA96.chr20.merge-1KGP3-vn916.chr20_forimpute.info", sep="\t", header = TRUE) %>%
+# rsq_VN916_1KGP <- fread(file="1KVG_imputation_panel/Impute_APMRA/APMRA96.chr20.merge-1KGP3-vn916.chr20_forimpute.info", sep="\t", header = TRUE) %>%
 #   select(c(1,7,8)) %>% mutate(across(Genotyped, as.factor))
 # # SG10K
-# rsq_SG10K <- fread(file="/mnt/nas_share/vinhdc/1KVG_imputation_panel/Impute_APMRA/APMRA96.chr20.SG10K.chr20.hg38_QC2.QC.info", sep="\t") %>%
+# rsq_SG10K <- fread(file="1KVG_imputation_panel/Impute_APMRA/APMRA96.chr20.SG10K.chr20.hg38_QC2.QC.info", sep="\t") %>%
 #   select(c(1,7,8)) %>% mutate(across(Genotyped, as.factor))
 
-# rsq_VN916_SG10K <- fread(file="/mnt/nas_share/vinhdc/1KVG_imputation_panel/Impute_APMRA/APMRA96.chr20.merge-SG10K-vn916.chr20_forimpute.info", sep="\t") %>%
+# rsq_VN916_SG10K <- fread(file="1KVG_imputation_panel/Impute_APMRA/APMRA96.chr20.merge-SG10K-vn916.chr20_forimpute.info", sep="\t") %>%
 #   select(c(1,7,8)) %>% mutate(across(Genotyped, as.factor))
 
 # #### plot high quality imputed variants ####
