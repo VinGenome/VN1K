@@ -10,9 +10,9 @@ from sklearn.metrics import accuracy_score
 # df = pd.read_csv("")
 
 # %%
-# path_hgdp_list = '/media/vinhdc/DATA/NAS/1KVG_imputation_panel/hgdp_list'
-# path_impute = '/media/vinhdc/DATA/NAS/1KVG_imputation_panel/Impute_hgdp/impute'
-# path_ground_truth = '/media/vinhdc/DATA/NAS/1KVG_imputation_panel/HGDP/hgdp_wgs.chr20.vcf.gz'
+# path_hgdp_list = '1KVG_imputation_panel/hgdp_list'
+# path_impute = '1KVG_imputation_panel/Impute_hgdp/impute'
+# path_ground_truth = '1KVG_imputation_panel/HGDP/hgdp_wgs.chr20.vcf.gz'
 # for file_impute in os.listdir(path_impute):
 #     for population in os.listdir(path_hgdp_list):
 #         with open(os.path.join(path_hgdp_list, population), 'r') as fp:
@@ -28,9 +28,9 @@ from sklearn.metrics import accuracy_score
 # # %%
 
 # %%
-path_hgdp_list = '/media/vinhdc/DATA/NAS/1KVG_imputation_panel/AMPRA_list'
-path_impute = '/media/vinhdc/DATA/NAS/1KVG_imputation_panel/Impute_APMRA/impute'
-path_ground_truth = '/media/vinhdc/DATA/NAS/1KVG_imputation_panel/Reference_Tmp/VN_1011.HaplotypeData.chr20.vcf.gz'
+path_hgdp_list = '1KVG_imputation_panel/AMPRA_list'
+path_impute = '1KVG_imputation_panel/Impute_APMRA/impute'
+path_ground_truth = '1KVG_imputation_panel/Reference_Tmp/VN_1011.HaplotypeData.chr20.vcf.gz'
 dict_acc = {'Population':[]}
 for file_impute in os.listdir(path_impute):
     dict_acc[file_impute] = []
@@ -46,7 +46,7 @@ for population in os.listdir(path_hgdp_list):
         print(len(sample))
         cmd_genotype_gt = ['bcftools', 'query', '-f "%CHROM:%POS:%REF:%ALT[\\t%GT]\\n"', f'-s{",".join(sample)}', path_ground_truth, '>', 'df_gt_1.csv']
         os.system(' '.join(cmd_genotype_gt))
-        cmd_gt = ['bcftools', 'query', '-f "%CHROM:%POS:%REF:%ALT[\\t%GT]\\n"', f'-S /media/vinhdc/DATA/NAS/1KVG_imputation_panel/sample_impute.txt', os.path.join(path_impute, file_impute), '>', 'df_impute.csv']
+        cmd_gt = ['bcftools', 'query', '-f "%CHROM:%POS:%REF:%ALT[\\t%GT]\\n"', f'-S 1KVG_imputation_panel/sample_impute.txt', os.path.join(path_impute, file_impute), '>', 'df_impute.csv']
         print(' '.join(cmd_gt))
         os.system(' '.join(cmd_gt))
         df_ref = pd.read_csv('df_gt_1.csv', sep='\t', header=None)
@@ -80,8 +80,8 @@ for population in os.listdir(path_hgdp_list):
 print(dict_acc)
 
 # %%
-pd.DataFrame(dict_acc).to_csv('/media/vinhdc/DATA/NAS/1KVG_imputation_panel/dict_acc/apmra94.csv')
-# df = pd.read_csv('/media/vinhdc/DATA/NAS/1KVG_imputation_panel/HGDP_1KGP3.chr20.csv', sep='\t')
+pd.DataFrame(dict_acc).to_csv('1KVG_imputation_panel/dict_acc/apmra94.csv')
+# df = pd.read_csv('1KVG_imputation_panel/HGDP_1KGP3.chr20.csv', sep='\t')
 # %%
-# df_gt = pd.read_csv('/media/vinhdc/DATA/NAS/1KVG_imputation_panel/HGDP/HGDP_ref.chr20.csv', sep='\t')
+# df_gt = pd.read_csv('1KVG_imputation_panel/HGDP/HGDP_ref.chr20.csv', sep='\t')
 # %%
