@@ -62,7 +62,7 @@ ldf2[[6]] <- NULL
 
 #### split ldf2 into subset of population ####
 # read info from excel file
-INPUT="/Users/hung/Data/HGDP/hgdp_stanford/HGDPid_populations.xls"
+INPUT="HGDPid_populations.xls"
 df0 <- readxl::read_excel(INPUT, range = "A1:F1065")
 #
 data.frame("Id"=vt0[grepl("VN", vt0)], "Sex"=NA,
@@ -190,7 +190,7 @@ p12 <- ggarrange(p1, p2, ncol=2, labels="A", widths=c(2,2))
 OUTPUT="output/branch-hgdp-p12.Rdata"
 save(list=ls(pattern="^p\\d+"), file=OUTPUT)
 #
-OUTPUT="output/plot-table/error-rate-hgdp-v2.png"
+OUTPUT="error-rate-hgdp-v2.png"
 ggsave(filename=OUTPUT, plot=p12,
        device="png", units="in", width=6, height=6)
 #
