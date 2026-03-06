@@ -1,4 +1,3 @@
-setwd("/home/namnn12/project/1KVG_imputation/")
 library(tidyverse)
 library(dplyr)
 library(ggplot2)
