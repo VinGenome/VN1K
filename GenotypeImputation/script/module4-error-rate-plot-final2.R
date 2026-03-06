@@ -114,5 +114,5 @@ ggsave(filename="images/imputation_figure.pdf", plot=fig_all,
 ### note: load image to add to a plot
 # library(png)
 # library(grid)
-# img <- readPNG("/home/namnn12/project/1KVG_imputation/images/HLA_impute.png")
+# img <- readPNG("HLA_impute.png")
 # g <- rasterGrob(img, interpolate=TRUE)
