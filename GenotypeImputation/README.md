@@ -68,6 +68,3 @@ This project is licensed under the MIT License. See the LICENSE file for details
 - Acknowledge any collaborators, libraries, or datasets used in the project.
 
 ---
-
-Feel free to modify this README to better fit your project's specifics!  
-
