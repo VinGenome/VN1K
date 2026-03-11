@@ -57,14 +57,3 @@ bash fst/run.sh
 # Run genotype imputation
 bash script/module3-impute.sh
 ```
-
-## Contributing
-Contributions are welcome! Please submit a pull request or open an issue for discussion.
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-## Acknowledgments
-- Acknowledge any collaborators, libraries, or datasets used in the project.
-
----
