@@ -7,7 +7,7 @@ Inputs:
   - VN1K: VN1k_1015.HISAT_result.csv (+ optional sample_ids.txt filter)
   - KHV: merged_hisat_hla_99KHV.csv
   - Hanoi_Kinh, Hanoi_Kinh2, HoaBinh_Muong: tab-separated ID / Allele / AF tables
-  - VN_Kinh_DQB1: kinh_dqb1.txt (column typo Alllele tolerated)
+  - VN_Kinh_DQB1: kinh_dqb1.txt
 """
 from __future__ import annotations
 
